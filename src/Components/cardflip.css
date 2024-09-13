@@ -1,0 +1,10 @@
+.carddiv {
+    height: 500px;
+    width: 60%;
+    
+}
+.cardimage{
+    height: 500px;
+    width: auto;
+    border-radius: 5px;
+}

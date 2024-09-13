@@ -1,0 +1,118 @@
+.hero-section {
+  position: relative;
+  background: #ff3c00;;
+  /* background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+  height: 80vh;
+
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.container-about {
+  z-index: 2; /* Ensures content stays above the background */
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  justify-content: center;
+}
+
+.about-heading2 {
+  font-size: 1.5rem;
+}
+
+/* SVG Curve Styling */
+.svg-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+
+/* ----------------------- */
+
+
+
+.containeraboutpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom */
+.type {
+  color: #dbd56e;
+  background: -webkit-linear-gradient(25deg, #ff3c00, #ff3c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: type 1.10s steps(90) 1.10s 1 normal both, cursor 1s step-end infinite;
+  position: relative;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+blockquote{
+  font-size: 1em;
+  width:90%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #ff3c00 ;
+
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  /* content: "\201C"; */
+  color:#ff3c00 ;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  font-family:Arial;
+  /* content: "\201D"; */
+  color:#ff3c00 ;
+  font-size:4em;
+  /* position: absolute; */
+  left: 10px;
+  /* top:-10px; */
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}

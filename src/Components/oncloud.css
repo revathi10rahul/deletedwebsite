@@ -1,0 +1,42 @@
+.half-half-image-text{
+  padding: 0px 0px;
+  h1{
+    color: #800000;
+  }
+  .content{
+    background: linear-gradient(45deg, #e2dfdf, #dadada, #d8d6d6, #cecbcb); 
+       border-radius: 10px; /* Rounded corners */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 560px; /* Set a fixed width for the container */
+    height: 530px; /* Set a fixed height for the container */
+    overflow: hidden; /* Hide any overflow */
+  }
+  .content p{
+    width: 100%; /* Set the image width to 100% of the container */
+    height: 100%; /* Set the image height to 100% of the container */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    padding: 20px; /* Add padding around the image */
+    font-size: 12px;
+    border-radius: 10px; /* Match the border radius of the container */
+  }
+  .img {
+    background: linear-gradient(45deg, #a53536, #802021, #a53536, #802021); 
+       border-radius: 10px; /* Rounded corners */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 560px; /* Set a fixed width for the container */
+    height: 530px; /* Set a fixed height for the container */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.img img {
+    width: 100%; /* Set the image width to 100% of the container */
+    height: 100%; /* Set the image height to 100% of the container */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    padding: 20px; /* Add padding around the image */
+    border-radius: 10px; /* Match the border radius of the container */
+}
+}

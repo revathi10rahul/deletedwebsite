@@ -1,0 +1,525 @@
+.animated-heading {
+  font-size: 48px; /* Adjust font size as needed */
+  color: #ff3c00; /* Text color */
+  opacity: 0; /* Start with hidden text */
+  transform: scale(0.5); /* Start with a smaller size */
+  animation: fadeInScale 4s forwards infinite; /* Apply animation */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInScale {
+  0% {
+      opacity: 0; /* Fully transparent */
+      transform: scale(0.5); /* Start smaller */
+  }
+  100% {
+      opacity: 1; /* Fully opaque */
+      transform: scale(1); /* End at normal size */
+  }
+}
+
+
+
+
+.hero-section {
+    position: relative;
+    background: #ff3c00;;
+    /* background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+    height: 80vh;
+  
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .container-about {
+    z-index: 2; /* Ensures content stays above the background */
+  }
+  
+  .about-heading {
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+  
+  .about-heading2 {
+    font-size: 1.5rem;
+  }
+  
+  /* SVG Curve Styling */
+  .svg-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  /* ------------------------- */
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Space items evenly */
+}
+
+.subdivs {
+    padding: 10px; /* Adjust padding as needed */
+    flex: 1 1 10%; /* Allow items to grow and shrink, with a base width of 10% */
+    text-align: center; /* Center text */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .subdivs{
+      padding: 15px;
+    }
+}
+  /*------------------------------  */
+    .parent {
+      position: relative;
+    }
+    
+    .childone {
+      position: absolute;
+      width: 50%;
+      display: flex; /* Use flexbox for centering */
+      flex-direction: column; /* Arrange content vertically */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      text-align: justify; 
+      margin-top: 150px;
+      padding: 30px;
+      opacity: 0; /* Start with hidden elements */
+      transition: opacity 0.5s ease ;
+    }
+    .childtwo{
+      position: absolute;
+      width: 50%;
+      display: flex; /* Use flexbox for centering */
+      flex-direction: column; /* Arrange content vertically */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      text-align: justify; 
+      opacity: 0; /* Start with hidden elements */
+      transition: opacity 0.5s ease ;
+      padding: 30px;
+    }
+    .child:first-child {
+      left: 0;
+    }
+    
+    .childtwo:last-child {
+      right: 0;
+    }
+    .childone.visible, .childtwo.visible {
+      opacity: 1; /* Fade to opacity 1 when visible */
+    }
+  @media (max-width: 767px) {
+    .childone, .childtwo {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Take full width on small screens */
+        margin-top: 0; /* Remove top margin */
+    }
+
+    .childone {
+        order: 2; /* Move the text below the image on small screens */
+    }
+
+    .childtwo img {
+        height: 100px; /* Adjust image height based on screen size */
+        border-radius: 10px;
+    }
+} 
+
+
+
+
+
+
+/* ------------------------------------------------ */
+  /* ---------fifth-------------- */
+  .faqinbount{
+    width: 98%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Three columns */
+  gap: 20px; /* Space between items */
+}
+
+.faqContainerinbount   {
+  border-bottom: 2px solid #ff3c00;
+  padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.faqQuestioninbount {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.answercontinbount {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.answer {
+  padding: 0 10px 20px;
+  line-height: 1.5rem;
+}
+
+.fqa_headline_container h2 span {
+  font-weight: 700;
+}
+
+.faqQuestion-text h3 {
+  font-size: 12px;
+  display: block;
+}
+
+.iconinbountinbount .active {
+  background: transparent;
+  border: 2px solid #0a0707;
+}
+
+.iconinbount:hover {
+  cursor: pointer;
+}
+
+.icon-shape-inbount {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  color:#ff3c00;
+}
+
+.iconinbountinbount .icon-shape-inbount::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 4px;
+  background: #ff3c00;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.iconinbountinbount .icon-shape-inbount::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 22px;
+  background: #ff3c00;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.iconinbountinbount .icon-shape-inbount.active::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.iconinbountinbount .icon-shape-inbount.active::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .faq {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+/* --------------------- */
+
+.containerinbount {
+  /* max-width: 1140px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*==================== SERVICE CARD ====================*/
+.card__container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+ 
+
+}
+.card__bx {
+  --bg-clr: #282828;
+  --txt-clr: #ffffff;
+  --btn-txt-clr: #333333;
+  --transition: all 0.5s;
+
+  font-family: 'Poppins', sans-serif;
+  height: 400px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  border-top-left-radius: 70px;
+  position: relative;
+  overflow: hidden;
+  background: var(--clr);
+  transition: var(--transition);
+}
+.card__1 {
+  --clr: #e1e1e1;
+}
+.card__2 {
+  --clr: #e1e1e1;
+}
+.card__3 {
+  --clr: #e1e1e1  ;
+}
+.card__4 {
+  --clr: #e1e1e1  ;
+}
+.card__bx .card__data {
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+  background: #ff3c00;
+  
+}
+.card__bx .card__data .card__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 50%;
+  height: 140px;
+  width: 140px;
+  background: var(--clr);
+  
+}
+.card__bx .card__data .card__icon::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border-top-left-radius: 30px;
+  background: transparent;
+  
+  box-shadow: -5px -5px 0 5px var(--clr);
+}
+.card__bx .card__data .card__icon::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  border-top-left-radius: 30px;
+  background: transparent;
+  box-shadow: -5px -5px 0 5px var(--clr);
+}
+.card__bx .card__data .card__icon .card__icon-bx1 {
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 60px;
+  background: url('../../../Assets/Efficiency.webp');
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center;
+  height: auto;
+  color: var(--clr);
+}
+.card__bx .card__data .card__icon .card__icon-bx2 {
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 60px;
+  background: url('../../../Assets/inventoryaccuracy.webp');
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center;
+  height: auto;
+  color: var(--clr);
+}
+.card__bx .card__data .card__icon .card__icon-bx3 {
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 60px;
+  background: url('../../../Assets/relationship.jpg');
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center;
+  height: auto;
+  color: var(--clr);
+}
+.card__bx .card__data .card__icon .card__icon-bx4 {
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 60px;
+  background: url('../../../Assets/costsavng.jpg');
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center;
+  height: auto;
+  color: var(--clr);
+}
+.card__bx:hover .card__data .card__icon .card__icon-bx {
+  background: var(--clr);
+  color: var(--txt-clr);
+  transition: var(--transition);
+}
+.card__bx .card__data .card__content {
+  position: absolute;
+  top: 150px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  color: var(--txt-clr);
+}
+.card__bx .card__data .card__content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__bx .card__data .card__content p {
+  font-size: 14px;
+  opacity: 0.75;
+}
+.card__bx .card__data .card__content a {
+  display: inline-flex;
+  align-self: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid var(--clr);
+  color: var(--btn-txt-clr);
+  background: var(--clr);
+  transition: var(--transition);
+}
+.card__bx .card__data .card__content a:hover {
+  background: transparent;
+  color: var(--clr);
+}
+
+
+
+/* ---------------------- */
+
+  
+.bx {
+  margin: 1em auto; padding: 1em 2em;
+  border: solid 12px #ff3c00; 
+  display: inline-block; 
+  position: relative; 
+  font-size: 18px;  
+  max-width: 880px;
+}
+
+
+.box-corners .corner { 
+  position: absolute; 
+  top: -21px; left: -21px; width: 40px; height: 40px; 
+  background: white; 
+  border: solid 1px #004658; border-radius: 50%; 
+  border-color: white white black white; 
+  transform: rotate(-45deg) 
+  
+}
+
+.box-corners .corner:nth-child(2) { 
+  left: auto; right: -21px; 
+  border-color: white white white black; 
+}
+.box-corners .corner:nth-child(3) { 
+  left: auto; right: -21px; top: auto; bottom: -21px; 
+  border-color: black white white white; 
+}
+.box-corners .corner:nth-child(4) { 
+  top: auto; bottom: -21px; 
+  border-color: white black white white; 
+}
+
+  /* Define the animation for the corner borders */
+  @keyframes cornerBorderAnimation {
+    0% {
+      border-color: #004658; /* Initial corner border color */
+    }
+    50% {
+      border-color: #ce2b0f; /* Change to a different color halfway */
+    }
+    100% {
+      border-color: #004658; /* Return to the initial corner border color */
+    }
+  }
+
+  @media (max-width: 767px) {
+    .bx {
+      font-size: 16px; /* Adjust the font size for mobile */
+    }
+  
+    .box-corners .corner {
+      width: 20px; /* Further reduce the size for mobile */
+      height: 20px; /* Further reduce the size for mobile */
+      top: -16px; /* Adjust the position for mobile */
+      left: -16px; /* Adjust the position for mobile */
+    }
+  
+    .box-corners .corner:nth-child(2) {
+      right: -16px; /* Adjust the position for mobile */
+    }
+    .box-corners .corner:nth-child(3) {
+      right: -16px; /* Adjust the position for mobile */
+      bottom: -16px; /* Adjust the position for mobile */
+    }
+    .box-corners .corner:nth-child(4) {
+      bottom: -16px; /* Adjust the position for mobile */
+    }
+  }

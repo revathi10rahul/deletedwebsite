@@ -1,0 +1,45 @@
+.containerorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+  }
+  
+  .order {
+    color: #dbd56e;
+    background: -webkit-linear-gradient(25deg, #ff3c00, #ff3c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: type 1.10s steps(90) 1.10s 1 normal both, cursor 1s step-end infinite;
+    position: relative;
+  }
+  
+  blockquote {
+    font-size: 1em;
+    width: 90%;
+    margin: 50px auto;
+    font-family: Open Sans;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #ff3c00;
+    position: relative;
+    background: #EDEDED;
+    display: flex;
+    align-items: center; /* Center content vertically */
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+
+/* --------------- */
+
+

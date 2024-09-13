@@ -1,0 +1,244 @@
+  .containerorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+  }
+  
+  .order {
+    color: #dbd56e;
+    background: -webkit-linear-gradient(25deg, #ff3c00, #ff3c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: type 1.10s steps(90) 1.10s 1 normal both, cursor 1s step-end infinite;
+    position: relative;
+  }
+  
+  blockquote {
+    font-size: 1em;
+    width: 90%;
+    margin: 50px auto;
+    font-family: Open Sans;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #ff3c00;
+    position: relative;
+    background: #EDEDED;
+    display: flex;
+    align-items: center; /* Center content vertically */
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+
+/* ------third--------- */
+.infinite-animate-heading {
+    animation: fadeSlide 4s ease-in-out infinite;
+    color: #ff3c00;
+  }
+  
+  @keyframes fadeSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  
+.parent {
+    position: relative;
+  }
+  
+  .child {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .child:first-child {
+    left: 0;
+    height: auto;
+    padding: 40px;
+    
+  }
+  .child:first-child img{
+    border-radius: 20px;
+  }
+  .child:last-child {
+    right: 0;
+    padding: 40px;
+    text-align: justify;
+  }
+  
+
+  /* ----------fourth---------------- */
+
+  
+.blockquoteagain{
+    font-size: 1.4em;
+    width:90%;
+    margin:50px auto;
+    font-family:Open Sans;
+    font-style:italic;
+    color: #555555;
+    padding:1.2em 30px 1.2em 75px;
+    border-left:8px solid #ff3c00 ;
+    line-height:1.6;
+    position: relative;
+    background:#EDEDED;
+  }
+  
+  .blockquoteagain::before{
+    font-family:Arial;
+    content: "\201C";
+    color:#ff3c00;
+    font-size:4em;
+    position: absolute;
+    left: 10px;
+    top:-10px;
+  }
+  
+  .blockquoteagain::after{
+    content: '';
+  }
+  
+  .blockquoteagain span{
+    display:block;
+    color:#333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top:1em;
+  }
+
+  /* ---------fifth-------------- */.faq_main_container {
+    width: 98%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Space between items */
+}
+
+.faq_container {
+  border-bottom: 2px solid #ff3c00;
+  padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.faq_question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.answer {
+  padding: 0 10px 20px;
+  line-height: 1.5rem;
+}
+
+.fqa_headline_container h2 span {
+  font-weight: 700;
+}
+
+.faq_question-text h3 {
+  font-size: 12px;
+  display: block;
+}
+
+.icon.active {
+  background: transparent;
+  border: 2px solid #0a0707;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon-shape {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  color:#ff3c00;
+}
+
+.icon .icon-shape::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 4px;
+  background: #ff3c00;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.icon .icon-shape::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 30px;
+  background: #ff3c00;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.icon .icon-shape.active::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.icon .icon-shape.active::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .faq_main_container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .faq_main_container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+.learnmore{
+    padding: 10px;
+    height: 20px;
+    color:#18191a;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 2px solid #ff3c00;
+}
