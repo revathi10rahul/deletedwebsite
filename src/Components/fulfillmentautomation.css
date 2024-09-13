@@ -212,11 +212,11 @@
   
 .bx {
   margin: 1em auto; padding: 1em 2em;
-  border: solid 12px #004658; 
+  border: solid 12px #C33764; 
   display: inline-block; 
   position: relative; 
   font-size: 18px;  
-  max-width: 580px;
+  max-width: 1033px;
 }
 
 
@@ -225,22 +225,22 @@
   top: -21px; left: -21px; width: 40px; height: 40px; 
   background: white; 
   border: solid 1px #004658; border-radius: 50%; 
-  border-color: white white black white; 
+  border-color: white white #C33764 white; 
   transform: rotate(-45deg) 
   
 }
 
 .box-corners .corner:nth-child(2) { 
   left: auto; right: -21px; 
-  border-color: white white white black; 
+  border-color: white white white #C33764; 
 }
 .box-corners .corner:nth-child(3) { 
   left: auto; right: -21px; top: auto; bottom: -21px; 
-  border-color: black white white white; 
+  border-color: #C33764 white white white; 
 }
 .box-corners .corner:nth-child(4) { 
   top: auto; bottom: -21px; 
-  border-color: white black white white; 
+  border-color: white #C33764 white white; 
 }
 
   /* Define the animation for the corner borders */

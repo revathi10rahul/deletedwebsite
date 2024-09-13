@@ -7,7 +7,7 @@
   
   .order {
     color: #dbd56e;
-    background: -webkit-linear-gradient(25deg, #ff3c00, #ff3c00);
+    background: -webkit-linear-gradient(25deg, #C33764, #C33764);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
@@ -27,7 +27,7 @@
     font-style: italic;
     color: #555555;
     padding: 1.2em 30px 1.2em 75px;
-    border-left: 8px solid #ff3c00;
+    border-left: 8px solid #C33764;
     position: relative;
     background: #EDEDED;
     display: flex;
@@ -43,7 +43,7 @@
 /* ------third--------- */
 .infinite-animate-heading {
     animation: fadeSlide 4s ease-in-out infinite;
-    color: #ff3c00;
+    color: #C33764;
   }
   
   @keyframes fadeSlide {
@@ -99,7 +99,7 @@
     font-style:italic;
     color: #555555;
     padding:1.2em 30px 1.2em 75px;
-    border-left:8px solid #ff3c00 ;
+    border-left:8px solid #C33764 ;
     line-height:1.6;
     position: relative;
     background:#EDEDED;
@@ -108,7 +108,7 @@
   .blockquoteagain::before{
     font-family:Arial;
     content: "\201C";
-    color:#ff3c00;
+    color:#C33764;
     font-size:4em;
     position: absolute;
     left: 10px;
@@ -136,7 +136,7 @@
 }
 
 .faq_container {
-  border-bottom: 2px solid #ff3c00;
+  border-bottom: 2px solid #C33764;
   padding: 10px; /* Optional: Add padding for better spacing */
 }
 
@@ -183,7 +183,7 @@
   position: relative;
   width: 50px;
   height: 50px;
-  color:#ff3c00;
+  color:#C33764;
 }
 
 .icon .icon-shape::before {
@@ -194,7 +194,7 @@
   transform: translate(-50%, -50%);
   width: 30px;
   height: 4px;
-  background: #ff3c00;
+  background: #C33764;
   border-radius: 3px;
   transition: all 0.5s ease;
 }
@@ -207,7 +207,7 @@
   transform: translate(-50%, -50%);
   width: 4px;
   height: 30px;
-  background: #ff3c00;
+  background: #C33764;
   border-radius: 3px;
   transition: all 0.5s ease;
 }
@@ -240,5 +240,5 @@
     color:#18191a;
     font-size: 17px;
     border-radius: 10px;
-    border: 2px solid #ff3c00;
+    border: 5px solid #C33764;
 }

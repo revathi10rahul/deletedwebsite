@@ -166,22 +166,22 @@ const handleCrossdocking=()=>{
           </Container>
         </Navbar>
       </div>
-      <div style={{ height: "80vh" }}>
-        <div class="curved-div">
-          <h1 style={{ fontSize: "30px", marginTop: "40px",padding:"20PX" }}>
-            {" "}
-          WAREHOUSE MANAGEMENT SYSTEM
-          </h1>
+      <div className="hero-section mt-4">
+          <h1 className="about-heading mt-5">WAREHOUSE MANAGEMENT SYSTEM</h1>
+          {/* <h3 className="about-heading2 mt-3">FOR A DECADE PLUS</h3> */}
+          <div style={{ display: 'block' }} className="mt-3">
+            {/* <p className="mt-3">AND OUR FIRST CUSTOMERS ARE WITH US</p>
+            <p className="mt-3">TO CELEBRATE OUR MILESTONE</p> */}
+          </div>
 
-          <svg viewBox="0 0 1440 319">
+          <svg viewBox="0 0 1440 319" className="svg-curve">
             <path
               fill="#fff"
-              fill-opacity="1"
+              fillOpacity="1"
               d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
             ></path>
           </svg>
-    </div>
-    </div>
+        </div>
 
 
  {/* --------THIRD------------ */}
@@ -223,7 +223,7 @@ We recognize the importance of third-party logistics (3PL) providers in the mode
 
 {/* --------fifth---------------- */}
 <div style={{ height: "100vh" }}>
-<h1 style={{color:'#ff3c00'}}>Value Delivered</h1>
+<h1 style={{color:'#C33764'}}>Value Delivered</h1>
       <div className="faq_main_container">
      
         {faqData.map((faq, index) => (
@@ -268,8 +268,8 @@ We recognize the importance of third-party logistics (3PL) providers in the mode
                   Learn More
                 </button>
     </div>
-    <div style={{display:"flex",background:"#e1e1e1",borderRadius:"5px"}}>
-        <h3  style={{color:"#ff3c00",padding:"50px"}}>Discover how our WMS Software & Fulfillment Automation add value to your business <span className="learnmore">LEARN MORE</span>
+    <div style={{display:"flex",borderRadius:"5px"}}>
+        <h3  style={{color:"#C33764",padding:"50px"}}>Discover how our WMS Software & Fulfillment Automation add value to your business <span className="learnmore">LEARN MORE</span>
 
 </h3>
 

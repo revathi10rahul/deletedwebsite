@@ -1,6 +1,6 @@
 .animated-heading {
     font-size: 48px; /* Adjust font size as needed */
-    color: #ff3c00; /* Text color */
+    color: #C33764; /* Text color */
     opacity: 0; /* Start with hidden text */
     transform: scale(0.5); /* Start with a smaller size */
     animation: fadeInScale 4s forwards infinite; /* Apply animation */
@@ -151,7 +151,7 @@
       }
       
       .faqContainercrossdocking {
-        border-bottom: 2px solid #ff3c00;
+        border-bottom: 2px solid #C33764;
         padding: 10px; /* Optional: Add padding for better spacing */
       }
       
@@ -205,7 +205,7 @@
         position: relative;
         width: 50px;
         height: 50px;
-        color: #ff3c00;
+        color: #C33764;
       }
       
     
@@ -214,7 +214,7 @@
     position: relative;
     width: 50px;
     height: 50px;
-    color: #ff3c00; /* Color for the icon */
+    color: #C33764; /* Color for the icon */
     display: flex; /* Use flex to center the icon */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -224,7 +224,7 @@
   .iconinbountcrossdocking .icon-shape-inbount::after {
     position: absolute;
     content: "";
-    background: #ff3c00;
+    background: #C33764;
     border-radius: 3px;
     transition: all 0.5s ease;
   }
@@ -281,7 +281,7 @@
   }
   
   .faqContaineragain {
-    border-bottom: 2px solid #ff3c00;
+    border-bottom: 2px solid #C33764;
     padding: 10px; /* Optional: Add padding for better spacing */
   }
   
@@ -311,7 +311,7 @@
   .answeragain p {
     flex: 1; /* Allow text to take available space */
     margin: 0; /* Remove default margin */
-    font-size: 12px;
+    font-size: 18px;
   }
   
   .answeragain img {
@@ -336,7 +336,7 @@
     position: relative;
     width: 50px;
     height: 50px;
-    color: #ff3c00; /* Color for the icon */
+    color: #C33764; /* Color for the icon */
     display: flex; /* Use flex to center the icon */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -346,7 +346,7 @@
   .iconinbountagain .icon-shape-inbount-again::after {
     position: absolute;
     content: "";
-    background: #ff3c00;
+    background: #C33764;
     border-radius: 3px;
     transition: all 0.5s ease;
   }
@@ -409,14 +409,14 @@
     --transition: all 0.5s;
   
     font-family: 'Poppins', sans-serif;
-    height: 400px;
-    width: 300px;
+    height: 481px;
+    width: 380px;
     overflow: hidden;
     border-radius: 20px;
     border-top-left-radius: 70px;
     position: relative;
     overflow: hidden;
-    background: var(--clr);
+    background: #200247;
     transition: var(--transition);
   }
   .card__1 {
@@ -435,7 +435,7 @@
     position: absolute;
     inset: 10px;
     border-radius: 10px;
-    background: #ff3c00;
+    background: #C33764;
     
   }
   .card__bx .card__data .card__icon {
@@ -445,7 +445,7 @@
     border-bottom-right-radius: 50%;
     height: 140px;
     width: 140px;
-    background: var(--clr);
+    background: #200247;
     
   }
   .card__bx .card__data .card__icon::before {
@@ -588,7 +588,7 @@
     
   .bx {
     margin: 1em auto; padding: 1em 2em;
-    border: solid 12px #ff3c00; 
+    border: solid 12px #C33764; 
     display: inline-block; 
     position: relative; 
     font-size: 18px;  

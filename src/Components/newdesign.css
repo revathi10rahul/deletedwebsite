@@ -1,5 +1,5 @@
 .curved-div {
-  background:#C33764 ;
+  background: linear-gradient(#C33764, #200247);
   /* background:linear-gradient(#2E3192 , #1BFFFF); */
   color: #FFF;
   text-align: center;
@@ -96,7 +96,7 @@
 /* Custom */
 .type {
   color: #dbd56e;
-  background: -webkit-linear-gradient(25deg, #ff3c00, #ff3c00);
+  background: -webkit-linear-gradient(25deg,#C33764, #200247);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3rem;
@@ -126,7 +126,7 @@
 
 
 blockquote{
-  font-size: 1em;
+  font-size: 22px;
   width:90%;
   margin:50px auto;
   font-family:Open Sans;

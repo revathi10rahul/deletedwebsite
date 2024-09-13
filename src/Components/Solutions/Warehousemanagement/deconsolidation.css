@@ -1,0 +1,149 @@
+   /* ---------fifth-------------- */
+   .faqdeconsolidation {
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Four columns */
+    gap: 20px; 
+  }
+  
+  .faqContainerdeconsolidation {
+    border-bottom: 2px solid #C33764;
+    padding: 10px; /* Optional: Add padding for better spacing */
+  }
+  
+  .faqQuestiondeconsolidation {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .answercontdeconsolidation {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .answerdeconsolidation {
+    padding: 10px 0; /* Add padding for better spacing */
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .answerdeconsolidation p {
+    flex: 1; /* Allow text to take available space */
+    margin: 0; /* Remove default margin */
+    font-size: 18px;
+  }
+  
+  .answerdeconsolidation img {
+    width: 50%;
+    max-width: 300px; /* Limit image size */
+    padding: 2px;
+    border-radius: 10px;
+    margin-left: 20px; /* Add space between text and image */
+  }
+  
+  .iconinbountdeconsolidation .active {  
+    background: transparent;
+    border: 2px solid #0a0707;
+  }
+  
+  .iconinbountdeconsolidation:hover {
+    cursor: pointer;
+  }
+  
+  .icon-shape-inbount {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #C33764;
+  }
+  
+
+
+.iconinbountdeconsolidation .icon-shape-inbount {
+position: relative;
+width: 50px;
+height: 50px;
+color: #C33764; /* Color for the icon */
+display: flex; /* Use flex to center the icon */
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+}
+
+.iconinbountdeconsolidation .icon-shape-inbount::before,
+.iconinbountdeconsolidation .icon-shape-inbount::after {
+position: absolute;
+content: "";
+background: #C33764;
+border-radius: 3px;
+transition: all 0.5s ease;
+}
+
+.iconinbountdeconsolidation .icon-shape-inbount::before {
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 25px; /* Width of the horizontal line */
+height: 4px; /* Height of the horizontal line */
+}
+
+.iconinbountdeconsolidation .icon-shape-inbount::after {
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 4px; /* Width of the vertical line */
+height: 22px; /* Height of the vertical line */
+}
+
+.iconinbountdeconsolidation .icon-shape-inbount-.active::before {
+transform: translate(-50%, -50%) rotate(180deg); /* Rotate when active */
+}
+
+.iconinbountdeconsolidation .icon-shape-inbount.active::after {
+transform: translate(-50%, -50%) rotate(90deg); /* Rotate when active */
+}
+
+
+@media (max-width: 1024px) {
+.faqdeconsolidation {
+  grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+}
+}
+
+@media (max-width: 768px) {
+.animated-heading{
+  margin-top: 300px;
+}
+
+.faqdeconsolidation {
+  
+  grid-template-columns: 1fr; /* Single column on small screens */
+}
+
+}
+
+
+/* -------------------- */
+  
+.button-fulfillemnt {
+    position: relative; /* Changed from absolute to relative */
+    display: inline-block;
+    text-transform: uppercase;
+    color: #18191a;
+    padding: 5px 10px; /* Adjusted padding */
+    font-size: 18px; /* Adjusted font size */
+    letter-spacing: 1px; /* Adjusted letter spacing */
+    text-decoration: none;
+    background-color: transparent; /* Ensure no default background */
+    border: 2px solid #aa0014; /* Add border for visibility */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px; /* Space between paragraph and button */
+  }

@@ -75,21 +75,22 @@
 }
 
 
-blockquote{
-  font-size: 1em;
+.aboutpage-blockquote{
+  font-size: 20px;
   width:90%;
+  height: 70vh;
   margin:50px auto;
-  font-family:Open Sans;
-  font-style:italic;
+  font-family:sans-serif;
+  /* font-style:italic; */
   color: #555555;
-  padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #ff3c00 ;
+  /* padding:1.2em 30px 1.2em 75px; */
+  border-left:8px solid #C33764;
 
   position: relative;
   background:#EDEDED;
 }
 
-blockquote::before{
+.aboutpage-blockquote::before{
   font-family:Arial;
   /* content: "\201C"; */
   color:#ff3c00 ;
@@ -99,7 +100,7 @@ blockquote::before{
   top:-10px;
 }
 
-blockquote::after{
+.aboutpage-blockquote::after{
   font-family:Arial;
   /* content: "\201D"; */
   color:#ff3c00 ;
@@ -109,7 +110,7 @@ blockquote::after{
   /* top:-10px; */
 }
 
-blockquote span{
+.aboutpage-blockquote span{
   display:block;
   color:#333333;
   font-style: normal;

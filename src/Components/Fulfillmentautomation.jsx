@@ -110,7 +110,7 @@ const handleCrossdocking=()=>{
       </Navbar>
      </div>
     
-<div style={{height:"8  0vh"}}>
+{/* <div style={{height:"80vh"}}>
 <div class="curved-div">
   <h1 style={{fontSize:"100px",marginTop:"20px",padding:"30PX"}}> BRING IN 
   </h1>
@@ -120,7 +120,22 @@ const handleCrossdocking=()=>{
     <path fill="#fff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
   </svg>
 </div>
-</div>
+</div> */}
+  <div className="hero-section mt-4">
+  <h1 style={{fontSize:"100px",marginTop:"20px",padding:"30PX"}}> BRING IN </h1>
+          
+          <div style={{ display: 'block' }} className="mt-3">
+            <p className="mt-3"> One Of It's Kind Solutions</p>
+          </div>
+
+          <svg viewBox="0 0 1440 319" className="svg-curve">
+            <path
+              fill="#fff"
+              fillOpacity="1"
+              d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
 <div style={{ height: "100vh" }}>
   <h1>Apora</h1>
   <h2>The Leading AI-Powered Fulfilment Automation System</h2>

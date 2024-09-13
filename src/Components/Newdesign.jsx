@@ -2,6 +2,8 @@ import React from 'react'
 import './newdesign.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import WH from '../Assets/WH-Homepage.png'
 import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../Assets/nswhite.png'
@@ -27,7 +29,7 @@ const carData = [
   { id: 2, carName: "Aventador Ultimae", carBrand: "Lamborghini", carImage: pharma, description: "PHARMA" },
   { id: 3, carName: "M4 CS", carBrand: "BMW", carImage: apparel, description: "APPAREL" },
   { id: 4, carName: "Droptail Arcadia", carBrand: "Rolls Royce", carImage: FB, description: "FB" },
-  { id: 5, carName: "Vantage GT3", carBrand: "Aston Martin", carImage: cpg, description: "CPG" }
+  { id: 5, carName: "Vantage GT3", carBrand: "Aston Martin", carImage: cpg, description: "FMCG" }
 ];
 
 function Navbars() {
@@ -93,6 +95,21 @@ const { src,title, subtitle, description } = imagesAndTexts[currentIndex];
 
 const containerRef = useRef(null);
 
+// Scroll left function
+const scrollLeft = () => {
+  containerRef.current.scrollBy({
+    left: -300, // Adjust the value based on the scroll amount you want
+    behavior: 'smooth',
+  });
+};
+
+// Scroll right function
+const scrollRight = () => {
+  containerRef.current.scrollBy({
+    left: 300, // Adjust the value based on the scroll amount you want
+    behavior: 'smooth',
+  });
+};
   useEffect(() => {
     const container = containerRef.current;
 
@@ -306,18 +323,28 @@ Embrace the future of business operations with "On Cloud" - a revolutionary plat
         <div>
        
         <div className="outterContainer">
-  <h1>Industries We Serve</h1>
-  <div className="containerss" ref={containerRef}>
-    {carData.map(car => (
-      <div key={car.id} className="carCard">
-        <img className="imgage" src={car.carImage} alt={`${car.carName}.png`} />
-        <div className="hoverDescription">
-          <p>{car.description}</p>
-        </div>
+      <h1 style={{color:"#C33764"}}>Industries We Serve</h1>
+
+      {/* Left Arrow Icon */}
+
+      <div className="containerss" ref={containerRef}>
+        {carData.map(car => (
+          <div key={car.id} className="carCard">
+            <img className="imgage" src={car.carImage} alt={`${car.carName}.png`} />
+           
+              <p><b>{car.description} </b></p>
+           
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</div>
+
+      {/* Right Arrow Icon */}
+      {/* <div style={{display:"flex",justifyContent:"center",allignItems:"center"}}>
+      <FontAwesomeIcon icon={faArrowLeft} onClick={scrollLeft} style={{ cursor: 'pointer', fontSize: '3rem',padding:"10px" ,color:"#C33764"}} />
+      <FontAwesomeIcon icon={faArrowRight} onClick={scrollRight} style={{ cursor: 'pointer', fontSize: '3rem',padding:"10px",color:"#C33764"   }} />
+   
+      </div> */}
+       </div>
 
         </div>
     </div>

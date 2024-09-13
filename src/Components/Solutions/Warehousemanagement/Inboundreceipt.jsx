@@ -77,11 +77,12 @@ navigate('/crossdocking')
 ,   },
  
  ];
-
  const childOneRef = useRef(null);
  const childTwoRef = useRef(null);
+ const faqinbount = useRef(null);
  const [isChildOneVisible, setIsChildOneVisible] = useState(false);
  const [isChildTwoVisible, setIsChildTwoVisible] = useState(false);
+ const [isFaqinbountVisible, setIsFaqinbountVisible] = useState(false);
 
  useEffect(() => {
      const observerOptions = {
@@ -97,12 +98,16 @@ navigate('/crossdocking')
                      setIsChildOneVisible(true);
                  } else if (entry.target === childTwoRef.current) {
                      setIsChildTwoVisible(true);
+                 } else if (entry.target === faqinbount.current) {
+                     setIsFaqinbountVisible(true);
                  }
              } else {
                  if (entry.target === childOneRef.current) {
                      setIsChildOneVisible(false);
                  } else if (entry.target === childTwoRef.current) {
                      setIsChildTwoVisible(false);
+                 } else if (entry.target === faqinbount.current) {
+                     setIsFaqinbountVisible(false);
                  }
              }
          });
@@ -111,14 +116,15 @@ navigate('/crossdocking')
      // Observe the child elements
      if (childOneRef.current) observer.observe(childOneRef.current);
      if (childTwoRef.current) observer.observe(childTwoRef.current);
+     if (faqinbount.current) observer.observe(faqinbount.current);
 
      // Cleanup observer on component unmount
      return () => {
          if (childOneRef.current) observer.unobserve(childOneRef.current);
          if (childTwoRef.current) observer.unobserve(childTwoRef.current);
+         if (faqinbount.current) observer.unobserve(faqinbount.current);
      };
  }, []);
-
 
 
 
@@ -242,8 +248,8 @@ navigate('/crossdocking')
        </div>
 {/* -------------------------------- */}
 <div style={{ height: "100vh"  }}>
-  <h1 style={{ color: '#ff3c00' }} className="animated-heading">Features</h1>
-  <div className="faqinbount">
+  <h1 style={{ color: '#C33764' }} className="animated-heading">Features</h1>
+  <div className={`faqinbount ${isFaqinbountVisible ? 'visible' : ''}`} ref={faqinbount}>
     {faqData.map((faq, index) => (
       <div className="faqContainerinbount" key={index}>
         <div
@@ -298,7 +304,7 @@ navigate('/crossdocking')
     {/* ----------------------------------- */}
     <div style={{height:"100vh"}}>
     <section class="containerinbount">
-    <h1 style={{color:"#ff3c00"}} class="animated-heading">Value Delivered</h1>
+    <h1 style={{color:"#C33764"}} class="animated-heading">Value Delivered</h1>
 
 <div class="card__container">
 
@@ -311,7 +317,7 @@ navigate('/crossdocking')
       </div>
       <div class="card__content">
         <h5>Increased Efficiency</h5>
-        <p style={{fontSize:"12px"}}>By automating and streamlining the Inbound Receipt process, our PURVEY WMS eliminates manual tasks, reduces processing time, and increases operational efficiency, allowing your warehouse team to focus on higher-value activities.</p>
+        <p style={{fontSize:"16px"}}>By automating and streamlining the Inbound Receipt process, our PURVEY WMS eliminates manual tasks, reduces processing time, and increases operational efficiency, allowing your warehouse team to focus on higher-value activities.</p>
       </div>
     </div>
   </div>
@@ -322,7 +328,7 @@ navigate('/crossdocking')
       </div>
       <div class="card__content">
         <h5>Enhanced Inventory Accuracy</h5>
-        <p style={{fontSize:"12px"}}>Real-time tracking, automated documentation, and quality control checks in our WMS ensure accurate inventory records, reducing discrepancies and minimizing stockouts or overstock situations.</p>
+        <p style={{fontSize:"16px"}}>Real-time tracking, automated documentation, and quality control checks in our WMS ensure accurate inventory records, reducing discrepancies and minimizing stockouts or overstock situations.</p>
        
       </div>
     </div>
@@ -334,7 +340,7 @@ navigate('/crossdocking')
       </div>
       <div class="card__content">
         <h5>Improved Supplier Relationships</h5>
-        <p style={{fontSize:"12px"}}>With seamless integration and efficient communication, our WMS fosters stronger supplier relationships. Timely notifications, quick resolutions, and accurate information exchange enhance collaboration and trust.</p>
+        <p style={{fontSize:"16px"}}>With seamless integration and efficient communication, our WMS fosters stronger supplier relationships. Timely notifications, quick resolutions, and accurate information exchange enhance collaboration and trust.</p>
       </div>
     </div>
   </div>
@@ -345,8 +351,8 @@ navigate('/crossdocking')
       </div>
       <div class="card__content">
         <h5>Cost Savings</h5>
-        <p style={{fontSize:"12px"}}>The Inbound Receipt function in our WMS optimizes inventory levels, reduces holding costs, minimizes stockouts, and streamlines processes. These cost-saving measures improve cash flow and overall supply chain efficiency.</p>
-        <a href="#">Read More</a>
+        <p style={{fontSize:"16px"}}>The Inbound Receipt function in our WMS optimizes inventory levels, reduces holding costs, minimizes stockouts, and streamlines processes. These cost-saving measures improve cash flow and overall supply chain efficiency.</p>
+      
       </div>
     </div>
   </div>
@@ -357,7 +363,7 @@ navigate('/crossdocking')
     </div>
 
 
-    <div style={{height:"60vh" }}>
+    <div style={{height:"40vh" }}>
   <div class="bx box-corners w-100%">
     <div class="corner"></div>
     <div class="corner"></div>

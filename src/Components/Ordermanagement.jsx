@@ -101,21 +101,24 @@ navigate('/crossdocking')
         </Navbar>
       </div>
 
-      <div style={{ height: "80vh" }}>
-        <div class="curved-div">
-          <h1 style={{ fontSize: "30px", marginTop: "40px" ,padding:"20PX"}}>
-            {" "}
-            ORDER MANAGEMENT SYSTEM
-          </h1>
 
-          <svg viewBox="0 0 1440 319">
+
+      <div className="hero-section mt-4">
+          <h1 className="about-heading mt-3">ORDER MANAGEMENT SYSTEM</h1>
+         
+          <div style={{ display: 'block' }} className="mt-3">
+           
+          </div>
+
+          <svg viewBox="0 0 1440 319" className="svg-curve">
             <path
               fill="#fff"
-              fill-opacity="1"
+              fillOpacity="1"
               d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
             ></path>
           </svg>
         </div>
+      <div style={{ height: "80vh" }}>  
 
         {/* ------------------------------- */}
         {/* ------------third-------------- */}

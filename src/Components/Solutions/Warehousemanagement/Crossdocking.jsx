@@ -37,6 +37,9 @@ const handleInbountreceipt=()=>{
 const handleCrossdocking=()=>{
   navigate('/crossdocking')
 }
+const handleDeconsolidation=()=>{
+  navigate('/deconsolidation')
+}
 
  const [activeIndex, setActiveIndex] = useState(null);
 
@@ -185,7 +188,7 @@ const handleCrossdocking=()=>{
                 <NavDropdown.Item onClick={handleInbountreceipt}>Inbount Receipt</NavDropdown.Item>
               <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
               
-              <NavDropdown.Item >Deconsolidation</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleDeconsolidation}>Deconsolidation</NavDropdown.Item>
               <NavDropdown.Item >Quality Assurance</NavDropdown.Item>
               <NavDropdown.Item >Repacking & Putaway</NavDropdown.Item>
               <NavDropdown.Item >Pick Management</NavDropdown.Item>
@@ -268,7 +271,7 @@ const handleCrossdocking=()=>{
 
        </div>
        <div style={{ height: "100vh" }}>
-  <h1 style={{ color: '#ff3c00' }} className="animated-headings">Features</h1>
+  <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
   <div className="faqcrossdocking">
     {faqData.map((faq, index) => (
       <div className="faqContainercrossdocking" key={index}>
@@ -309,7 +312,7 @@ const handleCrossdocking=()=>{
   </div>
 
  
-  <h1 style={{ color: '#ff3c00' }} className="animated-headings">Value Delivered</h1>
+  <h1 style={{ color: '#C33764' }} className="animated-headings">Value Delivered</h1>
   <div className="faqagain">
     {faqDataagain.map((faq, index) => (
       <div className="faqContaineragain" key={index}>
