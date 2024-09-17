@@ -3,69 +3,70 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../../../Assets/nswhite.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useNavigate } from 'react-router-dom';
-import './qualitycheck.css'
-import { useState,useEffect,useRef } from 'react';
-import Footer from '../../Footer';
-import qc2 from '../../../Assets/qc2.png'
 import { FaChevronDown } from 'react-icons/fa'; // Example icon
+import { useNavigate } from 'react-router-dom';
+import './inventorymanagement.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faSignOutAlt,
-  } from "@fortawesome/free-solid-svg-icons";   
-function Qualitycheck () {
-
-  const navigate=useNavigate()
-  const handleAboutus=()=>{
-      navigate('/about')
-  }
-  const handleHome=()=>{
-      navigate('/')
-  }
+import {  
+  faSignOutAlt,
+} from "@fortawesome/free-solid-svg-icons"; import { useState,useEffect,useRef } from 'react';
+import Footer from '../../../Components/Footer';
+import crossdoc1 from '../../../Assets/crossdoc1.jpg'
+import seemless_integration from '../../../Assets/seemless_integration.png'
+import realtimetracking from '../../../Assets/realtime_trcking.png'
+import compilance from '../../../Assets/compilance.png'
+import qc from '../../../Assets/qc.png'
+import costreduction from '../../../Assets/costreduction.jpg'
+function Dispatch () {
+ const navigate=useNavigate()
+    const handleAboutus=()=>{
+        navigate('/about')
+    }
+    const handleHome=()=>{
+        navigate('/')
+    }
 const handleFulfillmentautomation=()=>{
-navigate('/fulfillmentautomation')
+  navigate('/fulfillmentautomation')
 }
 
 const handleOrdermanagement=()=>{
-navigate('/ordermanagement')
+  navigate('/ordermanagement')
 }
 const handleWarehousemanagement=()=>{
-navigate('/warehousemanagement')
+  navigate('/warehousemanagement')
 }
 const handleInbountreceipt=()=>{
-navigate('/inboundreceipt')
+  navigate('/inboundreceipt')
 }
 const handleCrossdocking=()=>{
-navigate('/crossdocking')
+  navigate('/crossdocking')
 }
 const handleDeconsolidation=()=>{
-navigate('/deconsolidation')
+  navigate('/deconsolidation')
 }
 const handleDispatch =()=>{
-  navigate('/dispatch')
+    navigate('/dispatch')
 }
 
 const handleInventorymanagement=()=>{
-navigate('/inventorymanagement')
+  navigate('/inventorymanagement')
 }
 
 const handleApiintegration=()=>{
-navigate('/apiintegration')
+  navigate('/apiintegration')
 }
 const handleQualityassurance=()=>{
-navigate('/qualitycheck')
+  navigate('/qualitycheck')
 }
 const handleRepackingPutaway=()=>{
-navigate('/repackingputaway')
+  navigate('/repackingputaway')
 }
 const handlePickmanagement=()=>{
-navigate('/pickmanagement')
+  navigate('/pickmanagement')
 }
 const handleIOTIntegration=()=>{
-navigate('/iotintegration')
+  navigate('/iotintegration')
 }
-
-
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -73,24 +74,31 @@ navigate('/iotintegration')
  };
 
  const faqData = [
-    {
-     question: "Detailed Inspection Criteria",
-     answer: `The Quality Assurance feature allows you to define detailed inspection criteria for each product, including physical attributes, functional tests, packaging checks, and more. This ensures that every item undergoes thorough inspection before it is shipped, guaranteeing the highest quality and customer satisfaction.`
+   {
+     question: "Efficient Data Capture for Accurate Inventory",
+     answer: `Our WMS seamlessly integrates with barcode and RFID technologies, enabling efficient and accurate data capture. You can quickly scan items, update inventory records, and reduce manual errors, resulting in improved inventory accuracy.`,image:seemless_integration,
    },
    {
-     question: "Real-Time Visibility into the Quality Status",
-     answer: `With our PURVEY WMS, you gain real-time visibility into the quality status of your inventory. You can track and monitor quality checkpoints, identify potential issues, and take proactive measures to resolve them, ensuring that only compliant and high-quality products are dispatched.`
+     question: "Inventory Segmentation for Efficient Organization",
+     answer: `With our Inventory Management feature, you can classify and segment your inventory based on various criteria such as product category, SKU, or demand. This enables better organization, optimized storage, and faster retrieval of items, enhancing overall operational efficiency.`,
+     image:realtimetracking,
    },
    {
-    question: "Generates Automated Quality Alerts",
-     answer: `PURVEY WMS generates automated quality alerts whenever a deviation or non-conformance is detected during the inspection process. This enables timely corrective actions, reducing the risk of shipping defective or substandard products and maintaining your reputation for delivering superior quality.`,
-    
+     question: "Automated Replenishment for Optimal Control",
+     answer: `PURVEY WMS automates the replenishment process by setting reorder points and triggering alerts when stock levels fall below the defined thresholds. This ensures timely replenishment, minimizes stockouts, and maintains optimal inventory levels.`,
+     image:qc,
    },
    {
-    question: "Seamless Integration",
-     answer: `Our Quality Assurance module seamlessly integrates with various testing equipment, such as scales, scanners, and measuring devices. This ensures accurate measurements and efficient data capture during the inspection process, reducing manual errors and improving efficiency.`,
-    
+     question: "Batch & Lot Tracking: Compliance & Efficiency",
+     answer: `Our WMS supports batch and lot tracking, allowing you to trace the movement and usage of specific batches or lots of items. This is particularly beneficial for industries with strict compliance requirements or products with expiration dates, ensuring regulatory compliance and minimizing wastage.`,
+     image:compilance,
    },
+   {
+    question: "Cycle Counting & Inventory Management Efficiency",
+    answer: `Our Inventory Control feature includes cycle counting functionality, enabling you to conduct periodic stock counts without disrupting daily operations. This ensures ongoing accuracy and helps identify discrepancies for prompt resolution. Additionally, our WMS facilitates efficient management of physical inventory processes, minimizing errors and streamlining reconciliation.`,
+    image:compilance,
+  },
+ 
  ];
 
 
@@ -104,29 +112,28 @@ navigate('/iotintegration')
 
  const faqDataagain = [
    {
-     questionagain: "Enhanced Product Quantity",
-     answeragain: `Our Quality Assurance process enables you to maintain strict quality standards for every product leaving your warehouse. By identifying and rectifying any deviations or defects, you can deliver superior quality products to your customers, enhancing their satisfaction and loyalty.`
+     questionagain: "Accurate Inventory Management",
+     answeragain: `Our WMS ensures accurate inventory records and real-time visibility, reducing stock discrepancies, and improving overall inventory accuracy. This enables efficient order fulfilment, minimizes stock outs, and optimizes storage space.`,imageagain:costreduction,
    },
    {
-     questionagain: "Reduced Returns And Complaints",
-     answeragain: `With accurate and comprehensive quality control measures in place, you can minimize returns and customer complaints due to substandard or defective products. This saves costs associated with returns processing and improves your overall customer experience.`
+     questionagain: "Increased Operational Efficiency",
+     answeragain: `Streamlining inventory management processes through automation and real-time data capture improves operational efficiency. With accurate inventory information readily available, your team can make informed decisions, reduce manual errors, and optimize productivity.`,
+     imageagain:realtimetracking,
    },
    {
-    questionagain: "Complains with Regulatios and Standards",
-     answeragain: `Our WMS helps ensure compliance with industry regulations and quality standards. By implementing standardized quality assurance procedures, you can meet legal requirements, industry-specific guidelines, and customer expectations for product quality.`,
-    
+     questionagain: "Cost Savings",
+     answeragain: `By optimizing inventory levels, reducing stockouts, and minimizing excess stock, our Inventory Control feature helps reduce holding costs and improve cash flow. Efficient inventory management leads to cost savings and a better bottom line for your business.`,
+     imageagain:qc,
    },
    {
-    questionagain: "Increased Operational Efficiency",
-     answeragain: `Automation of the quality assurance process streamlines inspection procedures, and improves overall operational efficiency. This allows your team to focus on value-added tasks and optimize productivity.`,
-    
-   },
-   {
-    questionagain: "Enhanced Brand Reputation",
-     answeragain: `By consistently delivering high-quality products, you can strengthen your brand reputation and differentiate yourself in the market. Positive customer experiences and a reputation for quality contribute to increased customer trust and loyalty.`,
-    
-   },
-  
+    questionagain: "Enhanced Customer Satisfaction",
+    answeragain: `Accurate inventory control ensures accurate order fulfilment, reduces order errors, and improves delivery times. This results in enhanced customer satisfaction, increased loyalty, and a positive brand image.   `,
+    imageagain:qc,
+  }, {
+    questionagain: "Regulatory Compliance",
+    answeragain: `Our WMS supports compliance with industry regulations and requirements, such as batch tracking and expiration date management. You can easily track product traceability, ensure adherence to quality standards, and mitigate risks associated with non-compliance.`,
+    imageagain:qc,
+  },
  
  
  ];
@@ -322,7 +329,7 @@ navigate('/iotintegration')
      </div>
   
     <div className="hero-section mt-4">
-    <h1 className="about-heading mt-3 PX-5">QUALITY ASSURANCE</h1>
+    <h1 className="about-heading mt-3 PX-5">INVENTORY MANAGEMENT</h1>
     {/* <div className="flex-container">
         <span className='subdivs'>Inbound Receipt</span>
         <span className='subdivs' onClick={handleCrossdocking}>Cross Docking</span>
@@ -346,40 +353,40 @@ navigate('/iotintegration')
 </div>
        
 
-       <div style={{height:"100vh"}} >
-<h1  class="animated-heading">QUALITY ASSURANCE</h1>
+       <div style={{height:"80vh"}}>
+<h1  class="animated-heading">INVENTORY MANAGEMENT</h1>
 
 <div class="parent">
 <div className={`childone ${isChildOneVisible ? 'visible' : ''}`} ref={childOneRef}>
-      <span style={{fontSize:"18px"}}>Quality Assurance process in our PURVEY Warehouse Management System (WMS) is a fully scalable and customizable function. We understand the critical importance of maintaining high-quality standards and ensuring accuracy in every shipment that leaves your warehouse. With our comprehensive Quality Assurance feature within PURVEY WMS, you can streamline your quality control process, minimize errors, and deliver superior products to your customers.
-      PURVEY WMS offers a standardized and configurable Quality Assurance process that aligns with your specific business requirements. You can define and implement consistent quality control procedures across all product categories, ensuring uniformity and adherence to quality standards.</span>
+      <span>We understand the challenges of managing inventory effectively and the impact it has on your business operations. With our comprehensive Inventory Management feature within the PURVEY WMS, you can streamline your inventory management processes, improve accuracy, and gain real-time visibility into your stock levels. Let us guide you through the key features and benefits of our advanced Inventory Control functionality.
+      PURVEY WMS provides real-time visibility into your inventory, allowing you to monitor stock levels, track movement, and make informed decisions. You can easily view the quantity, location, and status of each item, ensuring accurate stock management and minimizing stockouts.</span>
   </div>
   <div className={`childtwo ${isChildTwoVisible ? 'visible' : ''}`} ref={childTwoRef}>
-        <img src={qc2} alt="" style={{height:"80vh",borderRadius:"10px"}}/>
+        <img src={crossdoc1} alt="" style={{height:"55vh",borderRadius:"10px",border:"5px solid black"}}/>
   </div>
 </div>
 
        </div>
-       <div style={{ height: "110vh" }}className='features-qualityassurance'>
+       <div style={{ height: "100vh" }} className='features-inventorymanagement'>
   <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
-  <div className="faqdeconsolidation">
+  <div className="faqcrossdocking">
     {faqData.map((faq, index) => (
-      <div className="faqContainerdeconsolidation" key={index}>
+      <div className="faqContainercrossdocking" key={index}>
         <div
-          className={`faqQuestiondeconsolidation ${activeIndex === index ? "active" : ""}`}
+          className={`faqQuestioncrossdocking ${activeIndex === index ? "active" : ""}`}
           onClick={() => toggleFAQ(index)}
         >
           <div className="faqQuestionText">
             <h3 style={{ color: "black", fontSize: "inherit" }}>{faq.question}</h3>
           </div>
-          <div className="iconinbountdeconsolidation">
+          <div className="iconinbountcrossdocking">
             <div
               className={`icon-shape-inbount ${activeIndex === index ? "active" : ""}`}
             ></div>
           </div>
         </div>
         <div
-          className="answercontdeconsolidation"
+          className="answercontcrossdocking"
           style={{
             maxHeight: activeIndex === index ? "300px" : "0",
             overflow: "hidden",
@@ -387,7 +394,7 @@ navigate('/iotintegration')
             textAlign: "justify"
           }}
         >
-          <div className="answerdeconsolidation">
+          <div className="answercrossdocking">
             <p>{faq.answer}</p>
             {faq.image && (
               <img
@@ -403,9 +410,9 @@ navigate('/iotintegration')
 
  
   <h1 style={{ color: '#C33764' }} className="animated-headings">Value Delivered</h1>
-  <div className="faqdeconsolidation">
+  <div className="faqagain" >
     {faqDataagain.map((faq, index) => (
-      <div className="faqContainerdeconsolidation" key={index}>
+      <div className="faqContaineragain" key={index}>
         <div
           className={`faqQuestionagain ${activeIndexagain === index ? "active" : ""}`}
           onClick={() => toggleFAQagain(index)}
@@ -430,7 +437,7 @@ navigate('/iotintegration')
         >
           <div className="answeragain">
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-              <p>{faq.answeragain}</p>
+              <p className='answer-inventorymamagement'>{faq.answeragain}</p>
               {faq.imageagain && (
                 <img
                   src={faq.imageagain}
@@ -447,23 +454,31 @@ navigate('/iotintegration')
 
 
 
-  <button className="button-fulfillemnt">
+ <button className="button-fulfillemnt">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     Learn More
   </button>
-
+  <div class="bx-inventorymanagement box-corners-inventorymanagement w-100%">
+    <div class="corner-inventorymanagement"></div>
+    <div class="corner-inventorymanagement"></div>
+    <div class="corner-inventorymanagement"></div>
+    <div class="corner-inventorymanagement"></div>
+    
+    <p style={{fontSize:"16px"}}>
+    With PURVEY WMS, you can streamline your inventory management, improve accuracy, and optimize operational efficiency. By leveraging real-time visibility, barcode and RFID integration, and automated replenishment, you can maintain optimal inventory levels, reduce stockouts, and enhance customer satisfaction. Choose our WMS to gain control over your inventory and drive success in your warehouse operations.
+  </p>
+  </div>
 </div>
     {/* ----------------------------------- */}
-    
-    <div >
-  </div>
+   
+
     
   <Footer/>
         </>
   )
 }
 
-export default Qualitycheck
+export default Dispatch

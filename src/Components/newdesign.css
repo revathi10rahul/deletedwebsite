@@ -1,78 +1,74 @@
-.curved-div {
-  background: linear-gradient(#C33764, #200247);
-  /* background:linear-gradient(#2E3192 , #1BFFFF); */
-  color: #FFF;
-  text-align: center;
-}
-.curved-div Navbar {
-  font-size: 6rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.curved-div Navbar {
-  font-size: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.curved-div Nav{
-  display: block;
-}
-.nav-dropdown .dropdown-item {
-  color: white; /* Change text color to white */
-}
-.sideimage-homepage{
-  border-radius: 50%;
-  margin-top:50px;
-  height:60vh;
-  z-index:'100';
-  margin-left:-150px;
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #6c757d;
+      color: white;
 }
 
+.navbar .navbar-brand img {
+  height: 60px;
+}
 
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on smaller screens */
+}
 
+.navbar-links {
+  display: flex;
+}
 
+.navbar-links .nav-link {
+  color: white;
+}
 
-@media (min-width: 760px) {
+.navbar-collapse {
+  display: flex;
+}
+.dropdown-title {
+  color: white;
+}
 
-  .sideimage-homepage{
-    border-radius: 50%;
-    margin-top:50px;
-    height:60vh;
-    z-index:'100';
-    margin-left:-150px;
+.dropdown-icon {
+  color: white; /* Change the icon color to white */
+  margin-left: 5px; /* Optional: Add some space between the title and icon */
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: block; /* Show the menu in mobile view */
   }
 
+  .navbar-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
 
+  .navbar-links {
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column;
+  }
 
+  .navbar-links.active {
+    display: flex; /* Show the links when active */
+  }
 }
 
 
 
 
 
+/* ------------ */
+/* General styles */
 .hero-section-homepage {
   position: relative;
-  background:linear-gradient(#C33764,#200247);
-  /* background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+  background: linear-gradient(#C33764, #200247);
   height: 80vh;
-
   text-align: center;
   color: white;
   overflow: hidden;
 }
 
-.container-about {
-  z-index: 2; /* Ensures content stays above the background */
-}
-
-.about-heading {
-  font-size: 2.5rem;
-  justify-content: center;
-}
-
-.about-heading2 {
-  font-size: 1.5rem;
-}
-
-/* SVG Curve Styling */
 .svg-curve {
   position: absolute;
   bottom: 0;
@@ -80,6 +76,101 @@
   width: 100%;
   height: auto;
   z-index: 1;
+}
+
+.sideimage-homepage {
+  border-radius: 50%;
+  margin-top: 50px;
+  height: 60vh;
+  z-index: 100;
+  margin-left: -50px; /* Adjust margin for centering on mobile */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .sideimage-homepage {
+    height: 40vh; /* Adjust height for smaller screens */
+    margin-left: 0; /* Reset margin for mobile view */
+  }
+
+  .hero-section-homepage {
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .hero-section-homepage h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-section-homepage h4 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-section-homepage b {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .text-center {
+    text-align: center; /* Ensure text alignment for mobile */
+  }
+
+  .text-md-left {
+    text-align: center; /* Ensure text alignment for mobile */
+  }
+}
+.h1-homepage{
+   color: white;
+   font-size: 4rem; 
+}
+@media (min-width: 768px) {
+  .h1-homepage{
+    color: white;
+    font-size: 2rem; 
+ }
+ .main-heading-homepage{
+  margin-left: -200px;
+ }
+  .heading-homepage{
+     margin-top: 80px;
+     width: 100%;
+      padding: 30px;
+       margin-left: 100px
+  }
+  @media (max-width:768px) {
+   
+      .svg-curve {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        z-index: 1;
+    
+    }
+    .heading-homepage{
+      margin-top: -100px;
+      margin-left: 25px;
+    }
+    .boldheading{
+      font-size: 8px;
+    }
+  }
+  .sideimage-homepage {
+    height: 60vh; /* Height for larger screens */
+    margin-left: -100px; /* Adjust margin for larger screens */
+  }
+
+  .hero-section-homepage h1 {
+    font-size: 4rem; /* Font size for larger screens */
+  }
+
+  .hero-section-homepage h4 {
+    font-size: 1.5rem; /* Font size for larger screens */
+  }
+
+  .hero-section-homepage b {
+    font-size: 1rem; /* Font size for larger screens */
+  }
 }
 
 
@@ -125,7 +216,7 @@
 }
 
 
-blockquote{
+/* blockquote{
   font-size: 22px;
   width:90%;
   margin:50px auto;
@@ -137,11 +228,11 @@ blockquote{
 
   position: relative;
   background:#EDEDED;
-}
+} */
 
 blockquote::before{
   font-family:Arial;
-  /* content: "\201C"; */
+  
   color:#ff3c00 ;
   font-size:4em;
   position: absolute;
@@ -151,32 +242,30 @@ blockquote::before{
 
 blockquote::after{
   font-family:Arial;
-  /* content: "\201D"; */
   color:#ff3c00 ;
   font-size:4em;
-  /* position: absolute; */
   left: 10px;
-  /* top:-10px; */
 }
 
-blockquote span{
+/* blockquote span{
   display:block;
   color:#333333;
   font-style: normal;
   font-weight: bold;
   margin-top:1em;
-}
+}  */
 
 
-/* --------------------- */
+/* --------------------- *//* Base styles for larger screens */
 .homepage-three-divs {
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Distribute space between divs */
-    align-items: center; /* Stretch divs to equal height */
-    height: 70vh; /* Set a fixed height for the container */
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  position: relative;
 }
-.homepage-first-div{
+
+.homepage-first-div {
   position: absolute;
   width: 30%;
   height: 70vh;
@@ -184,17 +273,16 @@ blockquote span{
   left: 0;
   text-align: justify;
 }
-.homepage-second-div{
+
+.homepage-second-div {
   position: absolute;
   width: 40%;
   height: 70vh;
   left: 40%;
- 
   text-align: justify;
-
 }
 
-.homepage-third-div{
+.homepage-third-div {
   position: absolute;
   width: 30%;
   height: 70vh;
@@ -202,41 +290,212 @@ blockquote span{
   right: 0;
   text-align: justify;
 }
-.homepage-button{
-  padding: 10px;
-  border: none;
-  background-color: #C33764;
-  color: white;
-  border-radius: 5px;
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+  
+  .homepage-three-divs {
+      flex-direction: column; /* Stack divs vertically */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 20px; /* Add padding for better spacing */
+  }
+
+  .homepage-first-div,
+  .homepage-second-div,
+  .homepage-third-div {
+      position: relative; /* Change to relative positioning */
+      width: 100%; /* Full width for each div */
+      height: auto; /* Adjust height based on content */
+      padding: 20px; /* Reduce padding for smaller screens */
+      box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .homepage-second-div img {
+      width: 100%; /* Make image responsive */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 0; /* Reset margin for mobile view */
+      border-radius: 10px; /* Keep border radius consistent */
+      border-width: 5px; /* Adjust border size for mobile */
+  }
+  .cuttingedge-heading{
+   margin-top: 750px;;
+  }
+  .oncloud-heading{
+    margin-top: 750px;;
+   }
+   .outterContainer{
+    margin-top: 700px;
+   }
+   .industries-heading{
+    margin-top: 1300px
+   }
+   .wh-image-homepege{
+    height: 346px;
+    margin-top: -73px;
+   }
+   .sideimage-homepage {
+    
+    margin-left: 2px;
 }
-.moving-border {
+}
+
+.wh-image-homepege{
+ height:450px;
+ margin-top:-120px;
+ border:10px solid transparent;
+ padding:20px;
+ border-radius:10px ;
+}
+
+
+/* ----------------------------------------------------------------- */
+.slideshow-container {
   position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  -webkit-animation: fade 1.5s ease-in-out;
+  animation: fade 1.5s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
   display: inline-block;
-  padding: 10px; /* Added padding for visual effect */
+  transition: background-color 0.6s ease;
 }
 
-.moving-border img {
-  border: 1px solid transparent; /* Start with transparent border */
+.dot.active {
+  background-color: #717171;
+}
+  
+
+/* -------------------- */
+
+
+.outterContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoverDescription {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   padding: 10px;
-  animation: borderAnimation 3s linear infinite; /* Infinite animation */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
 }
 
-@keyframes borderAnimation {
-  0% {
-    border-color: red;
+.containerss {
+  width: 100%;
+  height: 400px;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.carCard {
+  position: relative; /* Ensure the description stays within the card */
+  display: inline-block;
+  min-width: 300px; /* Set a minimum width for each card */
+}
+
+.imgage {
+  width: 343px; /* Default width */
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(58, 47, 47, 0.2);
+}
+
+.imgage:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .containerss {
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px 0;
   }
-  25% {
-    border-color: blue;
-  }
-  50% {
-    border-color: green;
-  }
-  75% {
-    border-color: yellow;
-  }
-  100% {
-    border-color: red;
+
+  .carCard {
+    min-width: 250px; /* Adjust minimum width for larger tablets */
   }
 }
 
+/* Responsive styles for mobile screens */
+@media (max-width: 600px) {
+  .containerss {
+    height: 50vh; /* Allow height to adjust based on content */
+    padding: 10px 0; /* Reduced padding for mobile screens */
+  }
 
+  .carCard {
+    min-width: 200px; /* Adjust minimum width for mobile screens */
+  }
+
+  .imgage {
+    width: 100%; /* Make images responsive */
+    border: 3px solid white; /* Adjust border for smaller screens */
+  }
+  
+  .rotated-text {
+    font-size: 16px; /* Further reduce font size for mobile screens */
+  }
+}

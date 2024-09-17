@@ -1,3 +1,63 @@
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #6c757d;
+      color: white;
+}
+
+.navbar .navbar-brand img {
+  height: 60px;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on smaller screens */
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links .nav-link {
+  color: white;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+.dropdown-title {
+  color: white;
+}
+
+.dropdown-icon {
+  color: white; /* Change the icon color to white */
+  margin-left: 5px; /* Optional: Add some space between the title and icon */
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: block; /* Show the menu in mobile view */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show the links when active */
+  }
+}
+
+
+
+/* ----------------- */
 .hero-section {
   position: relative;
   background: #ff3c00;;
@@ -74,46 +134,25 @@
   }
 }
 
-
-.aboutpage-blockquote{
+.content{
   font-size: 20px;
-  width:90%;
-  height: 70vh;
-  margin:50px auto;
-  font-family:sans-serif;
-  /* font-style:italic; */
-  color: #555555;
-  /* padding:1.2em 30px 1.2em 75px; */
-  border-left:8px solid #C33764;
-
-  position: relative;
-  background:#EDEDED;
+  text-align:justify; 
+  padding: 60px;
+}
+.content-different{
+  font-size: 20px;
+  text-align:justify; 
+  padding: 60px;
 }
 
-.aboutpage-blockquote::before{
-  font-family:Arial;
-  /* content: "\201C"; */
-  color:#ff3c00 ;
-  font-size:4em;
-  position: absolute;
-  left: 10px;
-  top:-10px;
-}
 
-.aboutpage-blockquote::after{
-  font-family:Arial;
-  /* content: "\201D"; */
-  color:#ff3c00 ;
-  font-size:4em;
-  /* position: absolute; */
-  left: 10px;
-  /* top:-10px; */
-}
-
-.aboutpage-blockquote span{
-  display:block;
-  color:#333333;
-  font-style: normal;
-  font-weight: bold;
-  margin-top:1em;
+@media(max-width:768px){
+  .content{
+   padding: 8px;
+  }
+  .content-different{
+     
+    padding:8px;
+  }
+ 
 }

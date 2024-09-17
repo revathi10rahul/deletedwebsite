@@ -1,4 +1,64 @@
-  .containerorder {
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #6c757d;
+      color: white;
+}
+
+.navbar .navbar-brand img {
+  height: 60px;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on smaller screens */
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links .nav-link {
+  color: white;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+.dropdown-title {
+  color: white;
+}
+
+.dropdown-icon {
+  color: white; /* Change the icon color to white */
+  margin-left: 5px; /* Optional: Add some space between the title and icon */
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: block; /* Show the menu in mobile view */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show the links when active */
+  }
+}
+
+
+/* ------------------------- */
+
+
+.containerorder {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,20 +79,7 @@
     position: relative;
   }
   
-  blockquote {
-    font-size: 1em;
-    width: 90%;
-    margin: 50px auto;
-    font-family: Open Sans;
-    font-style: italic;
-    color: #555555;
-    padding: 1.2em 30px 1.2em 75px;
-    border-left: 8px solid #C33764;
-    position: relative;
-    background: #EDEDED;
-    display: flex;
-    align-items: center; /* Center content vertically */
-  }
+  
   
   img {
     width: 100%;
@@ -63,7 +110,7 @@
   
   
 .parent {
-    position: relative;
+    position: absolute;
   }
   
   .child {
@@ -87,47 +134,32 @@
     text-align: justify;
   }
   
-
-  /* ----------fourth---------------- */
-
+  @media (max-width: 768px) {
+    .parent {
+      flex-direction: column; /* Stack child elements vertically on small screens */
+    }
   
-.blockquoteagain{
-    font-size: 1.4em;
-    width:90%;
-    margin:50px auto;
-    font-family:Open Sans;
-    font-style:italic;
-    color: #555555;
-    padding:1.2em 30px 1.2em 75px;
-    border-left:8px solid #C33764 ;
-    line-height:1.6;
-    position: relative;
-    background:#EDEDED;
-  }
+    .child {
+      width: 100%; /* Full width for each child element */
+      padding: 10px; /* Reduced padding for smaller screens */
+    }
+    
+    .child:first-child {
+      padding-top: 0; /* Remove top padding for first child */
+    }
   
-  .blockquoteagain::before{
-    font-family:Arial;
-    content: "\201C";
-    color:#C33764;
-    font-size:4em;
-    position: absolute;
-    left: 10px;
-    top:-10px;
-  }
-  
-  .blockquoteagain::after{
-    content: '';
-  }
-  
-  .blockquoteagain span{
-    display:block;
-    color:#333333;
-    font-style: normal;
-    font-weight: bold;
-    margin-top:1em;
+    .child:last-child {
+      padding-top: 300px; /* Remove top padding for last child */
+      padding-bottom: 0; /* Remove bottom padding for last child */
+    }
   }
 
-  /* ---------fifth-------------- */.faq_main_container {
+
+
+
+  /* -------fourth---------------------- */
+  /* ---------fifth-------------- */
+  .faq_main_container {
     width: 98%;
   padding: 20px;
   display: grid;
@@ -224,21 +256,41 @@
 
 @media (max-width: 1024px) {
   .faq_main_container {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    margin-top: 30px;
+    display: block;
+    flex-direction: column; /* Two columns for medium screens */
   }
 }
 
 @media (max-width: 768px) {
+  .valuedelivered-warehouse{
+    margin-top: 400px;
+  }
   .faq_main_container {
     grid-template-columns: 1fr; /* Single column on small screens */
   }
-}
 
-.learnmore{
-    padding: 10px;
-    height: 20px;
-    color:#18191a;
-    font-size: 17px;
-    border-radius: 10px;
-    border: 5px solid #C33764;
+}
+.discover-div{
+  display: flex;
+  justify-content: center;
+  allign-items:center;
+}
+.discover-div h3{
+  color: #C33764;
+}
+.button-warehouse{
+  padding: 10px;
+  width: auto;
+  
+  background-color: white;
+  border-color: #C33764;
+  border-radius: 5px;
+} 
+
+@media (max-width:768px) {
+ .discover-div{
+  display: block;
+  margin-top: 500px;
+ } 
 }

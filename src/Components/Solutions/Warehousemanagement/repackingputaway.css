@@ -1,70 +1,7 @@
- /* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  background-color: #6c757d;
-      color: white;
-}
-
-.navbar .navbar-brand img {
-  height: 60px;
-}
-
-.navbar-toggle {
-  display: none; /* Hidden by default, shown on smaller screens */
-}
-
-.navbar-links {
-  display: flex;
-}
-
-.navbar-links .nav-link {
-  color: white;
-}
-
-.navbar-collapse {
-  display: flex;
-}
-.dropdown-title {
-  color: white;
-}
-
-.dropdown-icon {
-  color: white; /* Change the icon color to white */
-  margin-left: 5px; /* Optional: Add some space between the title and icon */
-}
-@media (max-width: 768px) {
-  .features-qualityassurance{
-    margin-top: 800px;
-  }
-  .navbar-collapse {
-    display: block; /* Show the menu in mobile view */
-  }
-
-  .navbar-toggle {
-    display: block; /* Show toggle button on small screens */
-  }
-
-  .navbar-links {
-    display: none; /* Hide the links by default on mobile */
-    flex-direction: column;
-  }
-
-  .navbar-links.active {
-    display: flex; /* Show the links when active */
-  }
-}
-
-
-
- 
- 
- /* * -------------------------------------------------quote------------------ */ */
+ /* -------------------------------------------------quote------------------ */
     
   
- .bx-qualitycheck {
+ .bx-repackingputaway {
     margin: 1em auto;
     padding: 1em 2em;
     border: solid 12px transparent; /* Make the border transparent */
@@ -79,7 +16,7 @@
 }
 
 
-.box-corners-qualitycheck .cornerQualitycheck { 
+.box-corners-repackingputaway .cornerrepackingputaway { 
   position: absolute; 
   top: -21px; left: -21px; width: 40px; height: 40px; 
   background: white; 
@@ -89,15 +26,15 @@
   
 }
 
-.box-corners-qualitycheck .cornerQualitycheck:nth-child(2) { 
+.box-corners-repackingputaway .cornerrepackingputaway:nth-child(2) { 
   left: auto; right: -21px; 
   border-color: white white white black; 
 }
-.box-corners-qualitycheck .cornerQualitycheck:nth-child(3) { 
+.box-corners-repackingputaway .cornerrepackingputaway:nth-child(3) { 
   left: auto; right: -21px; top: auto; bottom: -21px; 
   border-color: black white white white; 
 }
-.box-corners-qualitycheck .cornerQualitycheck:nth-child(4) { 
+.box-corners-repackingputaway .cornerrepackingputaway:nth-child(4) { 
   top: auto; bottom: -21px; 
   border-color: white black white white; 
 }
@@ -116,27 +53,36 @@
   }
 
   @media (max-width: 767px) {
-    .bx-qualitycheck {
-      margin-top: 500px;
+    .bx-repackingputaway {
+      margin-top: 12  0px;
       font-size: 16px; /* Adjust the font size for mobile */
       height: auto;
     }
-  
-    .box-corners-qualitycheck .cornerQualitycheck {
+  .footer-repacking{
+    margin-top: 100px;
+  }
+    .box-corners-repackingputaway .cornerrepackingputaway {
       width: 20px; /* Further reduce the size for mobile */
       height: 20px; /* Further reduce the size for mobile */
       top: -16px; /* Adjust the position for mobile */
       left: -16px; /* Adjust the position for mobile */
     }
   
-    .box-corners-qualitycheck .cornerQualitycheck:nth-child(2) {
+    .box-corners-repackingputaway .cornerrepackingputaway:nth-child(2) {
       right: -16px; /* Adjust the position for mobile */
     }
-    .box-corners-qualitycheck .cornerQualitycheck:nth-child(3) {
+    .box-corners-repackingputaway .cornerrepackingputaway:nth-child(3) {
       right: -16px; /* Adjust the position for mobile */
       bottom: -16px; /* Adjust the position for mobile */
     }
-    .box-corners-qualitycheck .cornerQualitycheck:nth-child(4) {
+    .box-corners-repackingputaway .cornerrepackingputaway:nth-child(4) {
       bottom: -16px; /* Adjust the position for mobile */
+    }
+  }
+
+
+  @media(max-width:728px){
+    .fetauresdiv-repackingputaway{
+      margin-top: 700px;
     }
   }

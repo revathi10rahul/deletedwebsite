@@ -1,4 +1,31 @@
-   /* ---------fifth-------------- */
+/* ------------------------ */
+.animated-heading-deconsolidation {
+  font-size: 48px; /* Adjust font size as needed */
+  color: #C33764; /* Text color */
+  opacity: 0; /* Start with hidden text */
+  transform: scale(0.5); /* Start with a smaller size */
+  animation: fadeInScale 4s forwards infinite; /* Apply animation */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInScale {
+  0% {
+      opacity: 0; /* Fully transparent */
+      transform: scale(0.5); /* Start smaller */
+  }
+  100% {
+      opacity: 1; /* Fully opaque */
+      transform: scale(1); /* End at normal size */
+  }
+}
+
+@media(max-width:768px){
+  .animated-heading-deconsolidation{
+        font-size: 2rem;
+  }
+}
+
+/* ---------fifth-------------- */
    .faqdeconsolidation {
     width: 100%;
     padding: 50px;
@@ -118,9 +145,7 @@ transform: translate(-50%, -50%) rotate(90deg); /* Rotate when active */
 }
 
 @media (max-width: 768px) {
-.animated-heading{
-  margin-top: 300px;
-}
+
 
 .faqdeconsolidation {
   
@@ -147,3 +172,14 @@ transform: translate(-50%, -50%) rotate(90deg); /* Rotate when active */
     border-radius: 10px;
     margin-top: 20px; /* Space between paragraph and button */
   }
+
+
+
+
+  
+    @media (max-width: 767px) {
+      .features-deconsolidation{
+        margin-top: 600px;
+      }
+     
+    }

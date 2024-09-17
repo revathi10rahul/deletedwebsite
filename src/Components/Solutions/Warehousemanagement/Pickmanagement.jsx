@@ -4,17 +4,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../../../Assets/nswhite.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
-import './qualitycheck.css'
+import './pickmanagement.css'
 import { useState,useEffect,useRef } from 'react';
-import Footer from '../../Footer';
-import qc2 from '../../../Assets/qc2.png'
+import Footer from '../../../Components/Footer';
+import crossdoc1 from '../../../Assets/crossdoc1.jpg'
+import seemless_integration from '../../../Assets/seemless_integration.png'
+import realtimetracking from '../../../Assets/realtime_trcking.png'
+import compilance from '../../../Assets/compilance.png'
+import qc from '../../../Assets/qc.png'
 import { FaChevronDown } from 'react-icons/fa'; // Example icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faSignOutAlt,
   } from "@fortawesome/free-solid-svg-icons";   
-function Qualitycheck () {
-
+import costreduction from '../../../Assets/costreduction.jpg'
+function Pickmanagement () {
   const navigate=useNavigate()
   const handleAboutus=()=>{
       navigate('/about')
@@ -65,33 +69,12 @@ const handleIOTIntegration=()=>{
 navigate('/iotintegration')
 }
 
-
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
    setActiveIndex(activeIndex === index ? null : index);
  };
 
- const faqData = [
-    {
-     question: "Detailed Inspection Criteria",
-     answer: `The Quality Assurance feature allows you to define detailed inspection criteria for each product, including physical attributes, functional tests, packaging checks, and more. This ensures that every item undergoes thorough inspection before it is shipped, guaranteeing the highest quality and customer satisfaction.`
-   },
-   {
-     question: "Real-Time Visibility into the Quality Status",
-     answer: `With our PURVEY WMS, you gain real-time visibility into the quality status of your inventory. You can track and monitor quality checkpoints, identify potential issues, and take proactive measures to resolve them, ensuring that only compliant and high-quality products are dispatched.`
-   },
-   {
-    question: "Generates Automated Quality Alerts",
-     answer: `PURVEY WMS generates automated quality alerts whenever a deviation or non-conformance is detected during the inspection process. This enables timely corrective actions, reducing the risk of shipping defective or substandard products and maintaining your reputation for delivering superior quality.`,
-    
-   },
-   {
-    question: "Seamless Integration",
-     answer: `Our Quality Assurance module seamlessly integrates with various testing equipment, such as scales, scanners, and measuring devices. This ensures accurate measurements and efficient data capture during the inspection process, reducing manual errors and improving efficiency.`,
-    
-   },
- ];
 
 
 
@@ -104,29 +87,25 @@ navigate('/iotintegration')
 
  const faqDataagain = [
    {
-     questionagain: "Enhanced Product Quantity",
-     answeragain: `Our Quality Assurance process enables you to maintain strict quality standards for every product leaving your warehouse. By identifying and rectifying any deviations or defects, you can deliver superior quality products to your customers, enhancing their satisfaction and loyalty.`
+     questionagain: "Increased Productivity ",
+     answeragain: `Our discrete picking solutions optimize the picking process, reducing travel time and maximizing picker efficiency allowing you to handle higher order volumes with the same resources.`,imageagain:costreduction,
    },
    {
-     questionagain: "Reduced Returns And Complaints",
-     answeragain: `With accurate and comprehensive quality control measures in place, you can minimize returns and customer complaints due to substandard or defective products. This saves costs associated with returns processing and improves your overall customer experience.`
+     questionagain: "Imporoved Accuracy",
+     answeragain: `By incorporating barcode/RFID guidance systems, we minimize picking errors and enhance overall accuracy. This reduces the risk of order discrepancies, returns, and customer dissatisfaction.`,
+     imageagain:realtimetracking,
    },
    {
-    questionagain: "Complains with Regulatios and Standards",
-     answeragain: `Our WMS helps ensure compliance with industry regulations and quality standards. By implementing standardized quality assurance procedures, you can meet legal requirements, industry-specific guidelines, and customer expectations for product quality.`,
-    
+     questionagain: "Real Time Inventory Visibility",
+     answeragain: `Barcode and RFID integration provides real-time visibility into your inventory. You can accurately track stock levels, monitor item locations, and ensure inventory accuracy. This helps prevent stockouts, enables better inventory planning, and enhances order fulfilment rates.`,
+     imageagain:qc,
    },
    {
-    questionagain: "Increased Operational Efficiency",
-     answeragain: `Automation of the quality assurance process streamlines inspection procedures, and improves overall operational efficiency. This allows your team to focus on value-added tasks and optimize productivity.`,
-    
-   },
-   {
-    questionagain: "Enhanced Brand Reputation",
-     answeragain: `By consistently delivering high-quality products, you can strengthen your brand reputation and differentiate yourself in the market. Positive customer experiences and a reputation for quality contribute to increased customer trust and loyalty.`,
-    
-   },
-  
+    questionagain: "Data-Driven Decision Making",
+    answeragain: `Our performance dashboard features provide valuable insights into your picking operations. By monitoring key metrics, you can identify bottlenecks, optimize processes, and make data-driven decisions to drive continuous improvement.`,
+    imageagain:qc,
+  },
+ 
  
  
  ];
@@ -322,7 +301,7 @@ navigate('/iotintegration')
      </div>
   
     <div className="hero-section mt-4">
-    <h1 className="about-heading mt-3 PX-5">QUALITY ASSURANCE</h1>
+    <h1 className="about-heading mt-3 PX-5">DISCRETE PICKING</h1>
     {/* <div className="flex-container">
         <span className='subdivs'>Inbound Receipt</span>
         <span className='subdivs' onClick={handleCrossdocking}>Cross Docking</span>
@@ -346,66 +325,28 @@ navigate('/iotintegration')
 </div>
        
 
-       <div style={{height:"100vh"}} >
-<h1  class="animated-heading">QUALITY ASSURANCE</h1>
+       <div style={{height:"80vh"}}>
+<h1  class="animated-heading">DISCRETE PICKING</h1>
 
 <div class="parent">
 <div className={`childone ${isChildOneVisible ? 'visible' : ''}`} ref={childOneRef}>
-      <span style={{fontSize:"18px"}}>Quality Assurance process in our PURVEY Warehouse Management System (WMS) is a fully scalable and customizable function. We understand the critical importance of maintaining high-quality standards and ensuring accuracy in every shipment that leaves your warehouse. With our comprehensive Quality Assurance feature within PURVEY WMS, you can streamline your quality control process, minimize errors, and deliver superior products to your customers.
-      PURVEY WMS offers a standardized and configurable Quality Assurance process that aligns with your specific business requirements. You can define and implement consistent quality control procedures across all product categories, ensuring uniformity and adherence to quality standards.</span>
+      <span>We have a deep understanding of the challenges faced by warehouses in discrete picking operations.
+      Our solutions are designed to address these challenges and deliver measurable results. We stay updated with the latest industry trends and technologies to ensure that our clients receive the most advanced and effective solutions. PURVEY provides an efficient and reliable solutions for discrete picking within warehouse management systems (WMS). Our cutting-edge technology and expertise in this field ensure that your warehouse operations are optimized, resulting in increased productivity and accuracy. we understand the importance of streamlined and error-free picking processes in a warehouse.</span>
   </div>
   <div className={`childtwo ${isChildTwoVisible ? 'visible' : ''}`} ref={childTwoRef}>
-        <img src={qc2} alt="" style={{height:"80vh",borderRadius:"10px"}}/>
+        <img src={crossdoc1} alt="" style={{height:"55vh",borderRadius:"10px",border:"5px solid black"}}/>
   </div>
 </div>
 
        </div>
-       <div style={{ height: "110vh" }}className='features-qualityassurance'>
-  <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
-  <div className="faqdeconsolidation">
-    {faqData.map((faq, index) => (
-      <div className="faqContainerdeconsolidation" key={index}>
-        <div
-          className={`faqQuestiondeconsolidation ${activeIndex === index ? "active" : ""}`}
-          onClick={() => toggleFAQ(index)}
-        >
-          <div className="faqQuestionText">
-            <h3 style={{ color: "black", fontSize: "inherit" }}>{faq.question}</h3>
-          </div>
-          <div className="iconinbountdeconsolidation">
-            <div
-              className={`icon-shape-inbount ${activeIndex === index ? "active" : ""}`}
-            ></div>
-          </div>
-        </div>
-        <div
-          className="answercontdeconsolidation"
-          style={{
-            maxHeight: activeIndex === index ? "300px" : "0",
-            overflow: "hidden",
-            transition: "max-height 0.3s ease",
-            textAlign: "justify"
-          }}
-        >
-          <div className="answerdeconsolidation">
-            <p>{faq.answer}</p>
-            {faq.image && (
-              <img
-                src={faq.image}
-                alt="FAQ related"
-              />
-            )}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
+       <div style={{ height: "70vh" }}>
+  
 
  
   <h1 style={{ color: '#C33764' }} className="animated-headings">Value Delivered</h1>
-  <div className="faqdeconsolidation">
+  <div className="faqagain">
     {faqDataagain.map((faq, index) => (
-      <div className="faqContainerdeconsolidation" key={index}>
+      <div className="faqContaineragain" key={index}>
         <div
           className={`faqQuestionagain ${activeIndexagain === index ? "active" : ""}`}
           onClick={() => toggleFAQagain(index)}
@@ -454,11 +395,21 @@ navigate('/iotintegration')
     <span></span>
     Learn More
   </button>
-
 </div>
     {/* ----------------------------------- */}
-    
+   
+
     <div >
+  <div class="bx-pickmanagement box-corners-pickmanagement w-100%">
+    <div class="corner-pickmanagement"></div>
+    <div class="corner-pickmanagement"></div>
+    <div class="corner-pickmanagement"></div>
+    <div class="corner-pickmanagement"></div>
+    
+    <p style={{fontSize:"16px"}}>
+    PURVEY WMS provides exceptional Inbound Receipt functionality within our advanced Warehouse Management System. With our state-of-the-art technology and commitment to excellence, we guarantee efficient handling, accurate tracking, and streamlined operations for your incoming goods. Partner with us to leverage the power of our WMS and experience enhanced efficiency and improved inventory management in your warehouse.
+  </p>
+  </div>
   </div>
     
   <Footer/>
@@ -466,4 +417,4 @@ navigate('/iotintegration')
   )
 }
 
-export default Qualitycheck
+export default Pickmanagement

@@ -1,4 +1,4 @@
-.animated-heading {
+.animated-heading-crossdocking {
     font-size: 48px; /* Adjust font size as needed */
     color: #C33764; /* Text color */
     opacity: 0; /* Start with hidden text */
@@ -261,7 +261,7 @@
   }
   
   @media (max-width: 768px) {
-    .animated-heading{
+    .animated-headings-crossdocking{
       margin-top: 300px;
     }
 

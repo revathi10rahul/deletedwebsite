@@ -12,101 +12,192 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {Row,Col} from 'react-bootstrap'
 import Footer from './Footer';
+import { FaChevronDown } from 'react-icons/fa'; // Example icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faSignOutAlt,
+  } from "@fortawesome/free-solid-svg-icons";   
 function Fulfillmentautomation() {
   const navigate=useNavigate()
-    const handleAboutus=()=>{
-        navigate('/about')
-    }
-    const handleHome=()=>{
-        navigate('/')
-    }
+  const handleAboutus=()=>{
+      navigate('/about')
+  }
+  const handleHome=()=>{
+      navigate('/')
+  }
 const handleFulfillmentautomation=()=>{
-  navigate('/fulfillmentautomation')
+navigate('/fulfillmentautomation')
 }
 
 const handleOrdermanagement=()=>{
-  navigate('/ordermanagement')
+navigate('/ordermanagement')
 }
 const handleWarehousemanagement=()=>{
-  navigate('/warehousemanagementsystem')
+navigate('/warehousemanagement')
 }
 const handleInbountreceipt=()=>{
-  navigate('/inboundreceipt')
+navigate('/inboundreceipt')
 }
 const handleCrossdocking=()=>{
-  navigate('/crossdocking')
+navigate('/crossdocking')
+}
+const handleDeconsolidation=()=>{
+navigate('/deconsolidation')
+}
+const handleDispatch =()=>{
+  navigate('/dispatch')
+}
+
+const handleInventorymanagement=()=>{
+navigate('/inventorymanagement')
+}
+
+const handleApiintegration=()=>{
+navigate('/apiintegration')
+}
+const handleQualityassurance=()=>{
+navigate('/qualitycheck')
+}
+const handleRepackingPutaway=()=>{
+navigate('/repackingputaway')
+}
+const handlePickmanagement=()=>{
+navigate('/pickmanagement')
+}
+const handleIOTIntegration=()=>{
+navigate('/iotintegration')
 }
   return (
     <>
      <div style={{height:"40px"}}>
-     <Navbar  className='text-white bg-secondary'  >
-        <Container>
-        <Navbar.Brand href="#home">
-  <img src={nswhite} alt="" style={{height:"60px"}} />
-</Navbar.Brand>
-          <Nav className="me-right color-white ">
-            <Nav.Link style={{color:"white"}} onClick={handleHome}>Home</Nav.Link>
-            <Nav.Link style={{color:"white"}} onClick={handleAboutus}>About Us </Nav.Link>
-          
-                 <NavDropdown
-  id="nav-dropdown"
-  title={
-    <span style={{ color: 'white' }}>
-      Products 
+     <Navbar collapseOnSelect expand="sm" variant="tabs" className="navbar" style={{fontSize:'14px',zIndex:"9999"}}>
+        <Navbar.Brand href="/#/">
+          <img
+            src={nswhite}
+            alt="logo"
+            style={{ width: "108px", height: "40px" }}
+          />
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link
+              style={{ color: "white" }}
+              onClick={handleHome}
+            >
+             Home 
+            </Nav.Link>
+            <Nav.Link onClick={handleAboutus}
+              style={{ color: "white" }}
+              
+            >
+             About Us 
+            </Nav.Link>
+            <NavDropdown    title={
+    <span className="dropdown-title">
+      Product <FaChevronDown className="dropdown-icon" />
     </span>
-  }
-  className="custom-nav-dropdown"
->
-  <NavDropdown.Item onClick={handleFulfillmentautomation}>Fullfillment Automation</NavDropdown.Item>
-  <NavDropdown.Item onClick={handleOrdermanagement}>Order Management System</NavDropdown.Item>
-  <NavDropdown.Item  onClick={handleWarehousemanagement}>Warehouse Management System</NavDropdown.Item>
-</NavDropdown>
-
-
-  <NavDropdown title={<span style={{ color: 'white' }}>Solutions </span>} id="nav-dropdown-about-us">
-  <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={handleInbountreceipt}>Inbount Receipt</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
-              <NavDropdown.Item >Deconsolidation</NavDropdown.Item>
-              <NavDropdown.Item >Quality Assurance</NavDropdown.Item>
-              <NavDropdown.Item >Repacking & Putaway</NavDropdown.Item>
-              <NavDropdown.Item >Pick Management</NavDropdown.Item>
-              <NavDropdown.Item >Dispatch</NavDropdown.Item>
-              <NavDropdown.Item >Inventory Management</NavDropdown.Item>
-              <NavDropdown.Item >API Integration</NavDropdown.Item>
-              <NavDropdown.Item >IOT Integration</NavDropdown.Item>
-
-
-                </NavDropdown>
-                <NavDropdown title="Sales" id="basic-nav-dropdown">
-                <NavDropdown.Item >Order Management</NavDropdown.Item>
-              <NavDropdown.Item > Quotation Management </NavDropdown.Item>
-              <NavDropdown.Item > Returns Management </NavDropdown.Item>
-              <NavDropdown.Item > Process Management </NavDropdown.Item>
-
-                </NavDropdown>
-                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown">
-                <NavDropdown.Item >Multi-Channel  Integration</NavDropdown.Item>
-              <NavDropdown.Item >Order Management System</NavDropdown.Item>
-              <NavDropdown.Item >Pick List Generation</NavDropdown.Item>
-              <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-              <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-              <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-              <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-              <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
-
-
-
-                </NavDropdown>
-             
+  } id="nav-dropdown">
+              
+              <NavDropdown.Item onClick={handleFulfillmentautomation}>
+                {" "}
+               Fulfillment Automation
+              </NavDropdown.Item>
+                
+              <NavDropdown.Item onClick={handleOrdermanagement}>
+                {" "}
+                Order Management System
+              </NavDropdown.Item>
+                 
+              <NavDropdown.Item onClick={handleWarehousemanagement}>
+                {" "}
+               Warehouse Management System
+              </NavDropdown.Item>
+                   
+              
+                   
             </NavDropdown>
-            <Nav.Link style={{color:"white"}}>Case Studies</Nav.Link>
-            <Nav.Link style={{color:"white"}}>Blog</Nav.Link>
-            <Nav.Link style={{color:"white"}}>Contact us</Nav.Link>
+           
+            
+            <NavDropdown  title={
+    <span className="dropdown-title">
+      Solutions <FaChevronDown className="dropdown-icon" />
+    </span>
+  }id="nav-dropdown-solutions">
+                <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleInbountreceipt}>Inbound Receipt</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDeconsolidation}>Deconsolidation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleQualityassurance}>Quality Assurance</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleRepackingPutaway}>Repacking & Putaway</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePickmanagement}>Pick Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDispatch}>Dispatch</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleInventorymanagement}>Inventory Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleApiintegration}>API Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleIOTIntegration}>IOT Integration</NavDropdown.Item>
+                </NavDropdown>
 
+                <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
+                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                </NavDropdown>
 
+                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
+                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                </NavDropdown>
+              </NavDropdown>
+          
+            <Nav.Link
+              className="rotate-on-hover"
+              id="nav-dropdown"
+              
+            >
+             
+            </Nav.Link>
+          
+          
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+              Case Studies
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Blog
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Contact Us
+            </Nav.Link>
           </Nav>
-        </Container>
+        
+       
+          <FontAwesomeIcon
+            icon={faSignOutAlt}
+            style={{
+              cursor: "pointer",
+              color: "white",
+              marginLeft: "10px",
+              fontSize: "24px",
+              paddingRight: "20px",
+            }}
+          />
+        </Navbar.Collapse>
       </Navbar>
      </div>
     
@@ -139,11 +230,11 @@ const handleCrossdocking=()=>{
 <div style={{ height: "100vh" }}>
   <h1>Apora</h1>
   <h2>The Leading AI-Powered Fulfilment Automation System</h2>
-  <div className="d-flex" style={{ height: "calc(100vh - 120px)" }}> {/* Adjust height to fit the content */}
-    <div style={{ flex: 1, padding: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-      <img src={work} alt="work" style={{ width: "100%", height: "70vh", maxHeight: "100%",borderRadius:"10px" }} />
+  <div className="heading-fulfillment" > {/* Adjust height to fit the content */}
+    <div className='img-div-fulfillment'>
+      <img src={work} alt="work" className='img-div' />
     </div>
-    <div style={{ flex: 1,  padding: "20px", display: "flex", alignItems: "center", justifyContent:"center"}}>
+    <div className='content-div-fulfillment'>
   <div style={{display:"block", textAlign: "center"}}>
     <p className='content-fulfillment'>
       Welcome to APORA, the AI-powered fulfilment automation system that optimizes operating costs and boosts efficiency exponentially. Our cutting-edge technology enables you to enjoy the benefits of reduced operational expenses and increased productivity, thanks to the exponential growth in efficiency. Say goodbye to order backlogs and experience a significant improvement in same-day deliveries.
@@ -162,9 +253,9 @@ const handleCrossdocking=()=>{
   </div>
 
   <div style={{height:"100vh"}}>
-    <h1 className='p-1'>Hybrid Proprietary Methodology, Opti-Pick</h1>
-    <div className="d-flex" style={{ height: "calc(100vh - 120px)" }}> {/* Adjust height to fit the content */}
-    <div style={{ flex: 1, padding: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <h1 className='hybrid-heading'>Hybrid Proprietary Methodology, Opti-Pick</h1>
+    <div className="heading-fulfillment" > {/* Adjust height to fit the content */}
+    <div className='hybrid-div-fullfillment'>
     <p className='content-fulfillment'>
     Unlike other fulfilment automation systems, APORA is not limited to e-commerce or B2B operations. We have developed a series of AI algorithms that implement our hybrid proprietary methodology, Opti-Pick. This ground-breaking approach has the potential to revolutionize Distribution Center activities, resulting in improved speed, efficiency, and ultimately generating more revenue for your business.
     </p>
@@ -185,9 +276,9 @@ const handleCrossdocking=()=>{
 
   {/* ------------third-------------- */}
   <div style={{height:"100vh"}}>
-    <h1 className='p-1'>Unlocking Fulfilment Automation Potential</h1>
-    <div className="d-flex" style={{ height: "calc(100vh - 120px)" }}> 
-    <div style={{ flex: 1, padding: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <h1 className='unlocking-heading'>Unlocking Fulfilment Automation Potential</h1>
+    <div className="heading-fulfillment" > 
+    <div className='unlocking-img-div'>
     <img src={aporasec3} alt="work" style={{ width: "100%", height: "70vh", maxHeight: "100%",borderRadius:"10px" }} />
     </div>
     <div style={{ flex: 1,  padding: "20px", display: "flex", alignItems: "center", flexDirection: "column" ,marginTop:"66px"}}>
@@ -211,7 +302,7 @@ const handleCrossdocking=()=>{
 
 
 
-<div style={{display:"flex",justifyContent:"center",allignItems:'center'}} className='mt-1'>
+<div  className='flip-card-fulfillment mt-1'>
 <div class="flip">
     <div class="front" >
     <h5 class="text-shadow">Precision Picking, Swift Deliveries: AI Empowered for Excellence</h5>
@@ -237,7 +328,7 @@ const handleCrossdocking=()=>{
 </div>
 </div>
 
-<div style={{display:"flex",justifyContent:"center",allignItems:'center'}}>
+<div className='flip-card-div2'>
 <div class="flip">
     <div class="front" >
     <h5 class="text-shadow">Opti-Pick: Unlocking 200% Efficiency Surge, Normalizing Accomplishment</h5>
@@ -268,11 +359,11 @@ const handleCrossdocking=()=>{
 
 
   <div style={{height:"30vh"}}>
-  <div class="bx box-corners w-100%">
-    <div class="corner"></div>
-    <div class="corner"></div>
-    <div class="corner"></div>
-    <div class="corner"></div>
+  <div class="bx-fulfillment box-corners-fulfillment w-100%">
+    <div class="cornerfulfillment"></div>
+    <div class="cornerfulfillment"></div>
+    <div class="cornerfulfillment"></div>
+    <div class="cornerfulfillment"></div>
     
     <p>
     Discover the transformative capabilities of APORA and unlock a new era of efficiency and cost savings. Contact us today to learn more about how APORA can empower your business.

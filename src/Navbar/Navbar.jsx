@@ -19,14 +19,14 @@ function Navbars() {
   return (
     <>
      <div style={{height:"40px"}}>
-     <Navbar  className='text-white'  >
+     <Navbar  className='text-white bg-secondary'  >
         <Container>
         <Navbar.Brand href="#home">
   <img src={nswhite} alt="" style={{height:"60px"}} />
 </Navbar.Brand>
-          <Nav className="me-right color-white">
+          <Nav className="me-right color-white ">
             <Nav.Link style={{color:"white"}} onClick={handleHome}>Home</Nav.Link>
-            <Nav.Link style={{color:"white"}} onClick={handleAbout}>About Us </Nav.Link>
+            <Nav.Link style={{color:"white"}} onClick={handleAboutus}>About Us </Nav.Link>
           
                  <NavDropdown
   id="nav-dropdown"
@@ -38,20 +38,22 @@ function Navbars() {
   className="custom-nav-dropdown"
 >
   <NavDropdown.Item onClick={handleFulfillmentautomation}>Fullfillment Automation</NavDropdown.Item>
-  <NavDropdown.Item>Order Management System</NavDropdown.Item>
-  <NavDropdown.Item>Warehouse Management System</NavDropdown.Item>
+  <NavDropdown.Item onClick={handleOrdermanagement}>Order Management System</NavDropdown.Item>
+  <NavDropdown.Item  onClick={handleWarehousemanagement}>Warehouse Management System</NavDropdown.Item>
 </NavDropdown>
 
 
   <NavDropdown title={<span style={{ color: 'white' }}>Solutions </span>} id="nav-dropdown-about-us">
   <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
-                <NavDropdown.Item h>Inbount Receipt</NavDropdown.Item>
-              <NavDropdown.Item >Deconsolidation</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleInbountreceipt}>Inbount Receipt</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+              
+              <NavDropdown.Item onClick={handleDeconsolidation}>Deconsolidation</NavDropdown.Item>
               <NavDropdown.Item >Quality Assurance</NavDropdown.Item>
               <NavDropdown.Item >Repacking & Putaway</NavDropdown.Item>
               <NavDropdown.Item >Pick Management</NavDropdown.Item>
-              <NavDropdown.Item >Dispatch</NavDropdown.Item>
-              <NavDropdown.Item >Inventory Management</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleDispatch}>Dispatch</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleInventorymanagement}>Inventory Management</NavDropdown.Item>
               <NavDropdown.Item >API Integration</NavDropdown.Item>
               <NavDropdown.Item >IOT Integration</NavDropdown.Item>
 

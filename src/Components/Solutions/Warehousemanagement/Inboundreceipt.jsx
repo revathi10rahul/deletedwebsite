@@ -14,7 +14,13 @@ import compilance from '../../../Assets/compilance.png'
 import qc from '../../../Assets/qc.png'
 import returns from '../../../Assets/return.png'
 import insights from '../../../Assets/insights.png'
+import { FaChevronDown } from 'react-icons/fa'; // Example icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faSignOutAlt,
+  } from "@fortawesome/free-solid-svg-icons";   
 function Inboundreceipt () {
+ 
   const navigate=useNavigate()
   const handleAboutus=()=>{
       navigate('/about')
@@ -38,6 +44,37 @@ navigate('/inboundreceipt')
 const handleCrossdocking=()=>{
 navigate('/crossdocking')
 }
+const handleDeconsolidation=()=>{
+navigate('/deconsolidation')
+}
+const handleDispatch =()=>{
+  navigate('/dispatch')
+}
+
+const handleInventorymanagement=()=>{
+navigate('/inventorymanagement')
+}
+
+const handleApiintegration=()=>{
+navigate('/apiintegration')
+}
+const handleQualityassurance=()=>{
+navigate('/qualitycheck')
+}
+const handleRepackingPutaway=()=>{
+navigate('/repackingputaway')
+}
+const handlePickmanagement=()=>{
+navigate('/pickmanagement')
+}
+const handleIOTIntegration=()=>{
+navigate('/iotintegration')
+}
+
+
+
+
+
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -134,76 +171,136 @@ navigate('/crossdocking')
  
   return (
     <>
+    <div>
      <div style={{height:"40px"}}>    
-     <Navbar  className='text-white bg-secondary'  >
-        <Container>
-        <Navbar.Brand href="#home">
-  <img src={nswhite} alt="" style={{height:"60px"}} />
-</Navbar.Brand>
-          <Nav className="me-right color-white ">
-            <Nav.Link style={{color:"white"}} onClick={handleHome}>Home</Nav.Link>
-            <Nav.Link style={{color:"white"}} onClick={handleAboutus}>About Us </Nav.Link>
-          
-                 <NavDropdown
-  id="nav-dropdown"
-  title={
-    <span style={{ color: 'white' }}>
-      Products 
-    </span>
-  }
-  className="custom-nav-dropdown"
->
-  <NavDropdown.Item onClick={handleFulfillmentautomation}>Fullfillment Automation</NavDropdown.Item>
-  <NavDropdown.Item onClick={handleOrdermanagement}>Order Management System</NavDropdown.Item>
-  <NavDropdown.Item  onClick={handleWarehousemanagement}>Warehouse Management System</NavDropdown.Item>
-</NavDropdown>
+     <Navbar collapseOnSelect expand="sm" variant="tabs" className="navbar" style={{fontSize:'14px',zIndex:"9999"}}>
+        <Navbar.Brand href="/#/">
+          <img
+            src={nswhite}
+            alt="logo"
+            style={{ width: "108px", height: "40px" }}
+          />
+        </Navbar.Brand>
 
-
-  <NavDropdown title={<span style={{ color: 'white' }}>Solutions </span>} id="nav-dropdown-about-us">
-  <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={handleInbountreceipt}>Inbount Receipt</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link
+              style={{ color: "white" }}
+              onClick={handleHome}
+            >
+             Home 
+            </Nav.Link>
+            <Nav.Link onClick={handleAboutus}
+              style={{ color: "white" }}
               
-              <NavDropdown.Item >Deconsolidation</NavDropdown.Item>
-              <NavDropdown.Item >Quality Assurance</NavDropdown.Item>
-              <NavDropdown.Item >Repacking & Putaway</NavDropdown.Item>
-              <NavDropdown.Item >Pick Management</NavDropdown.Item>
-              <NavDropdown.Item >Dispatch</NavDropdown.Item>
-              <NavDropdown.Item >Inventory Management</NavDropdown.Item>
-              <NavDropdown.Item >API Integration</NavDropdown.Item>
-              <NavDropdown.Item >IOT Integration</NavDropdown.Item>
-
-
-                </NavDropdown>
-                <NavDropdown title="Sales" id="basic-nav-dropdown">
-                <NavDropdown.Item >Order Management</NavDropdown.Item>
-              <NavDropdown.Item > Quotation Management </NavDropdown.Item>
-              <NavDropdown.Item > Returns Management </NavDropdown.Item>
-              <NavDropdown.Item > Process Management </NavDropdown.Item>
-
-                </NavDropdown>
-                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown">
-                <NavDropdown.Item >Multi-Channel  Integration</NavDropdown.Item>
-              <NavDropdown.Item >Order Management System</NavDropdown.Item>
-              <NavDropdown.Item >Pick List Generation</NavDropdown.Item>
-              <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-              <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-              <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-              <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-              <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
-
-
-
-                </NavDropdown>
-             
+            >
+             About Us 
+            </Nav.Link>
+            <NavDropdown    title={
+    <span className="dropdown-title">
+      Product <FaChevronDown className="dropdown-icon" />
+    </span>
+  } id="nav-dropdown">
+              
+              <NavDropdown.Item onClick={handleFulfillmentautomation}>
+                {" "}
+               Fulfillment Automation
+              </NavDropdown.Item>
+                
+              <NavDropdown.Item onClick={handleOrdermanagement}>
+                {" "}
+                Order Management System
+              </NavDropdown.Item>
+                 
+              <NavDropdown.Item onClick={handleWarehousemanagement}>
+                {" "}
+               Warehouse Management System
+              </NavDropdown.Item>
+                   
+              
+                   
             </NavDropdown>
-            <Nav.Link style={{color:"white"}}>Case Studies</Nav.Link>
-            <Nav.Link style={{color:"white"}}>Blog</Nav.Link>
-            <Nav.Link style={{color:"white"}}>Contact us</Nav.Link>
+           
+            
+            <NavDropdown  title={
+    <span className="dropdown-title">
+      Solutions <FaChevronDown className="dropdown-icon" />
+    </span>
+  }id="nav-dropdown-solutions">
+                <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleInbountreceipt}>Inbound Receipt</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDeconsolidation}>Deconsolidation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleQualityassurance}>Quality Assurance</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleRepackingPutaway}>Repacking & Putaway</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePickmanagement}>Pick Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDispatch}>Dispatch</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleInventorymanagement}>Inventory Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleApiintegration}>API Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleIOTIntegration}>IOT Integration</NavDropdown.Item>
+                </NavDropdown>
 
+                <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
+                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                </NavDropdown>
 
+                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
+                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                </NavDropdown>
+              </NavDropdown>
+          
+            <Nav.Link
+              className="rotate-on-hover"
+              id="nav-dropdown"
+              
+            >
+             
+            </Nav.Link>
+          
+          
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+              Case Studies
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Blog
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Contact Us
+            </Nav.Link>
           </Nav>
-        </Container>
+        
+       
+          <FontAwesomeIcon
+            icon={faSignOutAlt}
+            style={{
+              cursor: "pointer",
+              color: "white",
+              marginLeft: "10px",
+              fontSize: "24px",
+              paddingRight: "20px",
+            }}
+          />
+        </Navbar.Collapse>
       </Navbar>
      </div>
   
@@ -233,7 +330,7 @@ navigate('/crossdocking')
        
 
        <div style={{height:"100vh"}}>
-<h1  class="animated-heading">INBOUND RECEIPT</h1>
+<h1  class="animated-heading-inbount">INBOUND RECEIPT</h1>
 
 <div class="parent">
 <div className={`childone ${isChildOneVisible ? 'visible' : ''}`} ref={childOneRef}>
@@ -248,7 +345,7 @@ navigate('/crossdocking')
        </div>
 {/* -------------------------------- */}
 <div style={{ height: "100vh"  }}>
-  <h1 style={{ color: '#C33764' }} className="animated-heading">Features</h1>
+  <h1 style={{ color: '#C33764' }} className="animated-heading-inbount-features">Features</h1>
   <div className={`faqinbount ${isFaqinbountVisible ? 'visible' : ''}`} ref={faqinbount}>
     {faqData.map((faq, index) => (
       <div className="faqContainerinbount" key={index}>
@@ -275,13 +372,13 @@ navigate('/crossdocking')
           }}
         >
           <div className="answerinbount">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <div className="answerinbount-content">
               <p>{faq.answer}</p>
               {faq.image && (
                 <img
                   src={faq.image}
                   alt="FAQ related"
-                  style={{ width: "100%", maxWidth: "300px", padding: "2px", borderRadius: "10px" }}
+                  style={{ width: "50%", maxWidth: "300px", padding: "2px", borderRadius: "10px" }}
                 />
               )}
             </div>
@@ -291,20 +388,19 @@ navigate('/crossdocking')
     ))}
   </div>
 
-  <button className="button-fulfillemnt">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+  <button className="button-inbount">
+   
     Learn More
   </button>
 </div>
 
 
     {/* ----------------------------------- */}
-    <div style={{height:"100vh"}}>
-    <section class="containerinbount">
-    <h1 style={{color:"#C33764"}} class="animated-heading">Value Delivered</h1>
+   
+<div className='cardsgroup-inbount'>
+<section class="containerinbount">
+  
+<h1 style={{color:"#C33764"}} class="animated-heading">Value Delivered</h1>
 
 <div class="card__container">
 
@@ -351,7 +447,7 @@ navigate('/crossdocking')
       </div>
       <div class="card__content">
         <h5>Cost Savings</h5>
-        <p style={{fontSize:"16px"}}>The Inbound Receipt function in our WMS optimizes inventory levels, reduces holding costs, minimizes stockouts, and streamlines processes. These cost-saving measures improve cash flow and overall supply chain efficiency.</p>
+        <p className='cardcontent'>The Inbound Receipt function in our WMS optimizes inventory levels, reduces holding costs, minimizes stockouts, and streamlines processes. These cost-saving measures improve cash flow and overall supply chain efficiency.</p>
       
       </div>
     </div>
@@ -359,23 +455,28 @@ navigate('/crossdocking')
 </div>
 
 </section>
-
-    </div>
-
+</div>
 
     <div style={{height:"40vh" }}>
-  <div class="bx box-corners w-100%">
-    <div class="corner"></div>
-    <div class="corner"></div>
-    <div class="corner"></div>
-    <div class="corner"></div>
+  <div class="bx-inbount box-corners-inbount w-100%">
+    <div class="cornerinbount"></div>
+    <div class="cornerinbount"></div>
+    <div class="cornerinbount"></div>
+    <div class="cornerinbount"></div>
     
     <p>
     PURVEY WMS provides exceptional Inbound Receipt functionality within our advanced Warehouse Management System. With our state-of-the-art technology and commitment to excellence, we guarantee efficient handling, accurate tracking, and streamlined operations for your incoming goods. Partner with us to leverage the power of our WMS and experience enhanced efficiency and improved inventory management in your warehouse.
   </p>
   </div>
+  
   </div>
-  <Footer/>
+ 
+
+
+</div>
+<div className='footer-inbount'>
+<Footer/>
+</div>
         </>
   )
 }

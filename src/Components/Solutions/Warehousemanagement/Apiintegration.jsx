@@ -1,20 +1,23 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../../../Assets/nswhite.png'
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
-import './qualitycheck.css'
-import { useState,useEffect,useRef } from 'react';
-import Footer from '../../Footer';
-import qc2 from '../../../Assets/qc2.png'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import './apiintegration.css'
 import { FaChevronDown } from 'react-icons/fa'; // Example icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
     faSignOutAlt,
   } from "@fortawesome/free-solid-svg-icons";   
-function Qualitycheck () {
-
+import { Navbar, Nav, NavDropdown, Container, Collapse } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState,useEffect,useRef } from 'react';
+import Footer from '../../../Components/Footer';
+import apibanner from '../../../Assets/apibanner.jpg'
+import seemless_integration from '../../../Assets/seemless_integration.png'
+import realtimetracking from '../../../Assets/realtime_trcking.png'
+import compilance from '../../../Assets/compilance.png'
+import qc from '../../../Assets/qc.png'
+import costreduction from '../../../Assets/costreduction.jpg'
+function Apiintegration () {
   const navigate=useNavigate()
   const handleAboutus=()=>{
       navigate('/about')
@@ -65,7 +68,6 @@ const handleIOTIntegration=()=>{
 navigate('/iotintegration')
 }
 
-
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -73,24 +75,40 @@ navigate('/iotintegration')
  };
 
  const faqData = [
-    {
-     question: "Detailed Inspection Criteria",
-     answer: `The Quality Assurance feature allows you to define detailed inspection criteria for each product, including physical attributes, functional tests, packaging checks, and more. This ensures that every item undergoes thorough inspection before it is shipped, guaranteeing the highest quality and customer satisfaction.`
+   {
+     question: "Order Consolidation",
+     answer: `PURVEY WMS enables the consolidation of multiple orders into a single shipment, optimizing packing and reducing shipping costs. By efficiently grouping orders based on predefined criteria, you can streamline the dispatch process and enhance productivity.`,image:seemless_integration,
    },
    {
-     question: "Real-Time Visibility into the Quality Status",
-     answer: `With our PURVEY WMS, you gain real-time visibility into the quality status of your inventory. You can track and monitor quality checkpoints, identify potential issues, and take proactive measures to resolve them, ensuring that only compliant and high-quality products are dispatched.`
+     question: "Real-Time Inventory Tracking",
+     answer: `With our Dispatch Management feature, you gain real-time visibility into your inventory. You can track available stock, allocate items for dispatch, and ensure accurate fulfilment of customer orders, minimizing stockouts and delays.`,
+     image:realtimetracking,
    },
    {
-    question: "Generates Automated Quality Alerts",
-     answer: `PURVEY WMS generates automated quality alerts whenever a deviation or non-conformance is detected during the inspection process. This enables timely corrective actions, reducing the risk of shipping defective or substandard products and maintaining your reputation for delivering superior quality.`,
-    
+     question: "Order Prioritization",
+     answer: `PURVEY WMS intelligently prioritizes orders based on predefined rules, customer preferences, or service level agreements. This ensures that urgent or high-priority orders are dispatched promptly, enhancing customer satisfaction and loyalty.`,
+     image:qc,
    },
    {
-    question: "Seamless Integration",
-     answer: `Our Quality Assurance module seamlessly integrates with various testing equipment, such as scales, scanners, and measuring devices. This ensures accurate measurements and efficient data capture during the inspection process, reducing manual errors and improving efficiency.`,
-    
+     question: "Carrier Integration ",
+     answer: `PURVEY WMS seamlessly integrates with various carriers, enabling efficient coordination and communication. You can easily generate shipping labels, track shipments, and manage carrier-specific requirements, ensuring smooth collaboration and timely deliveries.`,
+     image:compilance,
    },
+   {
+    question: "Route Optimization",
+    answer: `Our Dispatch Management functionality includes advanced routing algorithms that optimize the selection of shipping routes. This minimizes transit time, reduces transportation costs, and improves overall delivery efficiency.`,
+    image:compilance,
+  },
+  {
+    question: "Proof Of Delivery",
+    answer: `PURVEY WMS captures proof of delivery through electronic signature capture or barcode scanning. This provides confirmation of successful deliveries and enables efficient reconciliation of shipments.`,
+    image:compilance,
+  },
+  {
+    question: "Reporting & Analytics",
+    answer: `Our WMS provides comprehensive reporting and analytics capabilities for dispatch management. You can gain insights into order processing times, delivery performance, carrier performance, and overall dispatch efficiency, empowering data-driven decision-making.`,
+    image:compilance,
+  },
  ];
 
 
@@ -104,29 +122,28 @@ navigate('/iotintegration')
 
  const faqDataagain = [
    {
-     questionagain: "Enhanced Product Quantity",
-     answeragain: `Our Quality Assurance process enables you to maintain strict quality standards for every product leaving your warehouse. By identifying and rectifying any deviations or defects, you can deliver superior quality products to your customers, enhancing their satisfaction and loyalty.`
+     questionagain: "Enhanced Order Fulfilment",
+     answeragain: `With our Dispatch Management feature, you can streamline your order fulfilment process, reducing lead times and ensuring accurate and on-time delivery. This enhances customer satisfaction and strengthens your competitive advantage.`,imageagain:costreduction,
    },
    {
-     questionagain: "Reduced Returns And Complaints",
-     answeragain: `With accurate and comprehensive quality control measures in place, you can minimize returns and customer complaints due to substandard or defective products. This saves costs associated with returns processing and improves your overall customer experience.`
+     questionagain: "Improved Inventory Control ",
+     answeragain: `Real-time inventory tracking and order allocation capabilities in PURVEY WMS enable accurate stock management. You can efficiently allocate items for dispatch, reducing stockouts and optimizing inventory levels.`,
+     imageagain:realtimetracking,
    },
    {
-    questionagain: "Complains with Regulatios and Standards",
-     answeragain: `Our WMS helps ensure compliance with industry regulations and quality standards. By implementing standardized quality assurance procedures, you can meet legal requirements, industry-specific guidelines, and customer expectations for product quality.`,
-    
+     questionagain: "Cost Optimization",
+     answeragain: `By consolidating orders and optimizing shipping routes, our Dispatch Management feature helps reduce transportation costs and improve operational efficiency. This leads to significant cost savings for your warehouse operations.`,
+     imageagain:qc,
    },
    {
     questionagain: "Increased Operational Efficiency",
-     answeragain: `Automation of the quality assurance process streamlines inspection procedures, and improves overall operational efficiency. This allows your team to focus on value-added tasks and optimize productivity.`,
-    
-   },
-   {
-    questionagain: "Enhanced Brand Reputation",
-     answeragain: `By consistently delivering high-quality products, you can strengthen your brand reputation and differentiate yourself in the market. Positive customer experiences and a reputation for quality contribute to increased customer trust and loyalty.`,
-    
-   },
-  
+    answeragain: `Automation of labelling, documentation, and routing processes minimizes manual errors, reduces administrative tasks, and enhances overall operational efficiency. Your team can focus on value-added activities, improving productivity.`,
+    imageagain:qc,
+  }, {
+    questionagain: "Customer Satisfaction and Loyalty",
+    answeragain: `Swift and accurate dispatches result in satisfied customers who receive their orders on time. This builds customer trust, encourages repeat purchases, and enhances long-term loyalty.`,
+    imageagain:qc,
+  },
  
  
  ];
@@ -184,12 +201,15 @@ navigate('/iotintegration')
 
 
 
+ const [isOpen, setIsOpen] = useState(false);
 
+  const handleToggle = () => setIsOpen(!isOpen);
 
  
   return (
     <>
      <div style={{height:"40px"}}>    
+  
      <Navbar collapseOnSelect expand="sm" variant="tabs" className="navbar" style={{fontSize:'14px',zIndex:"9999"}}>
         <Navbar.Brand href="/#/">
           <img
@@ -322,7 +342,7 @@ navigate('/iotintegration')
      </div>
   
     <div className="hero-section mt-4">
-    <h1 className="about-heading mt-3 PX-5">QUALITY ASSURANCE</h1>
+    <h1 className="about-heading mt-3 PX-5">API INTEGRATIONS</h1>
     {/* <div className="flex-container">
         <span className='subdivs'>Inbound Receipt</span>
         <span className='subdivs' onClick={handleCrossdocking}>Cross Docking</span>
@@ -346,124 +366,37 @@ navigate('/iotintegration')
 </div>
        
 
-       <div style={{height:"100vh"}} >
-<h1  class="animated-heading">QUALITY ASSURANCE</h1>
+       <div style={{height:"80vh"}}>
+<h1  class="animated-heading-apiintegration">API INTEGRATIONS</h1>
 
 <div class="parent">
 <div className={`childone ${isChildOneVisible ? 'visible' : ''}`} ref={childOneRef}>
-      <span style={{fontSize:"18px"}}>Quality Assurance process in our PURVEY Warehouse Management System (WMS) is a fully scalable and customizable function. We understand the critical importance of maintaining high-quality standards and ensuring accuracy in every shipment that leaves your warehouse. With our comprehensive Quality Assurance feature within PURVEY WMS, you can streamline your quality control process, minimize errors, and deliver superior products to your customers.
-      PURVEY WMS offers a standardized and configurable Quality Assurance process that aligns with your specific business requirements. You can define and implement consistent quality control procedures across all product categories, ensuring uniformity and adherence to quality standards.</span>
+      <span>As technology continues to evolve, businesses are seeking ways to enhance their operations, improve connectivity, and drive efficiency. API integration in PURVEY WMS allows seamless communication and data exchange between different systems, enabling you to unlock a wide range of benefits.</span>
+      <span>
+API integration bridges the gap between your WMS and other systems, such as ERP, CRM, e-commerce platforms, or third-party logistics providers. This enables real-time data synchronization and eliminates manual data entry, ensuring accurate and up-to-date information across all integrated systems. With enhanced connectivity, you can streamline processes, reduce errors, and improve overall efficiency.
+</span>
+  <span>
+  API integration provides scalability and flexibility to adapt to your changing business needs. As your business grows or diversifies, you can easily integrate new systems or applications into your WMS using APIs. This flexibility allows you to expand your capabilities, integrate with new channels, and accommodate evolving business requirements without disrupting your existing operations.</span>
   </div>
   <div className={`childtwo ${isChildTwoVisible ? 'visible' : ''}`} ref={childTwoRef}>
-        <img src={qc2} alt="" style={{height:"80vh",borderRadius:"10px"}}/>
+        <img src={apibanner} alt="" style={{height:"55vh",borderRadius:"10px",border:"5px solid black"}}/>
   </div>
 </div>
 
        </div>
-       <div style={{ height: "110vh" }}className='features-qualityassurance'>
-  <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
-  <div className="faqdeconsolidation">
-    {faqData.map((faq, index) => (
-      <div className="faqContainerdeconsolidation" key={index}>
-        <div
-          className={`faqQuestiondeconsolidation ${activeIndex === index ? "active" : ""}`}
-          onClick={() => toggleFAQ(index)}
-        >
-          <div className="faqQuestionText">
-            <h3 style={{ color: "black", fontSize: "inherit" }}>{faq.question}</h3>
-          </div>
-          <div className="iconinbountdeconsolidation">
-            <div
-              className={`icon-shape-inbount ${activeIndex === index ? "active" : ""}`}
-            ></div>
-          </div>
-        </div>
-        <div
-          className="answercontdeconsolidation"
-          style={{
-            maxHeight: activeIndex === index ? "300px" : "0",
-            overflow: "hidden",
-            transition: "max-height 0.3s ease",
-            textAlign: "justify"
-          }}
-        >
-          <div className="answerdeconsolidation">
-            <p>{faq.answer}</p>
-            {faq.image && (
-              <img
-                src={faq.image}
-                alt="FAQ related"
-              />
-            )}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
- 
-  <h1 style={{ color: '#C33764' }} className="animated-headings">Value Delivered</h1>
-  <div className="faqdeconsolidation">
-    {faqDataagain.map((faq, index) => (
-      <div className="faqContainerdeconsolidation" key={index}>
-        <div
-          className={`faqQuestionagain ${activeIndexagain === index ? "active" : ""}`}
-          onClick={() => toggleFAQagain(index)}
-        >
-          <div className="faqQuestionTextagain">
-            <h3 style={{ color: "black", fontSize: "inherit" }}>{faq.questionagain}</h3>
-          </div>
-          <div className="iconinbountagain">
-            <div
-              className={`icon-shape-inbount-again ${activeIndexagain === index ? "active" : ""}`}
-            ></div>
-          </div>
-        </div>
-        <div
-          className="answercontagain"
-          style={{
-            maxHeight: activeIndexagain === index ? "300px" : "0",
-            overflow: "hidden",
-            transition: "max-height 0.3s ease",
-            textAlign: "justify"
-          }}
-        >
-          <div className="answeragain">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-              <p>{faq.answeragain}</p>
-              {faq.imageagain && (
-                <img
-                  src={faq.imageagain}
-                  alt="FAQ related"
-                  style={{ width: "50%", maxWidth: "300px", padding: "2px", borderRadius: "10px" }}
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
-
-
-  <button className="button-fulfillemnt">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    Learn More
-  </button>
-
-</div>
+     
     {/* ----------------------------------- */}
-    
+   
+
     <div >
+ 
   </div>
     
-  <Footer/>
+ <div className='footerdiv'>
+ <Footer/>
+ </div>
         </>
   )
 }
 
-export default Qualitycheck
+export default Apiintegration

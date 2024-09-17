@@ -4,17 +4,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../../../Assets/nswhite.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
-import './qualitycheck.css'
 import { useState,useEffect,useRef } from 'react';
 import Footer from '../../Footer';
 import qc2 from '../../../Assets/qc2.png'
+import './repackingputaway.css'
 import { FaChevronDown } from 'react-icons/fa'; // Example icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faSignOutAlt,
   } from "@fortawesome/free-solid-svg-icons";   
-function Qualitycheck () {
-
+function RepackingPutaway () {
   const navigate=useNavigate()
   const handleAboutus=()=>{
       navigate('/about')
@@ -63,7 +62,7 @@ navigate('/pickmanagement')
 }
 const handleIOTIntegration=()=>{
 navigate('/iotintegration')
-}
+} 
 
 
  const [activeIndex, setActiveIndex] = useState(null);
@@ -74,21 +73,21 @@ navigate('/iotintegration')
 
  const faqData = [
     {
-     question: "Detailed Inspection Criteria",
-     answer: `The Quality Assurance feature allows you to define detailed inspection criteria for each product, including physical attributes, functional tests, packaging checks, and more. This ensures that every item undergoes thorough inspection before it is shipped, guaranteeing the highest quality and customer satisfaction.`
+     question: "Streamlining Operations and Maximizing Storage Capacity",
+     answer: `Say goodbye to wasted storage space and cumbersome searching. Our WMS software's Repacking & Put Away module utilizes intelligent algorithms to allocate the optimal storage location for repacked items. This maximizes your warehouse's storage capacity and minimizes retrieval times, streamlining your operations.`
    },
    {
-     question: "Real-Time Visibility into the Quality Status",
-     answer: `With our PURVEY WMS, you gain real-time visibility into the quality status of your inventory. You can track and monitor quality checkpoints, identify potential issues, and take proactive measures to resolve them, ensuring that only compliant and high-quality products are dispatched.`
+     question: "Organized Storage & Tracking Efficiency",
+     answer: `Take control of your storage areas with our comprehensive location management capabilities. Define and manage location hierarchies, assign specific storage areas for repacked items, and easily track the availability and capacity of each location. No more time wasted on searching for misplaced items.`
    },
    {
-    question: "Generates Automated Quality Alerts",
-     answer: `PURVEY WMS generates automated quality alerts whenever a deviation or non-conformance is detected during the inspection process. This enables timely corrective actions, reducing the risk of shipping defective or substandard products and maintaining your reputation for delivering superior quality.`,
+    question: "Intelligent Put-Away Strategies",
+     answer: `Our software offers a range of intelligent put-away strategies customized to your unique needs. Whether you prefer random put-away, zone-based storage, or dynamic slotting, our module seamlessly implements these strategies. Improve your operational efficiency by leveraging the optimal method for your warehouse.`,
     
    },
    {
-    question: "Seamless Integration",
-     answer: `Our Quality Assurance module seamlessly integrates with various testing equipment, such as scales, scanners, and measuring devices. This ensures accurate measurements and efficient data capture during the inspection process, reducing manual errors and improving efficiency.`,
+    question: "Comprehensive Tasks Assignment",
+     answer: `Empower your warehouse operators with clear instructions through our task assignment feature. Our Repacking & Put Away module generates comprehensive tasks displayed on handheld devices or management terminals. These tasks outline the repacked items to be stored and their designated locations, ensuring accuracy and productivity.`,
     
    },
  ];
@@ -104,26 +103,26 @@ navigate('/iotintegration')
 
  const faqDataagain = [
    {
-     questionagain: "Enhanced Product Quantity",
-     answeragain: `Our Quality Assurance process enables you to maintain strict quality standards for every product leaving your warehouse. By identifying and rectifying any deviations or defects, you can deliver superior quality products to your customers, enhancing their satisfaction and loyalty.`
+     questionagain: "Optimized Storage Space",
+     answeragain: `The Repacking & Put Away module helps you maximize your warehouse's storage capacity by efficiently repacking items and utilizing available space more effectively. With intelligent algorithms and storage allocation strategies, you can avoid wasted space and ensure optimal utilization of every inch of your warehouse.`
    },
    {
-     questionagain: "Reduced Returns And Complaints",
-     answeragain: `With accurate and comprehensive quality control measures in place, you can minimize returns and customer complaints due to substandard or defective products. This saves costs associated with returns processing and improves your overall customer experience.`
+     questionagain: "Improved Inventory Accuracy",
+     answeragain: `By accurately repacking items and updating packaging information within the WMS software, you can maintain precise inventory records. This reduces the risk of discrepancies, improves inventory accuracy, and enables seamless order fulfilment. Real-time updates ensure that your inventory information remains up to date at all times.`
    },
    {
-    questionagain: "Complains with Regulatios and Standards",
-     answeragain: `Our WMS helps ensure compliance with industry regulations and quality standards. By implementing standardized quality assurance procedures, you can meet legal requirements, industry-specific guidelines, and customer expectations for product quality.`,
+    questionagain: "Enhanced Operational Efficiency",
+     answeragain: `The module streamlines the repacking and put-away processes, reducing manual effort and minimizing errors. With clear instructions and tasks assigned to warehouse operators, you can achieve faster and more accurate handling of repacked items. This results in increased operational efficiency and overall productivity.`,
     
    },
    {
-    questionagain: "Increased Operational Efficiency",
-     answeragain: `Automation of the quality assurance process streamlines inspection procedures, and improves overall operational efficiency. This allows your team to focus on value-added tasks and optimize productivity.`,
+    questionagain: "Faster Order Fulfillment",
+     answeragain: `With optimized storage allocation and streamlined processes, locating and retrieving repacked items becomes quicker and easier. Warehouse operators can efficiently access the right items in designated locations, enabling faster order fulfilment and ensuring customer satisfaction with prompt deliveries.`,
     
    },
    {
-    questionagain: "Enhanced Brand Reputation",
-     answeragain: `By consistently delivering high-quality products, you can strengthen your brand reputation and differentiate yourself in the market. Positive customer experiences and a reputation for quality contribute to increased customer trust and loyalty.`,
+    questionagain: "Increased Flexibility",
+     answeragain: `Repacking & Put Away in WMS provides the flexibility to break down or combine products as needed, allowing you to adapt to changing customer demands and market trends. This flexibility enables you to efficiently manage product variations, bundle products for promotions, or customize orders based on customer preferences.`,
     
    },
   
@@ -322,7 +321,7 @@ navigate('/iotintegration')
      </div>
   
     <div className="hero-section mt-4">
-    <h1 className="about-heading mt-3 PX-5">QUALITY ASSURANCE</h1>
+    <h1 className="about-heading mt-3 PX-5">Repacking & Putaway</h1>
     {/* <div className="flex-container">
         <span className='subdivs'>Inbound Receipt</span>
         <span className='subdivs' onClick={handleCrossdocking}>Cross Docking</span>
@@ -346,13 +345,13 @@ navigate('/iotintegration')
 </div>
        
 
-       <div style={{height:"100vh"}} >
-<h1  class="animated-heading">QUALITY ASSURANCE</h1>
+       <div style={{height:"100vh"}}>
+<h1  class="animated-heading">Repacking & Putaway</h1>
 
 <div class="parent">
 <div className={`childone ${isChildOneVisible ? 'visible' : ''}`} ref={childOneRef}>
-      <span style={{fontSize:"18px"}}>Quality Assurance process in our PURVEY Warehouse Management System (WMS) is a fully scalable and customizable function. We understand the critical importance of maintaining high-quality standards and ensuring accuracy in every shipment that leaves your warehouse. With our comprehensive Quality Assurance feature within PURVEY WMS, you can streamline your quality control process, minimize errors, and deliver superior products to your customers.
-      PURVEY WMS offers a standardized and configurable Quality Assurance process that aligns with your specific business requirements. You can define and implement consistent quality control procedures across all product categories, ensuring uniformity and adherence to quality standards.</span>
+      <span style={{fontSize:"18px"}}>Our cutting-edge PURVEY Warehouse Management System introduces a powerful Repacking & Put Away module designed to optimize your warehouse operations. With our advanced features and user-friendly interface, you can revolutionize your repacking and storage processes for enhanced efficiency and productivity.
+      Our Repacking & Put Away module simplifies the repacking process by providing intuitive tools to manage and track repackaged items. Seamlessly break down or combine products, update packaging information, and maintain accurate inventory records. This ensures precision in order fulfilment and inventory management.</span>
   </div>
   <div className={`childtwo ${isChildTwoVisible ? 'visible' : ''}`} ref={childTwoRef}>
         <img src={qc2} alt="" style={{height:"80vh",borderRadius:"10px"}}/>
@@ -360,7 +359,7 @@ navigate('/iotintegration')
 </div>
 
        </div>
-       <div style={{ height: "110vh" }}className='features-qualityassurance'>
+       <div style={{ height: "110vh" }} className='fetauresdiv-repackingputaway'>
   <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
   <div className="faqdeconsolidation">
     {faqData.map((faq, index) => (
@@ -454,16 +453,28 @@ navigate('/iotintegration')
     <span></span>
     Learn More
   </button>
-
-</div>
-    {/* ----------------------------------- */}
+  <div class="bx-repackingputaway box-corners-repackingputaway w-100%">
+    <div class="cornerrepackingputaway"></div>
+    <div class="cornerrepackingputaway"></div>
+    <div class="cornerrepackingputaway"></div>
+    <div class="cornerrepackingputaway"></div>
     
-    <div >
+    <p style={{fontSize:"16px"}}>
+    Transform your warehouse into a well-oiled machine with our state-of-the-art Repacking & Put Away module. Experience the benefits of optimized storage space, efficient repacking processes, and increased operational productivity.
+  </p>
   </div>
-    
+</div>
+
+
+    {/* ----------------------------------- */}
+   
+
+   
+  <div className='footer-repacking'>
   <Footer/>
+  </div>
         </>
   )
 }
 
-export default Qualitycheck
+export default RepackingPutaway

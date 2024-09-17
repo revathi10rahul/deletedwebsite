@@ -1,6 +1,6 @@
 
 import './App.css';
-import Homepage from './Components/Homepage';
+// import Homepage from './Components/Homepage';
   import {HashRouter,Routes,Route} from 'react-router-dom'
 import Homepageagain from './Components/Homepageagain';
 import Aboutpage from './Components/Aboutpage';
@@ -12,6 +12,11 @@ import Inboundreceipt from './Components/Solutions/Warehousemanagement/Inboundre
 import Crossdocking from './Components/Solutions/Warehousemanagement/Crossdocking';
 import Deconsolidation from './Components/Solutions/Warehousemanagement/Deconsolidation'
 import Qualitycheck from './Components/Solutions/Warehousemanagement/Qualitycheck';
+import RepackingPutaway from './Components/Solutions/Warehousemanagement/RepackingPutaway';
+import Pickmanagement from './Components/Solutions/Warehousemanagement/Pickmanagement';
+import Dispatch from './Components/Solutions/Warehousemanagement/Dispatch';
+import Inventorymanagement from './Components/Solutions/Warehousemanagement/Inventorymanagement';
+import Apiintegration from './Components/Solutions/Warehousemanagement/Apiintegration';
 
 function App() {
   return (
@@ -24,11 +29,16 @@ function App() {
     <Route path='/' element={<Newdesign/>}/>
     <Route path='/fulfillmentautomation' element={<Fulfillmentautomation/>}/>
     <Route path='ordermanagement' element={<Ordermanagement/>}/>
-    <Route path='/warehousemanagementsystem' element={<Warehousemanagementsystem/>}/>
+    <Route path='/warehousemanagement' element={<Warehousemanagementsystem/>}/>
     <Route path='/inboundreceipt' element={<Inboundreceipt/>}/>
     <Route path='/crossdocking' element={<Crossdocking/>}/>
     <Route path='/deconsolidation' element={<Deconsolidation/>}/>
     <Route path='/qualitycheck' element={<Qualitycheck/>}/>
+    <Route path='/repackingputaway' element={<RepackingPutaway/>}/>
+    <Route path='/pickmanagement' element={<Pickmanagement/>}/>
+    <Route path='/dispatch' element={<Dispatch/>}/>
+    <Route path='/inventorymanagement' element={<Inventorymanagement/>}/>
+    <Route path='/apiintegration' element={<Apiintegration/>}/>
    </Routes>
     </div>
     </HashRouter>

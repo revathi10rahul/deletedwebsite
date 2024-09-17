@@ -1,5 +1,10 @@
 import React from 'react'
 import './newdesign.css'
+import { FaChevronDown } from 'react-icons/fa'; // Example icon
+
+import {
+    faSignOutAlt,
+  } from "@fortawesome/free-solid-svg-icons";   
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,7 +53,7 @@ const handleOrdermanagement=()=>{
 navigate('/ordermanagement')
 }
 const handleWarehousemanagement=()=>{
-navigate('/warehousemanagementsystem')
+navigate('/warehousemanagement')
 }
 const handleInbountreceipt=()=>{
 navigate('/inboundreceipt')
@@ -56,7 +61,32 @@ navigate('/inboundreceipt')
 const handleCrossdocking=()=>{
 navigate('/crossdocking')
 }
+const handleDeconsolidation=()=>{
+navigate('/deconsolidation')
+}
+const handleDispatch =()=>{
+  navigate('/dispatch')
+}
 
+const handleInventorymanagement=()=>{
+navigate('/inventorymanagement')
+}
+
+const handleApiintegration=()=>{
+navigate('/apiintegration')
+}
+const handleQualityassurance=()=>{
+navigate('/qualitycheck')
+}
+const handleRepackingPutaway=()=>{
+navigate('/repackingputaway')
+}
+const handlePickmanagement=()=>{
+navigate('/pickmanagement')
+}
+const handleIOTIntegration=()=>{
+navigate('/iotintegration')
+}
 
 const imagesAndTexts = [
   {
@@ -129,74 +159,134 @@ const scrollRight = () => {
   return (
     <>
      <div style={{height:"40px"}}>
-     <Navbar  className='text-white bg-secondary'  >
-        <Container>
-        <Navbar.Brand href="#home">
-  <img src={nswhite} alt="" style={{height:"60px"}} />
-</Navbar.Brand>
-          <Nav className="me-right color-white ">
-            <Nav.Link style={{color:"white"}} onClick={handleHome}>Home</Nav.Link>
-            <Nav.Link style={{color:"white"}} onClick={handleAboutus}>About Us </Nav.Link>
-          
-                 <NavDropdown
-  id="nav-dropdown"
-  title={
-    <span style={{ color: 'white' }}>
-      Products 
-    </span>
-  }
-  className="custom-nav-dropdown"
->
-  <NavDropdown.Item onClick={handleFulfillmentautomation}>Fullfillment Automation</NavDropdown.Item>
-  <NavDropdown.Item onClick={handleOrdermanagement}>Order Management System</NavDropdown.Item>
-  <NavDropdown.Item  onClick={handleWarehousemanagement}>Warehouse Management System</NavDropdown.Item>
-</NavDropdown>
+     <Navbar collapseOnSelect expand="sm" variant="tabs" className="navbar" style={{fontSize:'14px',zIndex:"9999"}}>
+        <Navbar.Brand href="/#/">
+          <img
+            src={nswhite}
+            alt="logo"
+            style={{ width: "108px", height: "40px" }}
+          />
+        </Navbar.Brand>
 
-
-  <NavDropdown title={<span style={{ color: 'white' }}>Solutions </span>} id="nav-dropdown-about-us">
-  <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={handleInbountreceipt}>Inbount Receipt</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link
+              style={{ color: "white" }}
+              onClick={handleHome}
+            >
+             Home 
+            </Nav.Link>
+            <Nav.Link onClick={handleAboutus}
+              style={{ color: "white" }}
               
-              <NavDropdown.Item >Quality Assurance</NavDropdown.Item>
-              <NavDropdown.Item >Repacking & Putaway</NavDropdown.Item>
-              <NavDropdown.Item >Pick Management</NavDropdown.Item>
-              <NavDropdown.Item >Dispatch</NavDropdown.Item>
-              <NavDropdown.Item >Inventory Management</NavDropdown.Item>
-              <NavDropdown.Item >API Integration</NavDropdown.Item>
-              <NavDropdown.Item >IOT Integration</NavDropdown.Item>
-
-
-                </NavDropdown>
-                <NavDropdown title="Sales" id="basic-nav-dropdown">
-                <NavDropdown.Item >Order Management</NavDropdown.Item>
-              <NavDropdown.Item > Quotation Management </NavDropdown.Item>
-              <NavDropdown.Item > Returns Management </NavDropdown.Item>
-              <NavDropdown.Item > Process Management </NavDropdown.Item>
-
-                </NavDropdown>
-                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown">
-                <NavDropdown.Item >Multi-Channel  Integration</NavDropdown.Item>
-              <NavDropdown.Item >Order Management System</NavDropdown.Item>
-              <NavDropdown.Item >Pick List Generation</NavDropdown.Item>
-              <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-              <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-              <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-              <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-              <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
-
-
-
-                </NavDropdown>
-             
+            >
+             About Us 
+            </Nav.Link>
+            <NavDropdown    title={
+    <span className="dropdown-title">
+      Product <FaChevronDown className="dropdown-icon" />
+    </span>
+  } id="nav-dropdown">
+              
+              <NavDropdown.Item onClick={handleFulfillmentautomation}>
+                {" "}
+               Fulfillment Automation
+              </NavDropdown.Item>
+                
+              <NavDropdown.Item onClick={handleOrdermanagement}>
+                {" "}
+                Order Management System
+              </NavDropdown.Item>
+                 
+              <NavDropdown.Item onClick={handleWarehousemanagement}>
+                {" "}
+               Warehouse Management System
+              </NavDropdown.Item>
+                   
+              
+                   
             </NavDropdown>
-            <Nav.Link style={{color:"white"}}>Case Studies</Nav.Link>
-            <Nav.Link style={{color:"white"}}>Blog</Nav.Link>
-            <Nav.Link style={{color:"white"}}>Contact us</Nav.Link>
+           
+            
+            <NavDropdown  title={
+    <span className="dropdown-title">
+      Solutions <FaChevronDown className="dropdown-icon" />
+    </span>
+  }id="nav-dropdown-solutions">
+                <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleInbountreceipt}>Inbound Receipt</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDeconsolidation}>Deconsolidation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleQualityassurance}>Quality Assurance</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleRepackingPutaway}>Repacking & Putaway</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePickmanagement}>Pick Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDispatch}>Dispatch</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleInventorymanagement}>Inventory Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleApiintegration}>API Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleIOTIntegration}>IOT Integration</NavDropdown.Item>
+                </NavDropdown>
 
+                <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
+                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                </NavDropdown>
 
+                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
+                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                </NavDropdown>
+              </NavDropdown>
+          
+            <Nav.Link
+              className="rotate-on-hover"
+              id="nav-dropdown"
+              
+            >
+             
+            </Nav.Link>
+          
+          
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+              Case Studies
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Blog
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Contact Us
+            </Nav.Link>
           </Nav>
-        </Container>
+        
+       
+          <FontAwesomeIcon
+            icon={faSignOutAlt}
+            style={{
+              cursor: "pointer",
+              color: "white",
+              marginLeft: "10px",
+              fontSize: "24px",
+              paddingRight: "20px",
+            }}
+          />
+        </Navbar.Collapse>
       </Navbar>
      </div>
   
@@ -219,11 +309,11 @@ const scrollRight = () => {
 
   
     </Col>
-    <Col lg={6}>
-        <div style={{ marginTop: '100px', width: '100%', padding: '30px', marginLeft: '100px' }}>
-          <h1 style={{ color: 'white', fontSize: '4rem' }}>{title}</h1>
+    <Col lg={6} className='main-heading-homepage'>
+        <div  className='heading-homepage'>
+          <h1  className='h1-homepage'>{title}</h1>
           <h4 style={{ color: 'white', }}>{subtitle}</h4>
-          <b style={{ color: 'white' }}>{description}</b>
+          <b style={{ color: 'white'}} className='bold-heading'>{description}</b>
         </div>
       </Col>
   </Row>
@@ -247,7 +337,7 @@ AI-Driven Inventory Management: Automate inventory tracking, replenishment, ensu
 <p>Intelligent Warehouse Optimization: Optimize your warehouse layout, picking routes, and storage allocation for improved efficiency and reduced labour costs.</p>
 </div>
 <div className='homeage-second-div rotating-gradient-container' >
-<img src={WH} alt="" style={{height:"450px",marginTop:"-120px",border:"10px solid transparent",padding:"20px",borderRadius:"10px"}} />
+<img src={WH} alt=""className='wh-image-homepage'/>
 </div>
 <div className='homepage-third-div'>
 <p>Real-Time Analytics: Gain actionable insights with advanced analytics and reporting, enabling data-driven decision-making for continuous improvement.</p>
@@ -262,8 +352,8 @@ AI-Driven Inventory Management: Automate inventory tracking, replenishment, ensu
 
 {/* ------------------------------------------------------- */}
 
-<div style={{height:"60vh"}}>
-<h1>Cutting - Edge AI Technology </h1>          
+<div style={{height:"100vh"}}>
+<h1 className='cuttingedge-heading'>Cutting - Edge AI Technology </h1>          
           <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><hr style={{width:"300px"}}/></div>
             
      
@@ -288,8 +378,8 @@ Partner with us to unlock the full potential of your warehouse operations and ga
 
 
 <div>
-  <h1>ON CLOUD</h1>
-<div className="d-flex" style={{ height: "calc(100vh - 120px)" }}> {/* Adjust height to fit the content */}
+  <h1 className='oncloud-heading'>ON CLOUD</h1>
+<div className="heading-fulfillment"> {/* Adjust height to fit the content */}
     <div style={{ flex: 1, padding: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
       <img src={oncloud} alt="work" style={{ width: "100%", height: "70vh", maxHeight: "100%",borderRadius:"10px" }} />
     </div>
@@ -323,9 +413,9 @@ Embrace the future of business operations with "On Cloud" - a revolutionary plat
         <div>
        
         <div className="outterContainer">
-      <h1 style={{color:"#C33764"}}>Industries We Serve</h1>
+      <h1 style={{color:"#C33764"}} className='industries-heading'>Industries We Serve</h1>
 
-      {/* Left Arrow Icon */}
+    
 
       <div className="containerss" ref={containerRef}>
         {carData.map(car => (
@@ -338,15 +428,11 @@ Embrace the future of business operations with "On Cloud" - a revolutionary plat
         ))}
       </div>
 
-      {/* Right Arrow Icon */}
-      {/* <div style={{display:"flex",justifyContent:"center",allignItems:"center"}}>
-      <FontAwesomeIcon icon={faArrowLeft} onClick={scrollLeft} style={{ cursor: 'pointer', fontSize: '3rem',padding:"10px" ,color:"#C33764"}} />
-      <FontAwesomeIcon icon={faArrowRight} onClick={scrollRight} style={{ cursor: 'pointer', fontSize: '3rem',padding:"10px",color:"#C33764"   }} />
-   
-      </div> */}
+     
        </div>
 
         </div>
+        <Footer/>
     </div>
 
 
@@ -354,9 +440,7 @@ Embrace the future of business operations with "On Cloud" - a revolutionary plat
 
 
 
-<div style={{height:"50vh"}}>
-  <Footer/>
-</div>
+
     </>
   );
 }

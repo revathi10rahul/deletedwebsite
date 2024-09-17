@@ -1,0 +1,130 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #6c757d;
+      color: white;
+}
+
+.navbar .navbar-brand img {
+  height: 60px;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on smaller screens */
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links .nav-link {
+  color: white;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+.dropdown-title {
+  color: white;
+}
+
+.dropdown-icon {
+  color: white; /* Change the icon color to white */
+  margin-left: 5px; /* Optional: Add some space between the title and icon */
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: block; /* Show the menu in mobile view */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show the links when active */
+  }
+}
+
+
+
+  /* ---------------------- */
+  
+    
+  .bx-pickmanagement {
+    margin: 1em auto; padding: 1em 2em;
+    border: solid 12px #C33764; 
+    display: inline-block; 
+    position: relative; 
+    font-size: 18px;  
+    max-width: 880px;
+  }
+  
+  
+  .box-corners-pickmanagement .corner-pickmanagement { 
+    position: absolute; 
+    top: -21px; left: -21px; width: 40px; height: 40px; 
+    background: white; 
+    border: solid 1px #004658; border-radius: 50%; 
+    border-color: white white black white; 
+    transform: rotate(-45deg) 
+    
+  }
+  
+  .box-corners-pickmanagement .corner-pickmanagement:nth-child(2) { 
+    left: auto; right: -21px; 
+    border-color: white white white black; 
+  }
+  .box-corners-pickmanagement .corner-pickmanagement:nth-child(3) { 
+    left: auto; right: -21px; top: auto; bottom: -21px; 
+    border-color: black white white white; 
+  }
+  .box-corners-pickmanagement .corner-pickmanagement:nth-child(4) { 
+    top: auto; bottom: -21px; 
+    border-color: white black white white; 
+  }
+  
+    /* Define the animation for the corner borders */
+    @keyframes cornerBorderAnimation {
+      0% {
+        border-color: #004658; /* Initial corner border color */
+      }
+      50% {
+        border-color: #ce2b0f; /* Change to a different color halfway */
+      }
+      100% {
+        border-color: #004658; /* Return to the initial corner border color */
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .bx-pickmanagement {
+        font-size: 16px; /* Adjust the font size for mobile */
+      }
+    
+      .box-corners-pickmanagement .corner-pickmanagement {
+        width: 20px; /* Further reduce the size for mobile */
+        height: 20px; /* Further reduce the size for mobile */
+        top: -16px; /* Adjust the position for mobile */
+        left: -16px; /* Adjust the position for mobile */
+      }
+    
+      .box-corners-pickmanagement .corner-pickmanagement:nth-child(2) {
+        right: -16px; /* Adjust the position for mobile */
+      }
+      .box-corners-pickmanagement .corner-pickmanagement:nth-child(3) {
+        right: -16px; /* Adjust the position for mobile */
+        bottom: -16px; /* Adjust the position for mobile */
+      }
+      .box-corners-pickmanagement .corner-pickmanagement:nth-child(4) {
+        bottom: -16px; /* Adjust the position for mobile */
+      }
+    }

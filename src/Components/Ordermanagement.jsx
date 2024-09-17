@@ -5,100 +5,196 @@ import nswhite from "../Assets/nswhite.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router-dom";
 import "./ordermanagement.css";
-
+import { FaChevronDown } from 'react-icons/fa'; // Example icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faSignOutAlt,
+  } from "@fortawesome/free-solid-svg-icons";   
 import aporasec3 from "../Assets/aporasec3.jpg";
 import Card from "react-bootstrap/Card";
 import Footer from "./Footer";
 function Ordermanagement() {
   const navigate=useNavigate()
-  const handleAboutus=()=>{
-      navigate('/about')
-  }
-  const handleHome=()=>{
-      navigate('/')
-  }
+    const handleAboutus=()=>{
+        navigate('/about')
+    }
+    const handleHome=()=>{
+        navigate('/')
+    }
 const handleFulfillmentautomation=()=>{
-navigate('/fulfillmentautomation')
+  navigate('/fulfillmentautomation')
 }
 
 const handleOrdermanagement=()=>{
-navigate('/ordermanagement')
+  navigate('/ordermanagement')
 }
 const handleWarehousemanagement=()=>{
-navigate('/warehousemanagementsystem')
+  navigate('/warehousemanagement')
 }
 const handleInbountreceipt=()=>{
-navigate('/inboundreceipt')
+  navigate('/inboundreceipt')
 }
 const handleCrossdocking=()=>{
-navigate('/crossdocking')
+  navigate('/crossdocking')
+}
+const handleDeconsolidation=()=>{
+  navigate('/deconsolidation')
+}
+const handleDispatch =()=>{
+    navigate('/dispatch')
+}
+
+const handleInventorymanagement=()=>{
+  navigate('/inventorymanagement')
+}
+
+const handleApiintegration=()=>{
+  navigate('/apiintegration')
+}
+const handleQualityassurance=()=>{
+  navigate('/qualitycheck')
+}
+const handleRepackingPutaway=()=>{
+  navigate('/repackingputaway')
+}
+const handlePickmanagement=()=>{
+  navigate('/pickmanagement')
+}
+const handleIOTIntegration=()=>{
+  navigate('/iotintegration')
 }
   return (
     <>
       <div style={{ height: "40px" }}>
-      <Navbar  className='text-white bg-secondary'  >
-        <Container>
-        <Navbar.Brand href="#home">
-  <img src={nswhite} alt="" style={{height:"60px"}} />
-</Navbar.Brand>
-          <Nav className="me-right color-white ">
-            <Nav.Link style={{color:"white"}} onClick={handleHome}>Home</Nav.Link>
-            <Nav.Link style={{color:"white"}} onClick={handleAboutus}>About Us </Nav.Link>
-          
-                 <NavDropdown
-  id="nav-dropdown"
-  title={
-    <span style={{ color: 'white' }}>
-      Products 
+      <Navbar collapseOnSelect expand="sm" variant="tabs" className="navbar" style={{fontSize:'14px',zIndex:"9999"}}>
+        <Navbar.Brand href="/#/">
+          <img
+            src={nswhite}
+            alt="logo"
+            style={{ width: "108px", height: "40px" }}
+          />
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link
+              style={{ color: "white" }}
+              onClick={handleHome}
+            >
+             Home 
+            </Nav.Link>
+            <Nav.Link onClick={handleAboutus}
+              style={{ color: "white" }}
+              
+            >
+             About Us 
+            </Nav.Link>
+            <NavDropdown    title={
+    <span className="dropdown-title">
+      Product <FaChevronDown className="dropdown-icon" />
     </span>
-  }
-  className="custom-nav-dropdown"
->
-  <NavDropdown.Item onClick={handleFulfillmentautomation}>Fullfillment Automation</NavDropdown.Item>
-  <NavDropdown.Item onClick={handleOrdermanagement}>Order Management System</NavDropdown.Item>
-  <NavDropdown.Item  onClick={handleWarehousemanagement}>Warehouse Management System</NavDropdown.Item>
-</NavDropdown>
-
-
-  <NavDropdown title={<span style={{ color: 'white' }}>Solutions </span>} id="nav-dropdown-about-us">
-  <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={handleInbountreceipt}>Inbount Receipt</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
-              <NavDropdown.Item>Deconsolidation</NavDropdown.Item>
-                  <NavDropdown.Item>Quality Assurance</NavDropdown.Item>
-                  <NavDropdown.Item>Repacking & Putaway</NavDropdown.Item>
-                  <NavDropdown.Item>Pick Management</NavDropdown.Item>
-                  <NavDropdown.Item>Dispatch</NavDropdown.Item>
-                  <NavDropdown.Item>Inventory Management</NavDropdown.Item>
-                  <NavDropdown.Item>API Integration</NavDropdown.Item>
-                  <NavDropdown.Item>IOT Integration</NavDropdown.Item>
+  } id="nav-dropdown">
+              
+              <NavDropdown.Item onClick={handleFulfillmentautomation}>
+                {" "}
+               Fulfillment Automation
+              </NavDropdown.Item>
+                
+              <NavDropdown.Item onClick={handleOrdermanagement}>
+                {" "}
+                Order Management System
+              </NavDropdown.Item>
+                 
+              <NavDropdown.Item onClick={handleWarehousemanagement}>
+                {" "}
+               Warehouse Management System
+              </NavDropdown.Item>
+                   
+              
+                   
+            </NavDropdown>
+           
+            
+            <NavDropdown  title={
+    <span className="dropdown-title">
+      Solutions <FaChevronDown className="dropdown-icon" />
+    </span>
+  }id="nav-dropdown-solutions">
+                <NavDropdown title="Warehouse Management" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleInbountreceipt}>Inbound Receipt</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleCrossdocking}>Cross Docking</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDeconsolidation}>Deconsolidation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleQualityassurance}>Quality Assurance</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleRepackingPutaway}>Repacking & Putaway</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePickmanagement}>Pick Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleDispatch}>Dispatch</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleInventorymanagement}>Inventory Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleApiintegration}>API Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleIOTIntegration}>IOT Integration</NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Sales" id="basic-nav-dropdown">
-                  <NavDropdown.Item>Order Management</NavDropdown.Item>
-                  <NavDropdown.Item> Quotation Management </NavDropdown.Item>
-                  <NavDropdown.Item> Returns Management </NavDropdown.Item>
-                  <NavDropdown.Item> Process Management </NavDropdown.Item>
+
+                <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
+                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown
-                  title="AI Powered Multi-Channel Fulfillment"
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown.Item>Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item>Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item>Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item>Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item>Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item>Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item>E-Commerce Integration</NavDropdown.Item>
+
+                <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
+                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
-              <Nav.Link style={{ color: "white" }}>Case Studies</Nav.Link>
-              <Nav.Link style={{ color: "white" }}>Blog</Nav.Link>
-              <Nav.Link style={{ color: "white" }}>Contact us</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
+          
+            <Nav.Link
+              className="rotate-on-hover"
+              id="nav-dropdown"
+              
+            >
+             
+            </Nav.Link>
+          
+          
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+              Case Studies
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Blog
+            </Nav.Link>
+            <Nav.Link
+              style={{ color: "white" }}
+              
+            >
+             Contact Us
+            </Nav.Link>
+          </Nav>
+        
+       
+          <FontAwesomeIcon
+            icon={faSignOutAlt}
+            style={{
+              cursor: "pointer",
+              color: "white",
+              marginLeft: "10px",
+              fontSize: "24px",
+              paddingRight: "20px",
+            }}
+          />
+        </Navbar.Collapse>
+      </Navbar>
       </div>
 
 
@@ -124,36 +220,18 @@ navigate('/crossdocking')
         {/* ------------third-------------- */}
         <div style={{ height: "100vh" }}>
           <h1 className="p-1">Purvey OMS- Order Management System</h1>
-          <div className="d-flex" style={{ height: "calc(100vh - 120px)" }}>
+          <div className="main-div-ordermanagement" >
             <div
-              style={{
-                flex: 1,
-                padding: "20px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              className="image-div-ordermanagement"
             >
               <img
                 src={aporasec3}
                 alt="work"
-                style={{
-                  width: "100%",
-                  height: "70vh",
-                  maxHeight: "100%",
-                  borderRadius: "10px",
-                }}
+                className="aporasec3"
               />
             </div>
             <div
-              style={{
-                flex: 1,
-                padding: "20px",
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "column",
-                marginTop: "66px",
-              }}
+              className="text-div-ordermanagement"
             >
               <div style={{ display: "block", textAlign: "center" }}>
                 <p className="content-fulfillment">
@@ -178,25 +256,25 @@ navigate('/crossdocking')
 
         {/* ----------------------------------------------- */}
         <div style={{ height: "100vh" }}>
-          <h1 >FEATURES</h1>
+          <h1 className="features-ordermanagement">FEATURES</h1>
 
-          <div style={{ display: "flex" }} className="mt-5">
-          <Card className="animated-border" style={{ width: "30%", marginLeft: "70px", height: "auto" }}>
-  <Card.Body>
+          <div  className="features-order-div  mt-5">
+          <Card className="card-orderdiv-first" >
+  <Card.Body className="cardbody-ordermanagement">
     <Card.Title style={{ color: "#C33764" }}>
       <b>Mobile Order Management</b>
     </Card.Title>
-    <Card.Text style={{ fontSize: "20px", textAlign: "justify" }}>
+    <Card.Text className="cardtext-ordermanagement">
       Purvey OMS enables your field representatives to manage orders on the go. With our intuitive mobile app, your team can create, track, and update orders directly from their smartphones or tablets. Say goodbye to paper-based processes and embrace digital order management for enhanced speed and accuracy.
     </Card.Text>
   </Card.Body>
 </Card>
-            <Card style={{ width: "30%", marginLeft: "20px",height:"auto" }}>
+            <Card className="card-orderdiv-first">
               <Card.Body>
                 <Card.Title style={{ color: "#C33764" }}>
                  <b>Inventory Management</b> 
                 </Card.Title>
-                <Card.Text style={{ fontSize: "20px",textAlign:"justify" }}>
+                <Card.Text className="cardtext-ordermanagement">
                   Keep track of your inventory in real-time, even when it's in
                   the hands of your field team. Purvey OMS provides visibility
                   into available stock levels, allowing your representatives to
@@ -206,12 +284,12 @@ navigate('/crossdocking')
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card style={{ width: "30%", marginLeft: "20px",height:"auto" }}>
+            <Card className="card-orderdiv-first">
               <Card.Body>
                 <Card.Title >
                  <b style={{ color: "#C33764" }}> Real Time Order Tracking</b>
                 </Card.Title>
-                <Card.Text style={{ fontSize: "20px",textAlign:"justify" }}>
+                <Card.Text className="cardtext-ordermanagement">
                   Gain real-time visibility into the status of your orders.
                   Purvey OMS provides you with instant updates on order
                   progress, enabling you to monitor each stage from creation to
@@ -223,13 +301,13 @@ navigate('/crossdocking')
             </Card>
           </div>
 
-          <div style={{ display: "flex" }} className="mt-3">
-            <Card style={{ width: "30%", marginLeft: "70px",height:"auto" }}>
+          <div  className="features-order-div mt-3">
+            <Card className="cardtext-ordermanagement-seconddiv">
               <Card.Body>
                 <Card.Title style={{ color: "#C33764" }}>
                  <b> Digital Documentation</b>
                 </Card.Title>
-                <Card.Text style={{ fontSize: "20px" ,textAlign:"justify"}}>
+                <Card.Text className="cardtext-ordermanagement">
                   Simplify paperwork and documentation processes with Purvey
                   OMS's digital capabilities. Your field representatives can
                   capture electronic signatures, take photos, and attach
@@ -239,12 +317,12 @@ navigate('/crossdocking')
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card style={{ width: "30%", marginLeft: "20px",height:"auto" }}>
+            <Card  className="cardtext-ordermanagement-seconddiv">
               <Card.Body>
                 <Card.Title style={{ color: "#C33764" }}>
                  <b> Integration Capabilities</b>
                 </Card.Title>
-                <Card.Text style={{ fontSize: "20px",textAlign:"justify" }}>
+                <Card.Text className="cardtext-ordermanagement">
                   Purvey OMS seamlessly integrates with your existing systems,
                   such as CRM and ERP, for smooth data synchronization. This
                   integration eliminates manual data entry and ensures
@@ -254,12 +332,12 @@ navigate('/crossdocking')
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card style={{ width: "30%", marginLeft: "20px",height:"auto" }}>
+            <Card className="cardtext-ordermanagement-seconddiv">
               <Card.Body>
                 <Card.Title style={{ color: "#C33764" }}>
                   <b>Scalability and Flexibility</b>
                 </Card.Title>
-                <Card.Text style={{ fontSize: "20px",textAlign:"justify"}}>
+                <Card.Text className="cardtext-ordermanagement">
                   Purvey Field is designed to scale with your business needs.
                   Whether you have a small field team or a large fleet of
                   representatives, our software can adapt to accommodate your
@@ -272,10 +350,11 @@ navigate('/crossdocking')
           </div>
           <div></div>
         </div>
-        <Footer/>
+      
       </div>
-
-   
+<div className="footer-ordermanagement">
+<Footer/>
+</div>
     </>
   );
 }
