@@ -61,6 +61,16 @@ navigate('/pickmanagement')
 const handleIOTIntegration=()=>{
 navigate('/iotintegration')
 }
+
+const handleMultichannel=()=>{
+  navigate('/multichannelintegration')
+}
+const handleOrderprocessing=()=>{
+  navigate('/orderprocessing')
+}
+const handlePicklistgen=()=>{
+  navigate('/picklistgeneration')
+}
   return (
     <>
      <div style={{height:"40px"}}>
@@ -133,21 +143,21 @@ navigate('/iotintegration')
                 </NavDropdown>
 
                 <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
-                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                  <NavDropdown.Item >Order Management</NavDropdown.Item>
+                  <NavDropdown.Item >Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item >Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item >Process Management</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
-                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -181,21 +191,12 @@ navigate('/iotintegration')
           </Nav>
         
        
-          <FontAwesomeIcon
-            icon={faSignOutAlt}
-            style={{
-              cursor: "pointer",
-              color: "white",
-              marginLeft: "10px",
-              fontSize: "24px",
-              paddingRight: "20px",
-            }}
-          />
+         
         </Navbar.Collapse>
       </Navbar>
      </div>
   
-     <div className="hero-section mt-4">
+     <div className="hero-section-aboutpage mt-4">
           <h1 className="about-heading mt-3">WE HAVE BEEN AROUND</h1>
           <h3 className="about-heading2 mt-3">FOR A DECADE PLUS</h3>
           <div style={{ display: 'block' }} className="mt-3">
@@ -217,6 +218,9 @@ navigate('/iotintegration')
 <h1>NACRE SYSTEM</h1>
 <p className='content'>We are a leading provider of cutting-edge IT solutions, specializing in AI-powered Warehouse Management Systems (WMS), E-commerce Fulfilment solutions, and 3PL warehouse management. With our innovative technologies and expertise, we empower businesses of all sizes to optimize their operations, enhance productivity, and achieve greater success in today's rapidly evolving digital landscape.
 We embrace innovation as a driving force behind our IT solutions. We believe that staying ahead in today's competitive landscape requires a constant focus on advancing technologies and harnessing their full potential. Our commitment to innovation is reflected in our AI capabilities, which form the backbone of our solutions.
+Artificial Intelligence (AI) lies at the core of our systems, enabling us to provide intelligent and data-driven solutions to our clients. Through the power of AI, we empower businesses to make smarter decisions, automate processes, and unlock hidden insights within their operations. By leveraging machine learning algorithms, predictive and natural language processing, we enable businesses to optimize their warehouse management, e-commerce operations, and 3PL logistics.
+With our AI-powered Warehouse Management Systems (WMS), we revolutionize the way businesses manage their inventory, optimize order fulfilment, and streamline their warehouse operations. Our WMS utilizes advanced algorithms to optimize storage space allocation and adapting to real-time information. Our WMS ensures that businesses achieve maximum efficiency, reduce errors, and deliver exceptional customer experiences.
+In the realm of e-commerce, our AI capabilities enable businesses to Process orders in the most efficient way, improve accuracy in order fulfilment and exponentially increase same day delivery capability. For 3PL providers, our AI-driven solutions optimize operational efficiency, enhance transparency, and improve customer satisfaction. By harnessing the power of AI, we help 3PL companies streamline their processes, reduce costs, and provide superior service to their clients.
 </p>
 </div>
 
@@ -224,11 +228,11 @@ We embrace innovation as a driving force behind our IT solutions. We believe tha
 
 {/* ---------------------------------------------- */}
 <div style={{height:"100vh"}}>
-<h1>HOW WE ARE DIFFERENT</h1>
+<h1 className='second-heading-aboutpage'>HOW WE ARE DIFFERENT</h1>
 <p className='content-different'>
-At Nacre System, we understand that AI is not just a buzzword, but a transformative technology that has the potential to reshape industries. That's why we invest heavily in research and development, continuously enhancing our AI capabilities to stay at the forefront of innovation. By embracing AI, we empower businesses to unlock new opportunities, improve operational efficiency, and achieve sustainable growth in today's digital age. Partner with Nacre System to harness the power of innovation and AI. Together, we can navigate the evolving technological landscape, drive digital transformation, and unlock new horizons of success for your business.
-Nacre System takes pride in offering products that possess a unique capability to seamlessly integrate with other ERP (Enterprise Resource Planning), WMS (Warehouse Management System), and OMS (Order Management System) systems. This integration capability sets Nacre System apart from its competitors and provides numerous benefits to businesses. In addition to their exceptional integration capabilities, Nacre System's products also offer the latest technological edge of AI (Artificial Intelligence) and IoT (Internet of Things) without the need for expensive upgrades or replacements of existing systems. This unique feature sets Nacre System apart as a cost-effective solution for businesses seeking to leverage cutting-edge technologies. The advantage of this approach is that we understand the value of preserving existing investments. Our software seamlessly integrates with the existing infrastructure, harnesses the power of AI and IoT without requiring businesses to undergo expensive system upgrades or replacements. This not only minimizes costs but also reduces disruption to day-to-day operations.
+At Nacre System, we view AI as a transformative technology with the power to reshape industries. Our significant investment in research and development ensures we stay at the forefront of innovation. By leveraging AI, we help businesses unlock new opportunities, enhance operational efficiency, and drive sustainable growth in the digital age. Partner with Nacre System to navigate the evolving technological landscape and achieve success.
 
+Our products are designed to seamlessly integrate with ERP (Enterprise Resource Planning), WMS (Warehouse Management System), and OMS (Order Management System) systems, distinguishing us from competitors. Additionally, our solutions offer the latest in AI and IoT technology without the need for costly upgrades or replacements. This approach preserves existing investments while minimizing costs and operational disruptions, making Nacre System a cost-effective choice for leveraging cutting-edge technologies.
 
 </p>
 </div>

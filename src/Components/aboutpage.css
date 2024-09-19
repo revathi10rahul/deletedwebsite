@@ -58,10 +58,16 @@
 
 
 /* ----------------- */
-.hero-section {
+.hero-section-aboutpage {
   position: relative;
   background: #ff3c00;;
   /* background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+  background: linear-gradient(45deg, 
+ 
+#fc00ff
+,
+#00dbde); 
+
   height: 80vh;
 
   text-align: center;
@@ -137,7 +143,7 @@
 .content{
   font-size: 20px;
   text-align:justify; 
-  padding: 60px;
+  padding: 40px;
 }
 .content-different{
   font-size: 20px;
@@ -153,6 +159,9 @@
   .content-different{
      
     padding:8px;
+  }
+  .second-heading-aboutpage{
+    margin-top: 1621px;
   }
  
 }

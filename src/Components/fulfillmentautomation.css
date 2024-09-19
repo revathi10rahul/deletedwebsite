@@ -5,20 +5,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.glass-effect {
+/* .glass-effect {
   position: relative;
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px; 
   color: #004658  ;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  border-radius: 10px; /* Rounded corners */
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  width: fit-content; /* Adjust width based on content */
-  max-width: 100%; /* Prevent overflow */
-  margin: 0 auto; /* Center align horizontally if needed */
-  text-align: center; /* Center text */
-}
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  width: fit-content; 
+  max-width: 100%; 
+  margin: 0 auto; 
+  text-align: center; 
+} */
 
 .flip {
     position: relative;
@@ -82,7 +82,7 @@
       background-position: center!important;
       height: 220px;
       padding: 1em 2em;
-      background: #313131;
+      background: linear-gradient(#C33764, #200247);;
       border-radius: 10px;
       p {
         font-size: 0.9125rem;
@@ -292,9 +292,9 @@
        height: calc(100vh - 120px);
        display: block;
     }
-    .unlocking-heading{
-      margin-top: 200px;
-    }
+    .unlocking-heading {
+      margin-top: 306px;
+  }
     
   }
 .hybrid-div-fulfillment{
@@ -309,13 +309,11 @@
     margin-top: 300px;
   }
   .glass-effect{
-    margin-top: 300px;
-  }
+    margin-top: 381px;  }
+ 
 }
 
-.valuedelivereddiv  {
-  margin-top: 400px;
-}
+
 .flip-card-fulfillment{
  display:flex;
  justify-content:center;
@@ -330,8 +328,8 @@
 }
 .flip-card-div2{
   display:flex;
-  justifyContent:center;
-  allignItems:center;
+  justify-content:center;
+  allign-items:center;
 }
 @media(max-width:768px){
   .flip-card-fulfillment{
@@ -353,9 +351,15 @@ allign-items:center
 }
 
 .hybrid-div-fullfillment P{
-  width: 300px;
-  margin-left: 20px;
+  width: 428px;
+  margin-left: -31px;
   text-align: justify;
 }
 }
 
+.content-fulfillment-hybrid{
+  text-align: justify;
+  padding: 60px;
+  width: 800px;
+
+}

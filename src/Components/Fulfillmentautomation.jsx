@@ -67,6 +67,16 @@ navigate('/pickmanagement')
 const handleIOTIntegration=()=>{
 navigate('/iotintegration')
 }
+
+const handleMultichannel=()=>{
+  navigate('/multichannelintegration')
+}
+const handleOrderprocessing=()=>{
+  navigate('/orderprocessing')
+}
+const handlePicklistgen=()=>{
+  navigate('/picklistgeneration')
+}
   return (
     <>
      <div style={{height:"40px"}}>
@@ -139,21 +149,21 @@ navigate('/iotintegration')
                 </NavDropdown>
 
                 <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
-                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                  <NavDropdown.Item >Order Management</NavDropdown.Item>
+                  <NavDropdown.Item >Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item >Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item >Process Management</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
-                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -187,16 +197,7 @@ navigate('/iotintegration')
           </Nav>
         
        
-          <FontAwesomeIcon
-            icon={faSignOutAlt}
-            style={{
-              cursor: "pointer",
-              color: "white",
-              marginLeft: "10px",
-              fontSize: "24px",
-              paddingRight: "20px",
-            }}
-          />
+         
         </Navbar.Collapse>
       </Navbar>
      </div>
@@ -254,9 +255,9 @@ navigate('/iotintegration')
 
   <div style={{height:"100vh"}}>
     <h1 className='hybrid-heading'>Hybrid Proprietary Methodology, Opti-Pick</h1>
-    <div className="heading-fulfillment" > {/* Adjust height to fit the content */}
+    <div className="heading-fulfillment" > 
     <div className='hybrid-div-fullfillment'>
-    <p className='content-fulfillment'>
+    <p className='content-fulfillment-hybrid'>
     Unlike other fulfilment automation systems, APORA is not limited to e-commerce or B2B operations. We have developed a series of AI algorithms that implement our hybrid proprietary methodology, Opti-Pick. This ground-breaking approach has the potential to revolutionize Distribution Center activities, resulting in improved speed, efficiency, and ultimately generating more revenue for your business.
     </p>
       

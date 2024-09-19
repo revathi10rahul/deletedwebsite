@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../../../Assets/nswhite.png'
@@ -8,15 +7,9 @@ import './pickmanagement.css'
 import { useState,useEffect,useRef } from 'react';
 import Footer from '../../../Components/Footer';
 import crossdoc1 from '../../../Assets/crossdoc1.jpg'
-import seemless_integration from '../../../Assets/seemless_integration.png'
 import realtimetracking from '../../../Assets/realtime_trcking.png'
-import compilance from '../../../Assets/compilance.png'
 import qc from '../../../Assets/qc.png'
-import { FaChevronDown } from 'react-icons/fa'; // Example icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faSignOutAlt,
-  } from "@fortawesome/free-solid-svg-icons";   
+import { FaChevronDown } from 'react-icons/fa'; // Example icon   
 import costreduction from '../../../Assets/costreduction.jpg'
 function Pickmanagement () {
   const navigate=useNavigate()
@@ -67,6 +60,16 @@ navigate('/pickmanagement')
 }
 const handleIOTIntegration=()=>{
 navigate('/iotintegration')
+}
+
+const handleMultichannel=()=>{
+  navigate('/multichannelintegration')
+}
+const handleOrderprocessing=()=>{
+  navigate('/orderprocessing')
+}
+const handlePicklistgen=()=>{
+  navigate('/picklistgeneration')
 }
 
  const [activeIndex, setActiveIndex] = useState(null);
@@ -238,21 +241,21 @@ navigate('/iotintegration')
                 </NavDropdown>
 
                 <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
-                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                  <NavDropdown.Item >Order Management</NavDropdown.Item>
+                  <NavDropdown.Item >Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item >Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item >Process Management</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
-                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -286,16 +289,7 @@ navigate('/iotintegration')
           </Nav>
         
        
-          <FontAwesomeIcon
-            icon={faSignOutAlt}
-            style={{
-              cursor: "pointer",
-              color: "white",
-              marginLeft: "10px",
-              fontSize: "24px",
-              paddingRight: "20px",
-            }}
-          />
+         
         </Navbar.Collapse>
       </Navbar>
      </div>

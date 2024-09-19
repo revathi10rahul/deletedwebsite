@@ -1,0 +1,177 @@
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #6c757d;
+      color: white;
+}
+
+.navbar .navbar-brand img {
+  height: 60px;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on smaller screens */
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links .nav-link {
+  color: white;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+.dropdown-title {
+  color: white;
+}
+
+.dropdown-icon {
+  color: white; /* Change the icon color to white */
+  margin-left: 5px; /* Optional: Add some space between the title and icon */
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: block; /* Show the menu in mobile view */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show the links when active */
+  }
+}
+
+
+
+/* ----------------- */
+.hero-section-aboutpage {
+  position: relative;
+
+  /* background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+  /* background: linear-gradient(45deg, 
+ 
+#fc00ff
+,
+#00dbde);  */
+
+  height: 80vh;
+
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.container-about {
+  z-index: 2; /* Ensures content stays above the background */
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  justify-content: center;
+}
+
+.about-heading2 {
+  font-size: 1.5rem;
+}
+
+/* SVG Curve Styling */
+.svg-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+
+/* ----------------------- */
+
+
+
+ .content-iotintegration{
+   position:relative;
+   
+   display:flex;
+   justify-content:center;
+   allign-items:center;
+   height: 80vh;
+   width: 100%;
+
+ }
+ .first-content-iotintegration{
+   position:absolute;
+   left:0px;
+   padding: 30px;
+   height: 80vh;
+   width: 50%;
+ }
+ .second-content-iotintegration{
+   position:absolute;
+   right:0px;
+   height: 80vh;
+   width: 50%;
+   padding: 30px;   
+ }
+ @media (max-width: 1024px) {
+  .content-iotintegration {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .first-content-iotintegration,
+  .second-content-iotintegration {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .first-content-iotintegration,
+  .second-content-iotintegration {
+    padding: 10px; /* Further reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .first-content-iotintegration,
+  .second-content-iotintegration {
+    padding: 5px; /* Minimal padding for very small screens */
+  }
+}
+
+/* ---------------------------------------------------- */
+.discover-iotgeneration{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+.discover-content-iotgeneration{
+  font-size: 20px;
+  font-weight:bold;
+}
+.button-iotintegration{
+  border: none;
+  padding: 5px;
+  background-color:#fc00ff;
+  color: white;
+  margin-left: 10px;
+  border-radius: 5px;
+}

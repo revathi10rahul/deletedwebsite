@@ -18,55 +18,72 @@ import compilance from '../../../Assets/compilance.png'
 import qc from '../../../Assets/qc.png'
 import costreduction from '../../../Assets/costreduction.jpg'
 function Dispatch () {
- const navigate=useNavigate()
-    const handleAboutus=()=>{
-        navigate('/about')
-    }
-    const handleHome=()=>{
-        navigate('/')
-    }
+ 
+  const navigate=useNavigate()
+  const handleAboutus=()=>{
+      navigate('/about')
+  }
+  const handleHome=()=>{
+      navigate('/')
+  }
 const handleFulfillmentautomation=()=>{
-  navigate('/fulfillmentautomation')
+navigate('/fulfillmentautomation')
 }
 
 const handleOrdermanagement=()=>{
-  navigate('/ordermanagement')
+navigate('/ordermanagement')
 }
 const handleWarehousemanagement=()=>{
-  navigate('/warehousemanagement')
+navigate('/warehousemanagement')
 }
 const handleInbountreceipt=()=>{
-  navigate('/inboundreceipt')
+navigate('/inboundreceipt')
 }
 const handleCrossdocking=()=>{
-  navigate('/crossdocking')
+navigate('/crossdocking')
 }
 const handleDeconsolidation=()=>{
-  navigate('/deconsolidation')
+navigate('/deconsolidation')
 }
 const handleDispatch =()=>{
-    navigate('/dispatch')
+  navigate('/dispatch')
 }
 
 const handleInventorymanagement=()=>{
-  navigate('/inventorymanagement')
+navigate('/inventorymanagement')
 }
 
 const handleApiintegration=()=>{
-  navigate('/apiintegration')
+navigate('/apiintegration')
 }
 const handleQualityassurance=()=>{
-  navigate('/qualitycheck')
+navigate('/qualitycheck')
 }
 const handleRepackingPutaway=()=>{
-  navigate('/repackingputaway')
+navigate('/repackingputaway')
 }
 const handlePickmanagement=()=>{
-  navigate('/pickmanagement')
+navigate('/pickmanagement')
 }
 const handleIOTIntegration=()=>{
-  navigate('/iotintegration')
+navigate('/iotintegration')
 }
+
+const handleMultichannel=()=>{
+  navigate('/multichannelintegration')
+}
+const handleOrderprocessing=()=>{
+  navigate('/orderprocessing')
+}
+const handlePicklistgen=()=>{
+  navigate('/picklistgeneration')
+}
+
+
+
+
+
+
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -266,21 +283,21 @@ const handleIOTIntegration=()=>{
                 </NavDropdown>
 
                 <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
-                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                  <NavDropdown.Item >Order Management</NavDropdown.Item>
+                  <NavDropdown.Item >Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item >Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item >Process Management</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
-                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -314,16 +331,7 @@ const handleIOTIntegration=()=>{
           </Nav>
         
        
-          <FontAwesomeIcon
-            icon={faSignOutAlt}
-            style={{
-              cursor: "pointer",
-              color: "white",
-              marginLeft: "10px",
-              fontSize: "24px",
-              paddingRight: "20px",
-            }}
-          />
+         
         </Navbar.Collapse>
       </Navbar>
      </div>

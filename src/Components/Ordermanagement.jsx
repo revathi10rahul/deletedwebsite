@@ -15,53 +15,63 @@ import Card from "react-bootstrap/Card";
 import Footer from "./Footer";
 function Ordermanagement() {
   const navigate=useNavigate()
-    const handleAboutus=()=>{
-        navigate('/about')
-    }
-    const handleHome=()=>{
-        navigate('/')
-    }
+  const handleAboutus=()=>{
+      navigate('/about')
+  }
+  const handleHome=()=>{
+      navigate('/')
+  }
 const handleFulfillmentautomation=()=>{
-  navigate('/fulfillmentautomation')
+navigate('/fulfillmentautomation')
 }
 
 const handleOrdermanagement=()=>{
-  navigate('/ordermanagement')
+navigate('/ordermanagement')
 }
 const handleWarehousemanagement=()=>{
-  navigate('/warehousemanagement')
+navigate('/warehousemanagement')
 }
 const handleInbountreceipt=()=>{
-  navigate('/inboundreceipt')
+navigate('/inboundreceipt')
 }
 const handleCrossdocking=()=>{
-  navigate('/crossdocking')
+navigate('/crossdocking')
 }
 const handleDeconsolidation=()=>{
-  navigate('/deconsolidation')
+navigate('/deconsolidation')
 }
 const handleDispatch =()=>{
-    navigate('/dispatch')
+  navigate('/dispatch')
 }
 
 const handleInventorymanagement=()=>{
-  navigate('/inventorymanagement')
+navigate('/inventorymanagement')
 }
 
 const handleApiintegration=()=>{
-  navigate('/apiintegration')
+navigate('/apiintegration')
 }
 const handleQualityassurance=()=>{
-  navigate('/qualitycheck')
+navigate('/qualitycheck')
 }
 const handleRepackingPutaway=()=>{
-  navigate('/repackingputaway')
+navigate('/repackingputaway')
 }
 const handlePickmanagement=()=>{
-  navigate('/pickmanagement')
+navigate('/pickmanagement')
 }
 const handleIOTIntegration=()=>{
-  navigate('/iotintegration')
+navigate('/iotintegration')
+}
+
+const handleMultichannel=()=>{
+  navigate('/multichannelintegration')
+}
+const handleOrderprocessing=()=>{
+  navigate('/orderprocessing')
+}
+const handlePicklistgen=()=>{
+  navigate('/picklistgeneration')
 }
   return (
     <>
@@ -135,21 +145,21 @@ const handleIOTIntegration=()=>{
                 </NavDropdown>
 
                 <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
-                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                  <NavDropdown.Item >Order Management</NavDropdown.Item>
+                  <NavDropdown.Item >Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item >Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item >Process Management</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
-                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -183,16 +193,7 @@ const handleIOTIntegration=()=>{
           </Nav>
         
        
-          <FontAwesomeIcon
-            icon={faSignOutAlt}
-            style={{
-              cursor: "pointer",
-              color: "white",
-              marginLeft: "10px",
-              fontSize: "24px",
-              paddingRight: "20px",
-            }}
-          />
+         
         </Navbar.Collapse>
       </Navbar>
       </div>
@@ -253,108 +254,75 @@ const handleIOTIntegration=()=>{
             </div>
           </div>
         </div>
-
-        {/* ----------------------------------------------- */}
-        <div style={{ height: "100vh" }}>
-          <h1 className="features-ordermanagement">FEATURES</h1>
-
-          <div  className="features-order-div  mt-5">
-          <Card className="card-orderdiv-first" >
-  <Card.Body className="cardbody-ordermanagement">
-    <Card.Title style={{ color: "#C33764" }}>
-      <b>Mobile Order Management</b>
-    </Card.Title>
-    <Card.Text className="cardtext-ordermanagement">
-      Purvey OMS enables your field representatives to manage orders on the go. With our intuitive mobile app, your team can create, track, and update orders directly from their smartphones or tablets. Say goodbye to paper-based processes and embrace digital order management for enhanced speed and accuracy.
-    </Card.Text>
-  </Card.Body>
-</Card>
-            <Card className="card-orderdiv-first">
-              <Card.Body>
-                <Card.Title style={{ color: "#C33764" }}>
-                 <b>Inventory Management</b> 
-                </Card.Title>
-                <Card.Text className="cardtext-ordermanagement">
-                  Keep track of your inventory in real-time, even when it's in
-                  the hands of your field team. Purvey OMS provides visibility
-                  into available stock levels, allowing your representatives to
-                  check inventory, place orders, and manage stock allocations on
-                  the spot. Eliminate the risk of stockouts and ensure accurate
-                  inventory management across the entire supply chain.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="card-orderdiv-first">
-              <Card.Body>
-                <Card.Title >
-                 <b style={{ color: "#C33764" }}> Real Time Order Tracking</b>
-                </Card.Title>
-                <Card.Text className="cardtext-ordermanagement">
-                  Gain real-time visibility into the status of your orders.
-                  Purvey OMS provides you with instant updates on order
-                  progress, enabling you to monitor each stage from creation to
-                  delivery. This visibility allows you to proactively address
-                  any issues, improve customer communication, and ensure timely
-                  order fulfilment.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-
-          <div  className="features-order-div mt-3">
-            <Card className="cardtext-ordermanagement-seconddiv">
-              <Card.Body>
-                <Card.Title style={{ color: "#C33764" }}>
-                 <b> Digital Documentation</b>
-                </Card.Title>
-                <Card.Text className="cardtext-ordermanagement">
-                  Simplify paperwork and documentation processes with Purvey
-                  OMS's digital capabilities. Your field representatives can
-                  capture electronic signatures, take photos, and attach
-                  documents directly within the app. This ensures accurate and
-                  organized record-keeping, reducing administrative errors and
-                  saving valuable time.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card  className="cardtext-ordermanagement-seconddiv">
-              <Card.Body>
-                <Card.Title style={{ color: "#C33764" }}>
-                 <b> Integration Capabilities</b>
-                </Card.Title>
-                <Card.Text className="cardtext-ordermanagement">
-                  Purvey OMS seamlessly integrates with your existing systems,
-                  such as CRM and ERP, for smooth data synchronization. This
-                  integration eliminates manual data entry and ensures
-                  consistency across platforms. Gain a holistic view of your
-                  operations by connecting all relevant systems and improving
-                  collaboration between field teams and back-office functions.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="cardtext-ordermanagement-seconddiv">
-              <Card.Body>
-                <Card.Title style={{ color: "#C33764" }}>
-                  <b>Scalability and Flexibility</b>
-                </Card.Title>
-                <Card.Text className="cardtext-ordermanagement">
-                  Purvey Field is designed to scale with your business needs.
-                  Whether you have a small field team or a large fleet of
-                  representatives, our software can adapt to accommodate your
-                  workforce size and growing order volumes. Scale up or down
-                  effortlessly and continue to streamline your field operations
-                  as your business expands.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-          <div></div>
         </div>
-      
+        {/* ----------------------------------------------- */}
+     
+    <div className="ordermangement-features-div">
+<h1 className="ordermanagement-features ">Features</h1>
+
+<main class="page-content">
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Mobile Order Management</h2>
+      <p class="data-content">Purvey OMS enables your field representatives to manage orders on the go. With our intuitive mobile app, your team can create, track, and update orders directly from their smartphones or tablets. Say goodbye to paper-based processes and embrace digital order management for enhanced speed and accuracy. </p>
+    </div>
+  </div>
+  
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Real Time Order Tracking</h2>
+      <p class="data-content">Gain real-time visibility into the status of your orders. Purvey OMS provides you with instant updates on order progress, enabling you to monitor each stage from creation to delivery. This visibility allows you to proactively address any issues, improve customer communication, and ensure timely order fulfilment. </p>
+    </div>
+  </div>
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Inventory Management</h2>
+      <p class="data-content">Keep track of your inventory in real-time, even when it's in the hands of your field team. Purvey OMS provides visibility into available stock levels, allowing your representatives to check inventory, place orders, and manage stock allocations on the spot. Eliminate the risk of stockouts and ensure accurate inventory management across the entire supply chain.</p>
+    </div>
+  </div>
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Digital Documentation</h2>
+      <p class="data-content">Simplify paperwork and documentation processes with Purvey OMS's digital capabilities. Your field representatives can capture electronic signatures, take photos, and attach documents directly within the app. This ensures accurate and organized record-keeping, reducing administrative errors and saving valuable time.</p>
+    </div>
+  </div>
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Integration Capabilities</h2>
+      <p class="data-content">Purvey OMS seamlessly integrates with your existing systems, such as CRM and ERP, for smooth data synchronization. This integration eliminates manual data entry and ensures consistency across platforms. Gain a holistic view of your operations by connecting all relevant systems and improving collaboration between field teams and back-office functions. </p>
+    </div>
+  </div>
+
+   <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Scalability And Flexibility</h2>
+      <p class="data-content">Purvey Field is designed to scale with your business needs. Whether you have a small field team or a large fleet of representatives, our software can adapt to accommodate your workforce size and growing order volumes. Scale up or down effortlessly and continue to streamline your field operations as your business expands. </p>
+    </div>
+  </div>
+</main>
       </div>
-<div className="footer-ordermanagement">
-<Footer/>
+
+
+      {/* -------------------------------------- */}
+      <div className="value-ordermanagement">
+<h1>Value Delivered</h1>
+
+<div>
+  <ul className="list-ordermanagement">
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Increased efficiency and streamlined order management processes.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Enhanced productivity through route optimization and minimized travel time.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Improved order accuracy and reduced errors with digital order management.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Real-time visibility into order status for proactive issue resolution.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Enhanced customer service through real-time order updates and delivery tracking.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Efficient inventory management with real-time visibility into stock levels. </li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Seamless integration with existing systems for data synchronization.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Data-driven insights and analytics for informed decision-making.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Cost savings by minimizing manual errors, unnecessary travel, and stockouts.</li>
+    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Scalability and flexibility to accommodate growing business needs.</li>
+  </ul>
 </div>
+      </div>
+     <Footer/>    
     </>
   );
 }

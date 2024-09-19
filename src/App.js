@@ -17,12 +17,22 @@ import Pickmanagement from './Components/Solutions/Warehousemanagement/Pickmanag
 import Dispatch from './Components/Solutions/Warehousemanagement/Dispatch';
 import Inventorymanagement from './Components/Solutions/Warehousemanagement/Inventorymanagement';
 import Apiintegration from './Components/Solutions/Warehousemanagement/Apiintegration';
+import IotIntegration from './Components/Solutions/Warehousemanagement/IotIntegration';
+import Multichannelintegration from './Components/Solutions/Warehousemanagement/AIPowered/Multichannelintegration';
+import Orderprocessing from './Components/Solutions/Warehousemanagement/AIPowered/Orderprocessing';
+import Picklistgeneration from './Components/Solutions/Warehousemanagement/AIPowered/Picklistgeneration';
+import Navbars from './Navbar/Navbar';
+import Picksequencing from './Components/Solutions/Warehousemanagement/AIPowered/Picksequencing';
+import Workforceoptimization from './Components/Solutions/Warehousemanagement/AIPowered/Workforceoptimization';
+import Packageandshipping from './Components/Solutions/Warehousemanagement/AIPowered/Packageandshipping';
 
 function App() {
   return (
   <HashRouter>
     <div className="App">
+   
     <Routes>
+     
     {/* <Route path='/' element={<Homepage/>}/> */}
     <Route path='/home' element={<Homepageagain/>}/>
     <Route path='/about' element={<Aboutpage/>}/>
@@ -39,6 +49,13 @@ function App() {
     <Route path='/dispatch' element={<Dispatch/>}/>
     <Route path='/inventorymanagement' element={<Inventorymanagement/>}/>
     <Route path='/apiintegration' element={<Apiintegration/>}/>
+    <Route path='/iotintegration' element={<IotIntegration/>}/>
+    <Route path='/multichannelintegration' element={<Multichannelintegration/>}/>
+    <Route path='/orderprocessing' element={<Orderprocessing/>}/>
+    <Route path='/picklistgeneration' element={<Picklistgeneration/>}/>
+    <Route path='/picksequencing' element={<Picksequencing/>}/>
+    <Route path='/workforceoptimization' element={<Workforceoptimization/>}/>
+    <Route path='/packageandshipping' element={<Packageandshipping/>}/>
    </Routes>
     </div>
     </HashRouter>

@@ -1,0 +1,422 @@
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #6c757d;
+        color: white;
+  }
+  
+  .navbar .navbar-brand img {
+    height: 60px;
+  }
+  
+  .navbar-toggle {
+    display: none; /* Hidden by default, shown on smaller screens */
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .navbar-links .nav-link {
+    color: white;
+  }
+  
+  .navbar-collapse {
+    display: flex;
+  }
+  .dropdown-title {
+    color: white;
+  }
+  
+  .dropdown-icon {
+    color: white; /* Change the icon color to white */
+    margin-left: 5px; /* Optional: Add some space between the title and icon */
+  }
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      display: block; /* Show the menu in mobile view */
+    }
+  
+    .navbar-toggle {
+      display: block; /* Show toggle button on small screens */
+    }
+  
+    .navbar-links {
+      display: none; /* Hide the links by default on mobile */
+      flex-direction: column;
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Show the links when active */
+    }
+  }
+  
+  
+  /* ----------------- */
+.hero-section-multichannel {
+    position: relative;
+  
+    /* background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); */
+    background: linear-gradient(45deg,#EE0979 ,#FF6A00); 
+  
+    height: 80vh;
+  
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+
+  .about-heading-multichannel {
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+  
+ 
+  
+  /* SVG Curve Styling */
+  .svg-curve-multichannel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  /* -------------------------------------------- */
+    .multi-div{
+        position: relative;
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .first-multi-div{
+        padding: 30px;
+        position: absolute;
+        height: 80vh;
+        width: 50%;
+        left: 0px;
+    }
+    .second-multi-div{
+        position: absolute;
+        height: 80vh;
+        padding: 30px;
+        text-align: justify;
+        width: 50%;
+        right: 0px;
+    }
+    .second-multi-div h1{
+        font-size: 4rem;
+    }
+    .second-multi-div p{
+        width: 800px;
+        font-size: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        .multi-div {
+          flex-direction: column;
+          height: auto;
+          text-align: center;
+        }
+      
+        .first-multi-div, 
+        .second-multi-div {
+          position: relative;
+          width: 100%;
+          height: auto;
+          padding: 20px;
+        }
+      
+        .second-multi-div p {
+          width: 100%;
+        }
+      
+        .second-multi-div h1 {
+          font-size: 3rem;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .second-multi-div h1 {
+          font-size: 2.5rem;
+        }
+      
+        .second-multi-div p {
+          font-size: 18px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .first-multi-div, 
+        .second-multi-div {
+          padding: 15px;
+        }
+      
+        .second-multi-div h1 {
+          font-size: 2rem;
+        }
+      
+        .second-multi-div p {
+          font-size: 16px;
+        }
+      }
+      /* -------------------------------------- */
+
+        .feature-multichannel-div{
+      position: relative;
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+        .first-feature-multichannel{
+          padding: 200px;
+          position: absolute;
+          height: 80vh;
+          width: 50%;
+          left: 0px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+      
+        .second-feature-multichannel{
+          position: absolute;
+          height: 80vh;
+          padding: 30px;
+          text-align: justify;
+          width: 50%;
+          right: 0px;
+        }
+        .second-feature-multichannel p{
+          width: 800px;
+          font-size: 20px ;
+          padding: 40px;
+        }
+
+@media(max-width:768px){
+  
+  .feature-multichannel-div{
+    display: block;
+    flex-direction: row;
+  }
+  .feature-multichannel-div h1{
+    margin-left: -100px;
+    margin-top: -150px;
+  }
+  .second-feature-multichannel p {
+    margin-left: -224px;
+    margin-top: 100px;
+    max-width: 394px;
+  }
+  .feature-multichannel{
+    margin-top: 30px;
+  }
+  .discover-multi{
+    margin-top: 300px;
+  }
+
+}
+ /*----------------------------  */
+   /* ---------fifth-------------- */
+   .faq_main_container {
+    width: 98%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Space between items */
+}
+
+.faq_container {
+  border-bottom: 2px solid #C33764;
+  padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.faq_question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.answer {
+  padding: 0 10px 20px;
+  line-height: 1.5rem;
+}
+
+.fqa_headline_container h2 span {
+  font-weight: 700;
+}
+
+.faq_question-text h3 {
+  font-size: 12px;
+  display: block;
+}
+
+.icon.active {
+  background: transparent;
+  border: 2px solid #0a0707;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon-shape {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  color:#C33764;
+}
+
+.icon .icon-shape::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 4px;
+  background: #C33764;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.icon .icon-shape::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 30px;
+  background: #C33764;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.icon .icon-shape.active::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.icon .icon-shape.active::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .faq_main_container {
+    margin-top: 30px;
+    display: block;
+    flex-direction: column; /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  .faq_main_container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+}
+
+/* ----------------------------------------------- */
+
+.bx-multi {
+  margin: 1em auto; padding: 1em 2em;
+  border: solid 12px #C33764; 
+  display: inline-block; 
+  position: relative; 
+  font-size: 18px;  
+  max-width: 1033px;
+}
+
+
+.box-corners-multi .cornermulti { 
+  position: absolute; 
+  top: -21px; left: -21px; width: 40px; height: 40px; 
+  background: white; 
+  border: solid 1px #004658; border-radius: 50%; 
+  border-color: white white #C33764 white; 
+  transform: rotate(-45deg) 
+  
+}
+
+.box-corners-multi .cornermulti:nth-child(2) { 
+  left: auto; right: -21px; 
+  border-color: white white white #C33764; 
+}
+.box-corners-multi .cornermulti:nth-child(3) { 
+  left: auto; right: -21px; top: auto; bottom: -21px; 
+  border-color: #C33764 white white white; 
+}
+.box-corners-multi .cornermulti:nth-child(4) { 
+  top: auto; bottom: -21px; 
+  border-color: white #C33764 white white; 
+}
+
+  /* Define the animation for the corner borders */
+  @keyframes cornerBorderAnimation {
+    0% {
+      border-color: #004658; /* Initial corner border color */
+    }
+    50% {
+      border-color: #ce2b0f; /* Change to a different color halfway */
+    }
+    100% {
+      border-color: #004658; /* Return to the initial corner border color */
+    }
+  }
+  .box-multi{
+    height: 50vh;
+  }
+@media(max-width:768px){
+  .box-multi{
+    height: 40vh;
+  }
+  .discover-multi{
+    margin-top: 300px;
+  }
+  .footer{
+    margin-top: 80px;
+  }
+}
+
+/* ------------------------------------------------------ */
+.discover-multi{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+padding: 20px;
+
+}
+.discover-content-multi{
+  font-size: 20px;
+  font-weight:bold;
+}
+.button-multi{
+  border: none;
+  padding: 5px;
+  background-color:#C33764;
+  color: white;
+  margin-left: 10px;
+  border-radius: 5px;
+}
