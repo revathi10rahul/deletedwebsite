@@ -75,6 +75,12 @@ const handleWorkforcemanagement=()=>{
 const handlePackingandshipping=()=>{
   navigate('/packageandshipping')
 }
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
   return (
     <>
      <div style={{height:"40px"}}>
@@ -160,8 +166,8 @@ const handlePackingandshipping=()=>{
                   <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           

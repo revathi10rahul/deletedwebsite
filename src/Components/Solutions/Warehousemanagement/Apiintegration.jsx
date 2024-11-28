@@ -1,14 +1,9 @@
 import nswhite from  '../../../Assets/nswhite.png'
 import { useNavigate } from 'react-router-dom';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './apiintegration.css'
 import { FaChevronDown } from 'react-icons/fa'; // Example icon
-
-import {
-    faSignOutAlt,
-  } from "@fortawesome/free-solid-svg-icons";   
-import { Navbar, Nav, NavDropdown, Container, Collapse } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { useState,useEffect,useRef } from 'react';
 import Footer from '../../../Components/Footer';
 import apibanner from '../../../Assets/apibanner.jpg'
@@ -78,6 +73,21 @@ const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
 
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -299,11 +309,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           

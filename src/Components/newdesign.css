@@ -55,9 +55,6 @@
 }
 
 
-
-
-
 /* ------------ */
 /* General styles */
 .hero-section-homepage {
@@ -85,7 +82,7 @@
   margin-top: 50px;
   height: 60vh;
   z-index: 100;
-  margin-left: -50px; /* Adjust margin for centering on mobile */
+  margin-left: 9px; /* Adjust margin for centering on mobile */
 }
 
 /* Responsive styles */
@@ -129,15 +126,11 @@
     color: white;
     font-size: 2rem; 
  }
- .main-heading-homepage{
-  margin-left: -200px;
- }
-  .heading-homepage{
-     margin-top: 80px;
-     width: 100%;
-      padding: 30px;
-       margin-left: 100px
-  }
+ .heading-homepage{
+  margin-top: 20px;
+  margin-left: -117px; 
+}
+  
   @media (max-width:768px) {
    
       .svg-curve {
@@ -347,11 +340,16 @@ align-items:center;
     margin-top: -73px;
    }
    .sideimage-homepage {
-    
-    margin-left: 2px;
+   
+           width: 100%;
+        margin-top: -34px;
+        margin-left: 4px;
 }
 }
-
+.heading-homepage{
+  margin-left: 34px;
+  margin-top: 20px;
+}
 .wh-image-homepege{
  height:450px;
  margin-top:-120px;

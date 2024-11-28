@@ -385,34 +385,53 @@
 
 
 /* ------------------------- */
-.list-ordermanagement{
-  list-style: none;
+.main-list-ordermanagement {
+  position: relative;
   display: flex;
- justify-content: center;
-  allign-items:center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 22em;
-  width: 100%;
-  
-}
-.listitems-ordermanagement {
-  padding: 1em;
-  margin: 2px ;
-  font-size: 17px;
-  text-align: justify;
- 
-}
-.value-ordermanagement{
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  text-align: center;
   height: 60vh;
+  width: 100%;
+
 }
-@media(max-width:768px){
-  .value-ordermanagement{
-    height: 110vh;
+
+.list-ordermanagement-left {
+ 
+  width: 50%;
+  padding: 30px;
+}
+
+.list-ordermanagement-right {
+
+  width: 50%;
+  padding: 30px;
+}
+
+
+/* ------------------------------------------- */
+@media (max-width:768px) {
+.main-list-ordermanagement{
+  margin-top: 300px;
+}
+}
+  
+.page-content-ordermanagement {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content-ordermanagement {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .list-ordermanagement{
-    display: block;
-    flex-direction: row;
-    height: 100px;
+}
+@media (min-width: 800px) {
+  .page-content-ordermanagement {
+    
+    grid-template-columns: repeat(3, 1fr);
   }
 }

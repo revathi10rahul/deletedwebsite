@@ -79,7 +79,21 @@ const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
 
-
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -298,11 +312,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -478,13 +492,13 @@ const handlePicklistgen=()=>{
 
 
 
- <button className="button-fulfillemnt">
+ {/* <button className="button-fulfillemnt">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     Learn More
-  </button>
+  </button> */}
   <div class="bx-inventorymanagement box-corners-inventorymanagement w-100%">
     <div class="corner-inventorymanagement"></div>
     <div class="corner-inventorymanagement"></div>

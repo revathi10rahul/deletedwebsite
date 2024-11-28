@@ -98,6 +98,22 @@ const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
 
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
+
 const imagesAndTexts = [
   {
    src:work,
@@ -248,11 +264,11 @@ const scrollRight = () => {
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -303,10 +319,11 @@ const scrollRight = () => {
           </svg>
           <Row>
     <Col lg={1}></Col>
-    <Col lg={4}>
+    <Col lg={4} style={{marginTop: "20px",
+                marginLeft: "2px"}}>
    
    <img   src={src} 
-              alt={subtitle}   className='sideimage-homepage'/>
+              alt={subtitle}   className='sideimage-homepage' />
 
   
     </Col>

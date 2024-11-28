@@ -34,85 +34,63 @@ function Workforceoptimization() {
         </div>
       </div>
       {/* ----------------------------------------------------------------------- */}
-     <div>
-     <h1 style={{fontSize:"39px",fontWeight:"bold"}} className='features-workforceoptimization'>Features</h1>
-     </div>
-     
-  <div class="row1-container">
-    <div class="box box-down cyan" style={{borderBottom:"5px solid cyan"}}>
-      <h2>Intelligent Team Allocation</h2>
-      <p>The AI-powered workforce optimization system intelligently assigns picking tasks based on factors such as employee availability, location, and workload. By considering individual capabilities and workload distribution, the system ensures that tasks are allocated optimally, resulting in efficient and balanced workloads across the workforce.</p>
-     
-    </div>
+	  <div className="workoptimization-features-div">
+<h1 className="workoptimization-features ">Features</h1>
 
-    <div class="box red" style={{borderBottom:"5px solid red"}}>
-      <h2>Real-Time Performance Monitoring</h2>
-      <p>The system provides real-time visibility into employee performance during the picking process. It tracks metrics such as pick rate, accuracy, and completion time, enabling supervisors to identify areas for improvement and provide timely feedback. This monitoring fosters a culture of accountability and continuous improvement among the workforce.</p>
-     
-    </div>
-
-    <div class="box box-down blue" style={{borderBottom:"5px solid blue"}}>
-      <h2>Machine Learning Algorithms</h2>
-      <p>AI-powered workforce optimization utilizes machine learning algorithms to analyse and identify storage patterns and effectively assign resources in required areas of warehouse to bring efficiency in picking processes.</p>
+<main class="page-content">
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Intelligent Task Allocation</h2>
+      <p class="data-content">The AI-powered workforce optimization system intelligently assigns picking tasks based on factors such as employee availability, location, and workload. By considering individual capabilities and workload distribution, the system ensures that tasks are allocated optimally, resulting in efficient and balanced workloads across the workforce. </p>
     </div>
   </div>
-  <div class="row2-container" style={{marginTop:"150px"}}>
-    <div class="box orange" style={{borderBottom:"5px solid orange"}}>
-      <h2>Multiple order synchronisation</h2>
-      <p>Multiple order synchronisation orchestrates greatly helps maintaining a lean resource pool and at the same time bring efficiency of optimised walk around time.</p>
+  
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Real-Time Performance Monitoring	</h2>
+      <p class="data-content">The system provides real-time visibility into employee performance during the picking process. It tracks metrics such as pick rate, accuracy, and completion time, enabling supervisors to identify areas for improvement and provide timely feedback. This monitoring fosters a culture of accountability and continuous improvement among the workforce. </p>
     </div>
   </div>
+  <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Machine Learning Algorithms</h2>
+      <p class="data-content">AI-powered workforce optimization utilizes machine learning algorithms to analyse and identify storage patterns and effectively assign resources in required areas of warehouse to bring efficiency in picking processes.</p>
+    </div>
+  </div>
+  
+
+   <div class="d_card">
+    <div class="content">
+      <h2 class="heading">Multiple order synchronisation	</h2>
+      <p class="data-content">Multiple order synchronisation orchestrates greatly helps maintaining a lean resource pool and at the same time bring efficiency of optimised walk around time. </p>
+    </div>
+  </div>
+</main>
+      </div>
  {/* --------------------------------------------------------------------- */}
 
-<div style={{height:"100vh"}}>
-
-
-<div>
-<section className='valuedelivered-workforceoptimization section'>
-      <div class="row">
-        <h2 class="section-heading">Value Delivered</h2>
-      </div>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-hammer"></i>
-            </div>
-            <h3>Enhanced Efficiency</h3>
-            <p>
-            AI-powered workforce optimization leverages advanced algorithms to intelligently allocate tasks and resources. By analysing real-time data such as order volumes, item locations, and employee performance, the system optimizes the assignment of picking tasks to the workforce. This automation streamlines the picking process, reduces travel time, and increases overall efficiency.
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-brush"></i>
-            </div>
-            <h3>Improved Productivity</h3>
-            <p>
-            With AI-powered workforce optimization, organizations can unlock the full potential of their workforce. The system takes into account employee skills, experience, and availability to allocate tasks that align with individual strengths. By matching the right employees with the right tasks, productivity is maximized, and employees are empowered to perform at their best.
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <i class="fas fa-wrench"></i>
-            </div>
-            <h3>Adaptive Planning</h3>
-            <p>
-            The dynamic nature of warehousing requires flexible planning and resource allocation. AI-powered workforce optimization adapts to changing circumstances by continuously analysing data and adjusting workforce assignments accordingly. Whether it's a sudden increase in order volumes or a change in order priorities, the system optimizes workforce planning to meet shifting demands effectively
-            </p>
-          </div>
-        </div>
-       
-      </div>
-    </section>
+ <div style={{height:"60vh",padding:"40px"}}>	
+<h1>Value Delivered</h1>
+<div className='maindiv-valuedelivered-workoptimization'>
+<div className='firstdiv-valuedelivered-workoptimization'>
+	<h1>Enhanced Efficiency</h1>
+	<p className='workoptimization-content'>AI-powered workforce optimization leverages advanced algorithms to intelligently allocate tasks and resources. By analysing real-time data such as order volumes, item locations, and employee performance, the system optimizes the assignment of picking tasks to the workforce. This automation streamlines the picking process, reduces travel time, and increases overall efficiency.</p>
+</div>
+<div className='seconddiv-valuedelivered-workoptimization'>
+	<h1>Improved Productivity</h1>
+	<p className='workoptimization-content'>With AI-powered workforce optimization, organizations can unlock the full potential of their workforce. The system takes into account employee skills, experience, and availability to allocate tasks that align with individual strengths. By matching the right employees with the right tasks, productivity is maximized, and employees are empowered to perform at their best.</p>
+</div>
+<div className='thirddiv-valuedelivered-workoptimization'>
+	<h1>Adaptive Planning</h1>
+	<p className='workoptimization-content'>The dynamic nature of warehousing requires flexible planning and resource allocation. AI-powered workforce optimization adapts to changing circumstances by continuously analysing data and adjusting workforce assignments accordingly. Whether it's a sudden increase in order volumes or a change in order priorities, the system optimizes workforce planning to meet shifting demands effectively</p>
 </div>
 </div>
+ </div>
 
+{/* --------------------------------------------------------- */}
+<div className='footer-footer'>
 <Footer/>
+</div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../Assets/nswhite.png'
@@ -77,6 +78,50 @@ const handleOrderprocessing=()=>{
 const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
+
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
+
+
+const [activeIndex, setActiveIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
+
+const faqData = [
+  {
+    question: "Precision Picking, Swift Deliveries: AI Empowered for Excellence",
+    answer: `APORA's robust system optimizes your warehouse workflows, reduces errors and provides comprehensive tracking capabilities, and allowing you to monitor progress of each order. Improve your warehouse performance and exceed customer expectations with APORA.`,
+  },
+  {
+    question: "IoT-Driven Validation: Redefining Returns, Standardizing Success",
+    answer: `Elevate customer satisfaction and minimize sales return by leveraging APORA's IOT enabled two-step validation process. APORA's advance technology empowers your business to deliver consistently, fostering trust and loyalty among your customer base.`,
+  },
+  {
+    question: "Opti-Pick: Unlocking 200% Efficiency Surge, Normalizing Accomplishment",
+    answer: `Optimize warehouse space utilization, reducing travel time and improving picking and replenishment processes.`,
+  },
+
+  {
+    question: "RSwiftShip: Turbocharging Same Day Deliveries by 100%",
+    answer: `APORA's cutting edge AI algorithm offers invaluable optimization throughout every stage of fulfillment. This greatly enhances your warehouse capabilities to handle double the volume of orders and facilitating same day deliveries. With APORA your warehouse gains the necessary tools to meet the growing demand for rapid deliveries and staying ahead in today's competitive market.`,
+  }
+  
+];
   return (
     <>
      <div style={{height:"40px"}}>
@@ -159,11 +204,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -297,69 +342,42 @@ const handlePicklistgen=()=>{
 
 
   {/* --------------------- */}
-  <div style={{height:"100vh"}} className='valuedelivereddiv'>
+  <div style={{height:"50vh"}} className='valuedelivereddiv'>
   <h1 className='glass-effect '>Value Delivered</h1>
 
+  <div className="faq-main-container-fulfillment">  
+        {faqData.map((faq, index) => (
+          <div className="ffaq-container-fulfillment" key={index}>
+            <div
+              className={`faq_question-fulfillment ${activeIndex === index ? "active" : ""}`}
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="faq-question-text-fulfillment">
+                <h3 style={{ color: "black" }}>{faq.question}</h3>
+              </div>
+              <div className="icon ">
+                <div className={`icon-shape ${activeIndex === index ? "active" : ""}`}></div>
+              </div>
+            </div>
+            <div
+              className="answercont-fulfillment"
+              style={{
+                maxHeight: activeIndex === index ? `${document.getElementById(`faq-answer-${index}`).scrollHeight}px` : "0",
+                overflow: "hidden",
+                transition: "max-height 0.3s ease",
+              }}
+            >
+              <div className="answer" id={`faq-answer-${index}`}>
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
 
 
-<div  className='flip-card-fulfillment mt-1'>
-<div class="flip">
-    <div class="front" >
-    <h5 class="text-shadow">Precision Picking, Swift Deliveries: AI Empowered for Excellence</h5>
-
-    </div>
-    <div class="back">
-     
-       <p>APORA's robust system optimizes your warehouse workflows, reduces errors and provides comprehensive tracking capabilities, and allowing you to monitor progress of each order. Improve your warehouse performance and exceed customer expectations with APORA.</p>
-    </div>
-    
-</div>
-<div class="flip">
-    <div class="front" >
-    <h5 class="text-shadow">IoT-Driven Validation: Redefining Returns, Standardizing
-    Success</h5>
-
-    </div>
-    <div class="back">
-     
-       <p>Elevate customer satisfaction and minimize sales return by leveraging APORA's IOT enabled two-step validation process. APORA's advance technology empowers your business to deliver consistently, fostering trust and loyalty among your customer base.</p>
-    </div>
-    
-</div>
-</div>
-
-<div className='flip-card-div2'>
-<div class="flip">
-    <div class="front" >
-    <h5 class="text-shadow">Opti-Pick: Unlocking 200% Efficiency Surge, Normalizing Accomplishment</h5>
-
-    </div>
-    <div class="back">
-     
-       <p>APORA's Opti-Pick algorithm revolutionizes warehouse operation by drastically reducing pickers walk around time. This intelligent algorithm optimizes the picking routes, ensuring efficient item retrieval. Pickers save valuable time and that enables enhanced productivity.</p>
-    </div>
-    
-</div>
-<div class="flip">
-    <div class="front" >
-    <h5 class="text-shadow">SwiftShip: Turbocharging Same Day Deliveries by 100%</h5>
-
-    </div>
-    <div class="back">
-     
-       <p>APORA's cutting edge AI algorithm offers invaluable optimization throughout every stage of fulfillment. This greatly enhances your warehouse capabilities to handle double the volume of orders and facilitating same day deliveries. With APORA your warehouse gains the necessary tools to meet the growing demand for rapid deliveries and staying ahead in today's competitive market.
-
-</p>
-    </div>
-    
-</div>
-</div>
-</div>
-
-
-
-  <div style={{height:"30vh"}}>
+      <div >
   <div class="bx-fulfillment box-corners-fulfillment w-100%">
     <div class="cornerfulfillment"></div>
     <div class="cornerfulfillment"></div>
@@ -372,11 +390,19 @@ const handlePicklistgen=()=>{
   </div>
   </div>
 
+</div>
+
+
+
+ 
 
 
 
 
+<div className='footer-fulfillment'>
+  
 <Footer/> 
+</div>
 </div>
 
 

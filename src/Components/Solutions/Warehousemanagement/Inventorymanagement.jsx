@@ -3,22 +3,22 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import nswhite from  '../../../Assets/nswhite.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { FaChevronDown } from 'react-icons/fa'; // Example icon
 import { useNavigate } from 'react-router-dom';
 import './inventorymanagement.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  
-  faSignOutAlt,
-} from "@fortawesome/free-solid-svg-icons"; import { useState,useEffect,useRef } from 'react';
+import { useState,useEffect,useRef } from 'react';
 import Footer from '../../../Components/Footer';
 import crossdoc1 from '../../../Assets/crossdoc1.jpg'
 import seemless_integration from '../../../Assets/seemless_integration.png'
 import realtimetracking from '../../../Assets/realtime_trcking.png'
 import compilance from '../../../Assets/compilance.png'
 import qc from '../../../Assets/qc.png'
+import { FaChevronDown } from 'react-icons/fa'; // Example icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faSignOutAlt,
+  } from "@fortawesome/free-solid-svg-icons";   
 import costreduction from '../../../Assets/costreduction.jpg'
-function Dispatch () {
- 
+function Inventorymanagement () {
   const navigate=useNavigate()
   const handleAboutus=()=>{
       navigate('/about')
@@ -79,11 +79,21 @@ const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
 
-
-
-
-
-
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
  const [activeIndex, setActiveIndex] = useState(null);
 
  const toggleFAQ = (index) => {
@@ -92,29 +102,25 @@ const handlePicklistgen=()=>{
 
  const faqData = [
    {
-     question: "Efficient Data Capture for Accurate Inventory",
-     answer: `Our WMS seamlessly integrates with barcode and RFID technologies, enabling efficient and accurate data capture. You can quickly scan items, update inventory records, and reduce manual errors, resulting in improved inventory accuracy.`,image:seemless_integration,
+     question: "Automated Processing ",
+     answer: `The PURVEY WMS cross-docking function automates the entire cross-docking process, from sorting and consolidation to outbound shipping. This eliminates the need for manual intervention, which can significantly reduce processing time.`,image:seemless_integration,
    },
    {
-     question: "Inventory Segmentation for Efficient Organization",
-     answer: `With our Inventory Management feature, you can classify and segment your inventory based on various criteria such as product category, SKU, or demand. This enables better organization, optimized storage, and faster retrieval of items, enhancing overall operational efficiency.`,
+     question: "Hybrid Web & Mobile App Solutions",
+     answer: `The PURVEY WMS cross-docking function provides real-time visibility into the status of all cross-docked orders. This allows businesses to track shipments, monitor progress, and receive instant notifications on order fulfilment milestones.`,
      image:realtimetracking,
    },
    {
-     question: "Automated Replenishment for Optimal Control",
-     answer: `PURVEY WMS automates the replenishment process by setting reorder points and triggering alerts when stock levels fall below the defined thresholds. This ensures timely replenishment, minimizes stockouts, and maintains optimal inventory levels.`,
+     question: "Built in Quality Control",
+     answer: `The PURVEY WMS cross-docking function includes built-in quality control checks to ensure accuracy and integrity of the goods being processed. Any discrepancies or issues are immediately flagged for resolution, reducing the risk of errors and customer dissatisfaction.`,
      image:qc,
    },
    {
-     question: "Batch & Lot Tracking: Compliance & Efficiency",
-     answer: `Our WMS supports batch and lot tracking, allowing you to trace the movement and usage of specific batches or lots of items. This is particularly beneficial for industries with strict compliance requirements or products with expiration dates, ensuring regulatory compliance and minimizing wastage.`,
+     question: "Data Driven Decision Making ",
+     answer: `The PURVEY WMS cross-docking function provides businesses with insights into order processing times, dock utilization, carrier performance, and overall efficiency. This information can be used to identify areas for improvement and make data-driven decisions that can help improve order fulfilment efficiency.`,
      image:compilance,
    },
-   {
-    question: "Cycle Counting & Inventory Management Efficiency",
-    answer: `Our Inventory Control feature includes cycle counting functionality, enabling you to conduct periodic stock counts without disrupting daily operations. This ensures ongoing accuracy and helps identify discrepancies for prompt resolution. Additionally, our WMS facilitates efficient management of physical inventory processes, minimizing errors and streamlining reconciliation.`,
-    image:compilance,
-  },
+ 
  
  ];
 
@@ -129,28 +135,20 @@ const handlePicklistgen=()=>{
 
  const faqDataagain = [
    {
-     questionagain: "Accurate Inventory Management",
-     answeragain: `Our WMS ensures accurate inventory records and real-time visibility, reducing stock discrepancies, and improving overall inventory accuracy. This enables efficient order fulfilment, minimizes stock outs, and optimizes storage space.`,imageagain:costreduction,
+     questionagain: "Reduced Inventory Cost ",
+     answeragain: `Cross-docking eliminates the need for long-term storage, which can help businesses reduce inventory costs.`,imageagain:costreduction,
    },
    {
-     questionagain: "Increased Operational Efficiency",
-     answeragain: `Streamlining inventory management processes through automation and real-time data capture improves operational efficiency. With accurate inventory information readily available, your team can make informed decisions, reduce manual errors, and optimize productivity.`,
+     questionagain: "Imporoved Cash Flow",
+     answeragain: `Cross-docking can help businesses improve cash flow by reducing the amount of time that goods are tied up in inventory.`,
      imageagain:realtimetracking,
    },
    {
-     questionagain: "Cost Savings",
-     answeragain: `By optimizing inventory levels, reducing stockouts, and minimizing excess stock, our Inventory Control feature helps reduce holding costs and improve cash flow. Efficient inventory management leads to cost savings and a better bottom line for your business.`,
+     questionagain: "Increased Customer Satisfaction",
+     answeragain: `Cross-docking can help businesses improve customer satisfaction by reducing order fulfilment cycle times and ensuring that customers receive their orders quickly and accurately.`,
      imageagain:qc,
    },
-   {
-    questionagain: "Enhanced Customer Satisfaction",
-    answeragain: `Accurate inventory control ensures accurate order fulfilment, reduces order errors, and improves delivery times. This results in enhanced customer satisfaction, increased loyalty, and a positive brand image.   `,
-    imageagain:qc,
-  }, {
-    questionagain: "Regulatory Compliance",
-    answeragain: `Our WMS supports compliance with industry regulations and requirements, such as batch tracking and expiration date management. You can easily track product traceability, ensure adherence to quality standards, and mitigate risks associated with non-compliance.`,
-    imageagain:qc,
-  },
+  
  
  
  ];
@@ -293,11 +291,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -361,13 +359,13 @@ const handlePicklistgen=()=>{
 </div>
        
 
-       <div style={{height:"80vh"}}>
+       <div style={{height:"100vh"}}>
 <h1  class="animated-heading">INVENTORY MANAGEMENT</h1>
 
 <div class="parent">
 <div className={`childone ${isChildOneVisible ? 'visible' : ''}`} ref={childOneRef}>
-      <span>We understand the challenges of managing inventory effectively and the impact it has on your business operations. With our comprehensive Inventory Management feature within the PURVEY WMS, you can streamline your inventory management processes, improve accuracy, and gain real-time visibility into your stock levels. Let us guide you through the key features and benefits of our advanced Inventory Control functionality.
-      PURVEY WMS provides real-time visibility into your inventory, allowing you to monitor stock levels, track movement, and make informed decisions. You can easily view the quantity, location, and status of each item, ensuring accurate stock management and minimizing stockouts.</span>
+      <span>In today's fast-paced business environment, efficient order fulfilment is critical to success. Customers expect their orders to be processed and delivered quickly and accurately, and businesses that cannot meet these expectations risk losing customers to competitors.
+      One way to improve order fulfilment efficiency is to use a cross-docking system. Cross-docking is a process in which incoming goods are sorted and consolidated directly for outbound shipping, without being placed in long-term storage. This can significantly reduce order fulfilment cycle times and improve customer satisfaction.</span>
   </div>
   <div className={`childtwo ${isChildTwoVisible ? 'visible' : ''}`} ref={childTwoRef}>
         <img src={crossdoc1} alt="" style={{height:"55vh",borderRadius:"10px",border:"5px solid black"}}/>
@@ -375,26 +373,26 @@ const handlePicklistgen=()=>{
 </div>
 
        </div>
-       <div style={{ height: "100vh" }} className='features-inventorymanagement'>
-  <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
-  <div className="faqcrossdocking">
+       <div style={{ height: "100vh" }}>
+  <h1 style={{ color: '#C33764' }} className="animated-headings-inventorymanagement">Features</h1>
+  <div className="faqinventorymanagement">
     {faqData.map((faq, index) => (
-      <div className="faqContainercrossdocking" key={index}>
+      <div className="faqContainerinventorymanagement" key={index}>
         <div
-          className={`faqQuestioncrossdocking ${activeIndex === index ? "active" : ""}`}
+          className={`faqQuestioninventorymanagement ${activeIndex === index ? "active" : ""}`}
           onClick={() => toggleFAQ(index)}
         >
           <div className="faqQuestionText">
             <h3 style={{ color: "black", fontSize: "inherit" }}>{faq.question}</h3>
           </div>
-          <div className="iconinbountcrossdocking">
+          <div className="iconinbountinventorymanagement">
             <div
               className={`icon-shape-inbount ${activeIndex === index ? "active" : ""}`}
             ></div>
           </div>
         </div>
         <div
-          className="answercontcrossdocking"
+          className="answercontinventorymanagement"
           style={{
             maxHeight: activeIndex === index ? "300px" : "0",
             overflow: "hidden",
@@ -402,7 +400,7 @@ const handlePicklistgen=()=>{
             textAlign: "justify"
           }}
         >
-          <div className="answercrossdocking">
+          <div className="answerinventorymanagement">
             <p>{faq.answer}</p>
             {faq.image && (
               <img
@@ -418,7 +416,7 @@ const handlePicklistgen=()=>{
 
  
   <h1 style={{ color: '#C33764' }} className="animated-headings">Value Delivered</h1>
-  <div className="faqagain" >
+  <div className="faqagain">
     {faqDataagain.map((faq, index) => (
       <div className="faqContaineragain" key={index}>
         <div
@@ -445,7 +443,7 @@ const handlePicklistgen=()=>{
         >
           <div className="answeragain">
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-              <p className='answer-inventorymamagement'>{faq.answeragain}</p>
+              <p>{faq.answeragain}</p>
               {faq.imageagain && (
                 <img
                   src={faq.imageagain}
@@ -462,31 +460,33 @@ const handlePicklistgen=()=>{
 
 
 
- <button className="button-fulfillemnt">
+  <button className="button-fulfillemnt">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     Learn More
   </button>
-  <div class="bx-inventorymanagement box-corners-inventorymanagement w-100%">
-    <div class="corner-inventorymanagement"></div>
-    <div class="corner-inventorymanagement"></div>
-    <div class="corner-inventorymanagement"></div>
-    <div class="corner-inventorymanagement"></div>
-    
-    <p style={{fontSize:"16px"}}>
-    With PURVEY WMS, you can streamline your inventory management, improve accuracy, and optimize operational efficiency. By leveraging real-time visibility, barcode and RFID integration, and automated replenishment, you can maintain optimal inventory levels, reduce stockouts, and enhance customer satisfaction. Choose our WMS to gain control over your inventory and drive success in your warehouse operations.
-  </p>
-  </div>
 </div>
     {/* ----------------------------------- */}
    
 
+    <div style={{height:"40vh" }}>
+  <div class="bx box-corners w-100%">
+    <div class="corner"></div>
+    <div class="corner"></div>
+    <div class="corner"></div>
+    <div class="corner"></div>
     
+    <p>
+    PURVEY WMS provides exceptional Inbound Receipt functionality within our advanced Warehouse Management System. With our state-of-the-art technology and commitment to excellence, we guarantee efficient handling, accurate tracking, and streamlined operations for your incoming goods. Partner with us to leverage the power of our WMS and experience enhanced efficiency and improved inventory management in your warehouse.
+  </p>
+  </div>
+  </div>
   <Footer/>
+
         </>
   )
 }
 
-export default Dispatch
+export default Inventorymanagement

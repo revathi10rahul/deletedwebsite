@@ -35,7 +35,7 @@ function Footer() {
 </div>
 <div className='Chatting-session' >
   <h2>Lets Chat</h2>
-  <FontAwesomeIcon icon={faWhatsapp}  style={{fontSize:"30px"}}/>
+  <FontAwesomeIcon icon={faWhatsapp} className="blink" style={{ fontSize: "30px" }} />
   <p>info@nacresys.com</p>
   <h2>call Us</h2>
   <p>+91 7736742072 </p>

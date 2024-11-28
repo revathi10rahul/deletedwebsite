@@ -64,8 +64,31 @@ const handleIOTIntegration=()=>{
 navigate('/iotintegration')
 }
 
+const handleMultichannel=()=>{
+  navigate('/multichannelintegration')
+}
+const handleOrderprocessing=()=>{
+  navigate('/orderprocessing')
+}
+const handlePicklistgen=()=>{
+  navigate('/picklistgeneration')
+}
 
-
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
 
 
 
@@ -175,21 +198,21 @@ const [activeIndex, setActiveIndex] = useState(null);
                 </NavDropdown>
 
                 <NavDropdown title="Sales" id="basic-nav-dropdown-sales">
-                  <NavDropdown.Item href="#order-management">Order Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#quotation-management">Quotation Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#returns-management">Returns Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#process-management">Process Management</NavDropdown.Item>
+                  <NavDropdown.Item >Order Management</NavDropdown.Item>
+                  <NavDropdown.Item >Quotation Management</NavDropdown.Item>
+                  <NavDropdown.Item >Returns Management</NavDropdown.Item>
+                  <NavDropdown.Item >Process Management</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title="AI Powered Multi-Channel Fulfillment" id="basic-nav-dropdown-ai">
-                  <NavDropdown.Item href="#multi-channel-integration">Multi-Channel Integration</NavDropdown.Item>
-                  <NavDropdown.Item href="#order-management-system">Order Management System</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-list-generation">Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item href="#pick-sequencing">Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item href="#work-force-management">Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item href="#packing-shipping">Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item href="#fulfillment-validation">Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item href="#e-commerce-integration">E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           

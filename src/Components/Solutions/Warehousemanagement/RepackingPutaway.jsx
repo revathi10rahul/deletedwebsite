@@ -72,7 +72,23 @@ const handleOrderprocessing=()=>{
 }
 const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
-} 
+}
+
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
 
 
  const [activeIndex, setActiveIndex] = useState(null);
@@ -278,11 +294,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -360,7 +376,7 @@ const handlePicklistgen=()=>{
 </div>
 
        </div>
-       <div style={{ height: "110vh" }} className='fetauresdiv-repackingputaway'>
+       <div style={{ height: "130vh" }} className='fetauresdiv-repackingputaway'>
   <h1 style={{ color: '#C33764' }} className="animated-headings">Features</h1>
   <div className="faqdeconsolidation">
     {faqData.map((faq, index) => (
@@ -447,13 +463,13 @@ const handlePicklistgen=()=>{
 
 
 
-  <button className="button-fulfillemnt">
+  {/* <button className="button-fulfillemnt">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     Learn More
-  </button>
+  </button> */}
   <div class="bx-repackingputaway box-corners-repackingputaway w-100%">
     <div class="cornerrepackingputaway"></div>
     <div class="cornerrepackingputaway"></div>
@@ -471,7 +487,7 @@ const handlePicklistgen=()=>{
    
 
    
-  <div className='footer-repacking'>
+  <div className='footer-repacking '>
   <Footer/>
   </div>
         </>

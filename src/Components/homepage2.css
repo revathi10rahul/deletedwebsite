@@ -772,21 +772,21 @@
   /*--------------------------------------------------------------
   # Global Sections
   --------------------------------------------------------------*/
-  section,
+  /* section,
   .section {
     color: var(--default-color);
     background-color: var(--background-color);
     padding: 60px 0;
     scroll-margin-top: 90px;
     overflow: clip;
-  }
+  } */
   
   @media (max-width: 1199px) {
-  
+/*   
     section,
     .section {
       scroll-margin-top: 66px;
-    }
+    } */
   }
   
   /*--------------------------------------------------------------

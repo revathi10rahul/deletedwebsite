@@ -73,6 +73,22 @@ const handleOrderprocessing=()=>{
 const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
+
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
   return (
     <>
       <div style={{ height: "40px" }}>
@@ -155,11 +171,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -260,7 +276,7 @@ const handlePicklistgen=()=>{
     <div className="ordermangement-features-div">
 <h1 className="ordermanagement-features ">Features</h1>
 
-<main class="page-content">
+<main class="page-content-ordermanagement">
   <div class="d_card">
     <div class="content">
       <h2 class="heading">Mobile Order Management</h2>
@@ -307,20 +323,47 @@ const handlePicklistgen=()=>{
       <div className="value-ordermanagement">
 <h1>Value Delivered</h1>
 
-<div>
-  <ul className="list-ordermanagement">
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Increased efficiency and streamlined order management processes.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Enhanced productivity through route optimization and minimized travel time.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Improved order accuracy and reduced errors with digital order management.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Real-time visibility into order status for proactive issue resolution.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Enhanced customer service through real-time order updates and delivery tracking.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Efficient inventory management with real-time visibility into stock levels. </li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Seamless integration with existing systems for data synchronization.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Data-driven insights and analytics for informed decision-making.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Cost savings by minimizing manual errors, unnecessary travel, and stockouts.</li>
-    <li className="listitems-ordermanagement"><span style={{fontSize:"20px"}}>&#9827; </span>Scalability and flexibility to accommodate growing business needs.</li>
-  </ul>
+<div className="main-list-ordermanagement">
+  <div className="list-ordermanagement-left">
+    <div className="listitems-ordermanagement">
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Increased efficiency and streamlined order management processes.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Enhanced productivity through route optimization and minimized travel time.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Improved order accuracy and reduced errors with digital order management.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Real-time visibility into order status for proactive issue resolution.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Enhanced customer service through real-time order updates and delivery tracking.
+      </p>
+    </div>
+  </div>
+  <div className="list-ordermanagement-left">
+    <div className="listitems-ordermanagement">
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Increased efficiency and streamlined order management processes.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Enhanced productivity through route optimization and minimized travel time.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Improved order accuracy and reduced errors with digital order management.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Real-time visibility into order status for proactive issue resolution.
+      </p>
+      <p className="listitems-ordermanagement">
+        <span style={{fontSize: "20px"}}>&#9827; </span>Enhanced customer service through real-time order updates and delivery tracking.
+      </p>
+    </div>
+  </div>
 </div>
+
       </div>
      <Footer/>    
     </>

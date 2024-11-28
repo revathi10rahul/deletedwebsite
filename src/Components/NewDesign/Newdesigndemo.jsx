@@ -1,17 +1,18 @@
-import Container from 'react-bootstrap/Container';
+import { Row,Col, Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import eco from '../../Assets/eco.jpg'
+import { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import nswhite from  '../Assets/nswhite.png'
+import nswhite from  '../../Assets/nswhite.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import work4 from '../../Assets/work4.jpg'
+import work2 from '../../Assets/work2.webp'
 import { useNavigate } from 'react-router-dom';
+import work3 from '../../Assets/work3.jpg'
 import { FaChevronDown } from 'react-icons/fa'; // Example icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faSignOutAlt,
-  } from "@fortawesome/free-solid-svg-icons";   
-import './aboutpage.css'
-import Footer from './Footer';
-function Navbars() {
+import './newdesigndemo.css'
+import Footer from '../Footer';
+function Newdesigndemo() {
   const navigate=useNavigate()
   const handleAboutus=()=>{
       navigate('/about')
@@ -87,6 +88,36 @@ const handleFulfillmentvalidation=()=>{
 const handleEcommerceintegration=()=>{
   navigate('/ecommerceintegration')
 }
+
+const [activeItem, setActiveItem] = useState('Material Inward');
+  const [activeSubItem, setActiveSubItem] = useState(''); // Default selected item
+const handleClick = (item) => {
+  setActiveItem(item);
+  setActiveSubItem(''); // Reset the sub-item when switching main items
+
+};
+
+
+
+const getImageForSubItem = () => {
+  if (activeItem === 'Material Inward') {
+    switch (activeSubItem) {
+      case 'Pallet, Bags, Carton Level Tracking':
+        return work4; // Path for Pallet, Bags, Carton Level Tracking image
+      case 'Purchase Order, Advanced Shipping Notice Linking':
+        return work3; // Path for Purchase Order image
+      // Add cases for other sub-items as needed
+      default:
+        return work2; // Default image for Material Inward
+    }
+  } 
+  return null; // No image found
+};
+
+
+const handleSubItemClick = (subItem) => {
+  setActiveSubItem(subItem);
+};
   return (
     <>
      <div style={{height:"40px"}}>
@@ -211,10 +242,9 @@ const handleEcommerceintegration=()=>{
         </Navbar.Collapse>
       </Navbar>
      </div>
-  
      <div className="hero-section-aboutpage mt-4">
           <h1 className="about-heading mt-3">WE HAVE BEEN AROUND</h1>
-          <h3 className="about-heading2 mt-3">FOR A DECADE PLUS</h3>
+          <h3 className="about-heading2 mt-3 text-white">FOR A DECADE PLUS</h3>
           <div style={{ display: 'block' }} className="mt-3">
             <p className="mt-3">AND OUR FIRST CUSTOMERS ARE WITH US</p>
             <p className="mt-3">TO CELEBRATE OUR MILESTONE</p>
@@ -228,33 +258,183 @@ const handleEcommerceintegration=()=>{
             ></path>
           </svg>
         </div>
- {/* -------------------------------------------------------- */}
+   
 
-<div style={{height:"100vh"}}>
-<h1>NACRE SYSTEM</h1>
-<p className='content'>We are a leading provider of cutting-edge IT solutions, specializing in AI-powered Warehouse Management Systems (WMS), E-commerce Fulfilment solutions, and 3PL warehouse management. With our innovative technologies and expertise, we empower businesses of all sizes to optimize their operations, enhance productivity, and achieve greater success in today's rapidly evolving digital landscape.
-We embrace innovation as a driving force behind our IT solutions. We believe that staying ahead in today's competitive landscape requires a constant focus on advancing technologies and harnessing their full potential. Our commitment to innovation is reflected in our AI capabilities, which form the backbone of our solutions.
-Artificial Intelligence (AI) lies at the core of our systems, enabling us to provide intelligent and data-driven solutions to our clients. Through the power of AI, we empower businesses to make smarter decisions, automate processes, and unlock hidden insights within their operations. By leveraging machine learning algorithms, predictive and natural language processing, we enable businesses to optimize their warehouse management, e-commerce operations, and 3PL logistics.
-With our AI-powered Warehouse Management Systems (WMS), we revolutionize the way businesses manage their inventory, optimize order fulfilment, and streamline their warehouse operations. Our WMS utilizes advanced algorithms to optimize storage space allocation and adapting to real-time information. Our WMS ensures that businesses achieve maximum efficiency, reduce errors, and deliver exceptional customer experiences.
-In the realm of e-commerce, our AI capabilities enable businesses to Process orders in the most efficient way, improve accuracy in order fulfilment and exponentially increase same day delivery capability. For 3PL providers, our AI-driven solutions optimize operational efficiency, enhance transparency, and improve customer satisfaction. By harnessing the power of AI, we help 3PL companies streamline their processes, reduce costs, and provide superior service to their clients.
-</p>
-</div>
+<Container fluid>
+<h1>PURVEY-WMS</h1>
 
+<Row>
+        <Col>
+        <ul className="responsive-list">
+          <li 
+            onClick={() => handleClick('Material Inward')}
+            className={activeItem === 'Material Inward' ? 'selected' : ''}
+          >
+            Material Inward
+          </li>
+          <li 
+            onClick={() => handleClick('Deconsolidation & Crossdocking')}
+            className={activeItem === 'Deconsolidation & Crossdocking' ? 'selected' : ''}
+          >
+            Deconsolidation & Crossdocking
+          </li>
+          <li 
+            onClick={() => handleClick('Quality Assurance')}
+            className={activeItem === 'Quality Assurance' ? 'selected' : ''}
+          >
+            Quality Assurance
+          </li>
+          <li 
+            onClick={() => handleClick('Unpacking & Repacking')}
+            className={activeItem === 'Unpacking & Repacking' ? 'selected' : ''}
+          >
+            Unpacking & Repacking
+          </li>
+          <li 
+            onClick={() => handleClick('Put Away')}
+            className={activeItem === 'Put Away' ? 'selected' : ''}
+          >
+            Put Away
+          </li>
+          <li 
+            onClick={() => handleClick('Picking')}
+            className={activeItem === 'Picking' ? 'selected' : ''}
+          >
+            Picking
+          </li>
+          <li 
+            onClick={() => handleClick('Van Delivery & Sales')}
+            className={activeItem === 'Van Delivery & Sales' ? 'selected' : ''}
+          >
+            Van Delivery & Sales
+          </li>
+        </ul>
+        </Col>
+      </Row>
 
+      <Row>
+        <Col lg={1}></Col>
+        <Col lg={5}>
+        
+        {activeItem === 'Material Inward' && (
+  <ul className="block-list mt-5">
+    <li
+      onClick={() => handleSubItemClick('Unique Scan Code Generation')}
+      style={{
+        background: activeSubItem === 'Unique Scan Code Generation' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      Unique Scan Code Generation
+    </li>
+    <li
+      onClick={() => handleSubItemClick('Pallet, Bags, Carton Level Tracking')}
+      style={{
+        background: activeSubItem === 'Pallet, Bags, Carton Level Tracking' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      Pallet, Bags, Carton Level Tracking
+    </li>
+    <li
+      onClick={() => handleSubItemClick('Purchase Order, Advanced Shipping Notice Linking')}
+      style={{
+        background: activeSubItem === 'Purchase Order, Advanced Shipping Notice Linking' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      Purchase Order, Advanced Shipping Notice Linking
+    </li>
+    <li
+      onClick={() => handleSubItemClick('Invoice Aligned Product, Lot Trace')}
+      style={{
+        background: activeSubItem === 'Invoice Aligned Product, Lot Trace' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      Invoice Aligned Product, Lot Trace
+    </li>
+    <li
+      onClick={() => handleSubItemClick('Electronic Record Transfer Deconsolidation And Crossdocking')}
+      style={{
+        background: activeSubItem === 'Electronic Record Transfer Deconsolidation And Crossdocking' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      Electronic Record Transfer Deconsolidation And Crossdocking
+    </li>
+    <li
+      onClick={() => handleSubItemClick('Supplier Metrics Data Input For Procurement Planning')}
+      style={{
+        background: activeSubItem === 'Supplier Metrics Data Input For Procurement Planning' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      Supplier Metrics Data Input For Procurement Planning
+    </li>
+    <li
+      onClick={() => handleSubItemClick('API Integrations To Purchase, Finance & ERP Applications')}
+      style={{
+        background: activeSubItem === 'API Integrations To Purchase, Finance & ERP Applications' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+      API Integrations To Purchase, Finance & ERP Applications
+    </li>
+  </ul>
+)}
 
-{/* ---------------------------------------------- */}
-<div style={{height:"100vh"}}>
-<h1 className='second-heading-aboutpage'>HOW WE ARE DIFFERENT</h1>
-<p className='content-different'>
-At Nacre System, we view AI as a transformative technology with the power to reshape industries. Our significant investment in research and development ensures we stay at the forefront of innovation. By leveraging AI, we help businesses unlock new opportunities, enhance operational efficiency, and drive sustainable growth in the digital age. Partner with Nacre System to navigate the evolving technological landscape and achieve success.
+        {activeItem === 'Deconsolidation & Crossdocking' && (
+           <ul className="block-list mt-5">
+             <li
+      onClick={() => handleSubItemClick(' Packages level Unique Scan Code Generation')}
+      style={{
+        background: activeSubItem === ' Packages level Unique Scan Code Generation' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+       Packages level Unique Scan Code Generation
+    </li>
+    <li
+      onClick={() => handleSubItemClick(' Goods Receipt Note to Package linking')}
+      style={{
+        background: activeSubItem === ' Goods Receipt Note to Package linking' ? '#e1e1e1' : 'transparent',
+        cursor: 'pointer'
+      }}
+    >
+       Goods Receipt Note to Package linking
+    </li>
+          
+             
+             <li >Bulk order Package Separation
+             </li>
+             <li >Invoice Aligned Product, Lot Trace</li>
+             <li >
+             Invoice Aligned Product, Lot, Quality Trace
 
-Our products are designed to seamlessly integrate with ERP (Enterprise Resource Planning), WMS (Warehouse Management System), and OMS (Order Management System) systems, distinguishing us from competitors. Additionally, our solutions offer the latest in AI and IoT technology without the need for costly upgrades or replacements. This approach preserves existing investments while minimizing costs and operational disruptions, making Nacre System a cost-effective choice for leveraging cutting-edge technologies.
+             </li>
+             <li >
+             Automated notification generation to Quality Assurance
 
-</p>
-</div>
+             </li>
+             <li >
+             Automated notification generation to dispatch for Buk Delivery
 
+             </li>
+             <li>API Integrations To Purchase, Finance & ERP Applications
+             </li>
+           </ul>
+        )}
+        </Col>
 
- 
+          <Col lg={5} className='mt-3'>
+            <img src={getImageForSubItem()} alt="Additional Information" />
+          </Col>
+
+        <Col lg={1}></Col>
+      </Row>
+</Container>
+
 <div className='footer-div'>
   <Footer/>
 </div>
@@ -262,4 +442,4 @@ Our products are designed to seamlessly integrate with ERP (Enterprise Resource 
   );
 }
 
-export default Navbars;
+export default Newdesigndemo;

@@ -148,6 +148,7 @@
 .third-picksequencing p {
   padding: 20px; /* Adjust padding for better spacing */
   text-align: justify;
+  margin-top: 71px; 
 }
 
 /* Positioning for larger screens */
@@ -313,9 +314,9 @@
 
 @media (max-width: 768px) {
   .valuedelivered-picksequencing{
-    margin-top: 500px;
+    margin-top: 941px;
   }
-  .answer-picksequencing{
+  .answer-picksequencing p{
     font-size: 12px;
   }
   .faq_main_container {
@@ -408,3 +409,20 @@ p {
     max-width: 33.33%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- */

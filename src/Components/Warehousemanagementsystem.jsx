@@ -69,6 +69,22 @@ const handlePicklistgen=()=>{
   navigate('/picklistgeneration')
 }
 
+const handlePicksequencing=()=>{
+  navigate('/picksequencing')
+}
+const handleWorkforcemanagement=()=>{
+  navigate('/workforceoptimization')
+}
+const handlePackingandshipping=()=>{
+  navigate('/packageandshipping')
+}
+const handleFulfillmentvalidation=()=>{
+  navigate('/fulfillmentvalidation')
+}
+const handleEcommerceintegration=()=>{
+  navigate('/ecommerceintegration')
+}
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -211,11 +227,11 @@ const handlePicklistgen=()=>{
                   <NavDropdown.Item onClick={handleMultichannel}>Multi-Channel Integration</NavDropdown.Item>
                   <NavDropdown.Item onClick={handleOrderprocessing}>Order Processing</NavDropdown.Item>
                   <NavDropdown.Item onClick={handlePicklistgen}>Pick List Generation</NavDropdown.Item>
-                  <NavDropdown.Item >Pick Sequencing</NavDropdown.Item>
-                  <NavDropdown.Item >Work Force Management</NavDropdown.Item>
-                  <NavDropdown.Item >Packing And Shipping</NavDropdown.Item>
-                  <NavDropdown.Item >Fulfillment Validation</NavDropdown.Item>
-                  <NavDropdown.Item >E-Commerce Integration</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePicksequencing}>Pick Sequencing</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleWorkforcemanagement}>Work Force Management</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handlePackingandshipping}>Packing And Shipping</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleFulfillmentvalidation}>Fulfillment Validation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleEcommerceintegration}>E-Commerce Integration</NavDropdown.Item>
                 </NavDropdown>
               </NavDropdown>
           
@@ -312,51 +328,44 @@ const handlePicklistgen=()=>{
       <div style={{ height: "100vh" }}>
       <h1 style={{ color: "#C33764" }} className="valuedelivered-warehouse">Value Delivered</h1>
 
-        <div className="faq_main_container">
-
-          {faqData.map((faq, index) => (
-            <div className="faq_container" key={index}>
-              <div
-                className={`faq_question ${
-                  activeIndex === index ? "active" : ""
-                }`}
-                onClick={() => toggleFAQ(index)}
-              >
-                <div className="faq_question-text">
-                  <h3 style={{ color: "black" }}>{faq.question}</h3>
-                </div>
-                <div className="icon ">
-                  <div
-                    className={`icon-shape ${
-                      activeIndex === index ? "active" : ""
-                    }`}
-                  ></div>
-                </div>
+      <div className="faq_main_container">  
+        {faqData.map((faq, index) => (
+          <div className="faq_container" key={index}>
+            <div
+              className={`faq_question ${activeIndex === index ? "active" : ""}`}
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="faq_question-text">
+                <h3 style={{ color: "black" }}>{faq.question}</h3>
               </div>
-              <div
-                className="answercont"
-                style={{
-                  maxHeight: activeIndex === index ? "300px" : "0",
-                  overflow: "hidden",
-                  transition: "max-height 0.3s ease",
-                }}
-              >
-                <div className="answer">
-                  <p>{faq.answer}</p>
-                </div>
+              <div className="icon ">
+                <div className={`icon-shape ${activeIndex === index ? "active" : ""}`}></div>
               </div>
             </div>
-          ))}
-        </div>
-
-        <button className="button-fulfillemnt">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Learn More
-        </button>
+            <div
+              className="answercont"
+              style={{
+                maxHeight: activeIndex === index ? `${document.getElementById(`faq-answer-${index}`).scrollHeight}px` : "0",
+                overflow: "hidden",
+                transition: "max-height 0.3s ease",
+              }}
+            >
+              <div className="answer" id={`faq-answer-${index}`}>
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
+
+      <button className="button-fulfillemnt">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Learn More
+      </button>
+    </div>
       <div className="discover-div">
        <h3>Discover how our WMS Software & Fulfillment Automation add value to your business </h3>
        <button className="button-warehouse ms-3">

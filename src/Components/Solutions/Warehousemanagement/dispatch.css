@@ -71,3 +71,20 @@
         bottom: -16px; /* Adjust the position for mobile */
       }
     }
+
+
+  /* /////// */
+  .footer-div{
+    margin-top: 300px;
+  }
+  @media(max-width:768px){
+    .features-inventorymanagement{
+      margin-top: 300px;
+    }
+    .footer-div{
+      margin-top: 1200px;
+    }
+    .answeragain p{
+      font-size: 12px;
+    }
+  }
